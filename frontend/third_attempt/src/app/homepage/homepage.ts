@@ -13,15 +13,6 @@ import TypeIt from 'typeit';
   styleUrl: './homepage.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class Homepage implements AfterViewInit {
-  ngAfterViewInit(): void {
-    new TypeIt('#typewriterTarget', {
-      speed: 60,
-      waitUntilVisible: true,
-      cursor: false,
-    })
-      .break()
-      .type('✧˖°. The Third Attempt 𖹭.ᐟ')
-      .go();
-  }
+export class Homepage  {
+
 }
