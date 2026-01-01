@@ -1,4 +1,35 @@
-<section id="1" class="w-full flex flex-col items-center justify-center">
+<section id="1" class="relative w-full flex flex-col items-center justify-center">
+<a
+  routerLink="/"
+  class="cursor-pointer fixed top-6 left-1/2 -translate-x-1/2 z-[9999]
+         px-6 py-2 rounded-full
+         text-[11px] tracking-[0.35em] uppercase font-medium
+         text-neutral-900
+         bg-white/70 backdrop-blur-lg
+         border border-black/10
+         shadow-[0_8px_25px_rgba(0,0,0,0.08)]
+         transition-all duration-500
+         hover:bg-white hover:shadow-[0_0_40px_rgba(255,255,255,0.7)]
+         hover:-translate-y-0.5"
+>
+  <span class="relative z-10">EXIT</span>
+
+  <!-- soft glow halo -->
+  <span
+    class="pointer-events-none absolute inset-0 rounded-full opacity-0
+           group-hover:opacity-100 transition-opacity duration-700 blur-xl"
+    style="
+      background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,0.2),
+        transparent 70%
+      );
+    "
+  ></span>
+</a>
+
+
   <swiper-container
     slides-per-view="1"
     speed="500"
