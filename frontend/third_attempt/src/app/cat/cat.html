@@ -1,34 +1,26 @@
-<section id="1" class="relative w-full flex flex-col items-center justify-center">
-<a
-  routerLink="/"
-  class="cursor-pointer fixed top-6 left-1/2 -translate-x-1/2 z-[9999]
-         px-6 py-2 rounded-full
-         text-[11px] tracking-[0.35em] uppercase font-medium
-         text-neutral-900
-         bg-white/70 backdrop-blur-lg
-         border border-black/10
-         shadow-[0_8px_25px_rgba(0,0,0,0.08)]
-         transition-all duration-500
-         hover:bg-white hover:shadow-[0_0_40px_rgba(255,255,255,0.7)]
-         hover:-translate-y-0.5"
+<section
+  id="1"
+  class="relative w-full flex flex-col items-center justify-center"
 >
-  <span class="relative z-10">EXIT</span>
+  <a
+    routerLink="/"
+    class="cursor-pointer fixed top-6 left-1/2 -translate-x-1/2 z-[9999] px-6 py-2 rounded-full text-[11px] tracking-[0.35em] uppercase font-medium text-neutral-900 bg-white/70 backdrop-blur-lg border border-black/10 shadow-[0_8px_25px_rgba(0,0,0,0.08)] transition-all duration-500 hover:bg-white hover:shadow-[0_0_40px_rgba(255,255,255,0.7)] hover:-translate-y-0.5"
+  >
+    <span class="relative z-10">EXIT</span>
 
-  <!-- soft glow halo -->
-  <span
-    class="pointer-events-none absolute inset-0 rounded-full opacity-0
-           group-hover:opacity-100 transition-opacity duration-700 blur-xl"
-    style="
-      background: radial-gradient(
-        circle,
-        rgba(255,255,255,0.9),
-        rgba(255,255,255,0.2),
-        transparent 70%
-      );
-    "
-  ></span>
-</a>
-
+    <!-- soft glow halo -->
+    <span
+      class="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl"
+      style="
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.2),
+          transparent 70%
+        );
+      "
+    ></span>
+  </a>
 
   <swiper-container
     slides-per-view="1"
@@ -78,69 +70,71 @@
     </swiper-slide>
 
     <swiper-slide
-      class="relative h-screen w-full flex flex-col items-center justify-center gap-12"
+      class="relative min-h-screen w-full flex flex-col items-center justify-center gap-4 sm:gap-6 md:gap-12 px-3"
     >
       <!-- Heading -->
       <h1
-        class="text-black text-4xl md:text-6xl font-semibold tracking-wide text-center"
+        class="text-black text-xl sm:text-2xl md:text-6xl font-semibold tracking-wide text-center"
       >
-        ⟡ THE PAPER WORK ⟡ <br />
+        ⟡ MY PAPER WORK ⟡
         <br />
-        ദ്ദി ˉ͈̀꒳ˉ͈́ )✧
+
+        <span
+          class="block mt-1 sm:mt-2 text-[10px] sm:text-xs md:text-lg tracking-[0.22em] uppercase text-gray-600 font-medium"
+        >
+          applying for
+          <span class="font-semibold text-gray-900">Jolie's Future</span>
+        </span>
+
+        <span
+          class="block mt-1 text-[10px] sm:text-xs md:text-base tracking-[0.16em] text-gray-500 opacity-90"
+        >
+          position · long-term consideration
+        </span>
       </h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-6">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-5 md:gap-8 w-full max-w-3xl px-2"
+      >
+        <!-- Cover Letter -->
+        <a
+          href="https://docs.google.com/presentation/d/1MF0WPF9rp7R2Wb4XBNK-sP1u3_rh6BtgugX4B5dOm88/edit?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          class="w-full h-[160px] sm:h-[200px] md:aspect-square md:h-auto rounded-xl border border-black flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-6 text-sm sm:text-lg md:text-3xl font-medium text-center transition-all duration-300 hover:scale-[1.03] hover:bg-sky-100 hover:text-sky-900 hover:shadow-[0_0_40px_rgba(56,189,248,0.45)]"
+        >
+          <span>
+            Cover Letter
+            <br />
+            <span class="text-[10px] sm:text-2xl opacity-70 text-gray-500">(my version)</span>
+          </span>
 
-  <!-- Cover Letter -->
-  <a href="https://docs.google.com/presentation/d/1MF0WPF9rp7R2Wb4XBNK-sP1u3_rh6BtgugX4B5dOm88/edit?usp=sharing" target="_blank" rel="noopener"
-    class="text-center aspect-square rounded-3xl border border-black flex flex-col items-center justify-center gap-6 text-2xl md:text-3xl font-medium transition-all duration-300 hover:scale-[1.03] hover:bg-sky-100 hover:text-sky-900 hover:shadow-[0_0_40px_rgba(56,189,248,0.45)]"
-  >
-    <span>
-      Cover Letter <br />
-      (MY VERSION)
-    </span>
+          <img
+            src="/assets/cinna-unscreen.gif"
+            class="w-16 sm:w-20 md:w-40 object-contain pointer-events-none"
+          />
+        </a>
 
-    <img
-      src="/assets/skate.gif"
-      alt="Cover letter illustration"
-      class="w-32 md:w-40 object-contain pointer-events-none"
-    />
-</a>
+        <!-- Resume -->
+        <a
+          href="/assets/CV.pdf"
+          target="_blank"
+          rel="noopener"
+          class="w-full h-[160px] sm:h-[200px] md:aspect-square md:h-auto rounded-xl border border-black flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-6 text-sm sm:text-lg md:text-3xl font-medium text-center transition-all duration-300 hover:scale-[1.03] hover:bg-sky-100 hover:text-sky-900 hover:shadow-[0_0_40px_rgba(56,189,248,0.45)]"
+        >
+          <span class="flex flex-col items-center leading-tight">
+            Resume
+            <span class="text-[10px] sm:text-2xl mt-1 opacity-70 text-gray-500">
+              (double click if doesn’t open)
+            </span>
+          </span>
 
-  <!-- Mock Interview -->
-  <button
-    class="aspect-square rounded-3xl border border-black flex flex-col items-center justify-center gap-6 text-2xl md:text-3xl font-medium transition-all duration-300 hover:scale-[1.03] hover:bg-pink-100 hover:text-pink-900 hover:shadow-[0_0_40px_rgba(244,114,182,0.45)]"
-  >
-    <span>Mock Interview</span>
-
-    <img
-      src="/assets/coffee.gif"
-      alt="Mock interview illustration"
-      class="w-32 md:w-40 object-contain pointer-events-none rounded-full"
-    />
-  </button>
-
-  <!-- Resume -->
-  <a
-    href="/assets/CV.pdf"
-    target="_blank"
-    rel="noopener"
-    class="aspect-square rounded-3xl border border-black flex flex-col items-center justify-center gap-6 text-2xl md:text-3xl font-medium transition-all duration-300 hover:scale-[1.03] hover:bg-[#f5f1e8] hover:text-[#5a4a3a] hover:shadow-[0_0_40px_rgba(210,190,160,0.45)]"
-  >
-    <span class="flex flex-col items-center leading-tight">
-      Resume
-      <span class="text-sm mt-1 opacity-70 text-gray-500">(double click if doesn't open)</span>
-    </span>
-
-    <img
-      src="/assets/rock-unscreen.gif"
-      alt="Resume illustration"
-      class="w-32 md:w-40 object-contain pointer-events-none"
-    />
-  </a>
-
-</div>
-
+          <img
+            src="/assets/rock-unscreen.gif"
+            class="w-16 sm:w-20 md:w-40 object-contain pointer-events-none"
+          />
+        </a>
+      </div>
     </swiper-slide>
   </swiper-container>
 </section>

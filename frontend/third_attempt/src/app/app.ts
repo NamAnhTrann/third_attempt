@@ -34,6 +34,7 @@ export class App {
 
   isCollapsed = signal(false);
   isMusicOn = signal(false);
+
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
@@ -41,21 +42,31 @@ export class App {
           this.isFirstNavigation = false;
           return;
         }
-
         this.startLoading();
       }
 
+      if (event instanceof NavigationEnd) {
+        this.handleRouteMusic(event.urlAfterRedirects);
+        this.stopLoading();
+      }
+
       if (
-        event instanceof NavigationEnd ||
         event instanceof NavigationCancel ||
         event instanceof NavigationError
       ) {
-        if (!this.isFirstNavigation) {
-          this.stopLoading();
-        }
+        this.stopLoading();
       }
     });
   }
+
+  private handleRouteMusic(url: string) {
+    if (url.startsWith('/cat')) {
+      this.setPlaylist(this.catPlaylist);
+    } else {
+      this.setPlaylist(this.currentPlaylist);
+    }
+  }
+
   private startLoading() {
     this.startTime = Date.now();
     this.pickRandomMessage();
@@ -87,10 +98,16 @@ export class App {
   }
 
   private currentPlaylist: string[] = [
-    // 'songs/Watashino Uso.mp3',
-    // 'songs/banana milk.mp3',
     'songs/willow.mp3',
     'songs/fragility.mp3',
+  ];
+
+  private catPlaylist: string[] = [
+    'songs/chevy - uwu.mp3',
+    'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
+    'songs/aha.mp3',
+    'songs/Original Song- MondaySunday (by Emma) (1).mp3',
+    'songs/can we (feat. Emi Choi).mp3'
   ];
 
   toggleMenu() {
@@ -138,8 +155,18 @@ export class App {
 
   private setPlaylist(list: string[]) {
     if (!list.length) return;
+
     this.currentPlaylist = list;
+    this.i = 0;
+
+    this.audio.pause();
+    this.audio.currentTime = 0;
+
     this.load(this.i);
+
+    if (this.isMusicOn()) {
+      this.play();
+    }
   }
 
   private load(index: number) {
@@ -149,7 +176,7 @@ export class App {
       ((index % this.currentPlaylist.length) + this.currentPlaylist.length) %
       this.currentPlaylist.length;
 
-    this.audio.src = this.currentPlaylist[this.i]; // ONLY SET SOURCE
+    this.audio.src = this.currentPlaylist[this.i]; 
 
     const raw = this.currentPlaylist[this.i].split('/').pop() ?? '';
     this.currentSong.set(raw.replace(/\.[^/.]+$/, ''));
