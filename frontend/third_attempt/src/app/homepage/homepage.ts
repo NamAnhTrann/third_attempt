@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ViewChild,
-  ElementRef,
-  CUSTOM_ELEMENTS_SCHEMA,
-} from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -12,20 +6,19 @@ import {
   styleUrl: './homepage.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class Homepage implements AfterViewInit {
+export class Homepage {
+  private unlocked = false;
 
-  @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
+  @HostListener('document:click')
+  unlockAutoplay() {
+    if (this.unlocked) return;
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      const video = this.bgVideo.nativeElement;
+    const video = document.querySelector('video') as HTMLVideoElement | null;
+    if (!video) return;
 
-      video.muted = true;
-      video.playsInline = true;
+    video.muted = true;
+    video.play().catch(() => {});
 
-      video.play().catch(() => {
-        // browser blocked it, but it will start after first interaction
-      });
-    }, 200);
+    this.unlocked = true;
   }
 }
