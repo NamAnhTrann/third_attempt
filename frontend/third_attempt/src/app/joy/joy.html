@@ -1,0 +1,350 @@
+<section
+  id="1"
+  class="relative w-screen h-screen overflow-hidden flex items-center justify-center"
+>
+  <!-- BACKGROUND -->
+  <canvas #bgCanvas class="bg-canvas"></canvas>
+  <a
+    routerLink="/"
+    class="group absolute top-6 left-1/2 -translate-x-1/2 z-[50] px-5 py-1.5 rounded-full text-[11px] tracking-[0.35em] uppercase text-white/70 hover:text-white border border-white/20 hover:border-white/40 backdrop-blur-md transition-all duration-500"
+  >
+    <span class="relative z-10">EXIT</span>
+
+    <!-- glow -->
+    <span
+      class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl"
+      style="
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.35),
+          transparent 70%
+        );
+      "
+    ></span>
+  </a>
+
+  <!-- SINGLE SWIPER -->
+  <swiper-container
+    slides-per-view="1"
+    speed="300"
+    effect="fade"
+    fade-effect-cross-fade="true"
+    navigation="true"
+    class="absolute inset-0 z-20 w-full h-full [--swiper-navigation-size:22px] [--swiper-theme-color:white]"
+  >
+    <!-- SLIDE 1 -->
+    <swiper-slide class="flex items-center justify-center">
+      <div class="text-center max-w-3xl px-6">
+        <h1 class="text-white text-4xl md:text-6xl tracking-wide mb-4">
+          1. Essence of Joy
+        </h1>
+      </div>
+    </swiper-slide>
+
+    <!-- SLIDE 2 -->
+    <swiper-slide class="flex items-center justify-center">
+      <div class="text-center max-w-3xl px-6">
+        <h1 class="text-white text-4xl md:text-6xl tracking-wide mb-4">
+          Remember...?
+        </h1>
+        <p class="text-white/80 text-lg md:text-xl">
+          I wrote about you on your birthday gift...
+        </p>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide class="flex items-center justify-center">
+      <div class="text-center max-w-3xl px-6">
+        <h1 class="text-white text-4xl md:text-6xl tracking-wide mb-4">
+          But I feel like...
+        </h1>
+        <p class="text-white/80 text-lg md:text-xl">
+          I could do better, so I decide to use the same background <br />
+          But improved wording ♡︎ <br /><br />
+          (•˕ •マ.ᐟ
+        </p>
+      </div>
+    </swiper-slide>
+
+    <!-- SLIDE 3 -->
+    <swiper-slide class="flex items-center justify-center">
+      <div class="text-center max-w-4xl px-6">
+        <h1
+          class="mb-8 text-white font-light leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          <span
+            class="block text-sm sm:text-base uppercase tracking-[0.35em] text-white/70 mb-2"
+          >
+            ✦. ── Wong Ying Sin ── .✦
+          </span>
+
+          <p
+            class="text-[11px] mb-4 sm:text-xs tracking-[0.25em] uppercase text-white/60"
+          >
+            08 · October | Jolie Wong
+          </p>
+
+          <span class="inline-block whitespace-nowrap font-medium">
+            ᰔ The Five Essences of Joy ᰔ
+          </span>
+          <span class="block text-[11px] mt-2 tracking-[0.3em] text-white/60">
+            ✦ | My 5 Reasons | ✦
+          </span>
+        </h1>
+      </div>
+    </swiper-slide>
+
+    <!-- SLIDE 4 -->
+    <swiper-slide class="flex items-center">
+      <div class="max-w-4xl px-10 text-left">
+        <span
+          class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
+        >
+          The First Essence | Skyblue 𑣲
+        </span>
+
+        <h1
+          class="text-white font-light leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          <span class="block font-light"> Of the Calm, She Brings </span>
+        </h1>
+
+        <p
+          id="first_essence"
+          class="mt-4 text-white/80 text-lg md:text-xl leading-relaxed tracking-wide max-w-3xl"
+        >
+          There is a calm that seems to arrive with her, unannounced and
+          unforced. It settles gently into the space between moments, easing the
+          noise without asking for attention.
+          <br /><br />
+          Around her, things feel lighter. Conversations slow. Breaths deepen.
+          Even restlessness seems to soften, as if it has finally found a place
+          to rest.
+          <br /><br />
+          It is not a silence, but a comfort, a quiet assurance that makes being
+          yourself feel easy, and staying feel natural.
+        </p>
+      </div>
+    </swiper-slide>
+
+    <!-- SLIDE 5 -->
+    <swiper-slide class="flex items-center">
+      <div class="max-w-4xl px-10 text-left">
+        <span
+          class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
+        >
+          The Second Essence | Cherry-Blossom 𑣲
+        </span>
+
+        <h1
+          class="text-white font-light leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          <span class="block font-light"> Of the Spark, She Carries </span>
+        </h1>
+
+        <p
+          id="second_essence"
+          class="mt-4 text-white/80 text-lg md:text-xl leading-relaxed tracking-wide max-w-3xl"
+        >
+          There is a brightness in her that arrives all at once, quick, warm,
+          unmistakable. Like petals caught in sudden wind, her energy moves
+          freely, lifting the air around her.
+          <br /><br />
+          She carries a kind of Joy that does not stay still. It moves through
+          laughter, through motion, through the spark in her eyes when she
+          speaks. A Joy that spreads before it can be contained.
+          <br /><br />
+          And yet, within that liveliness, there is grace. A lightness that
+          never overwhelms, only invites, leaving traces of warmth wherever she
+          passes.
+        </p>
+      </div>
+    </swiper-slide>
+    <!-- SLIDE 6 -->
+    <swiper-slide class="flex items-center">
+      <div class="max-w-4xl px-10 text-left">
+        <span
+          class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
+        >
+          The Third Essence | Beige 𑣲
+        </span>
+
+        <h1
+          class="text-white font-light leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          <span class="block font-light"> Of the Warmth, She Holds </span>
+        </h1>
+
+        <p
+          id="second_essence"
+          class="mt-4 text-white/80 text-lg md:text-xl leading-relaxed tracking-wide max-w-3xl"
+        >
+          There is a warmth in her that feels quietly reassuring, the kind that
+          settles in without asking to be noticed. It is felt in small moments,
+          in her tone, her patience, the way she makes space for others to
+          simply be.
+          <br /><br />
+          Around her, things feel gentler. Conversations soften. Tension
+          loosens. Even silence carries a sense of ease, as though nothing needs
+          to be proven or hurried.
+          <br /><br />
+          Her warmth does not demand attention. It stays, steady and sincere,
+          offering comfort without condition, and leaving behind a feeling of
+          being understood.
+        </p>
+      </div>
+    </swiper-slide>
+    <!-- SLIDE 7 -->
+    <swiper-slide class="flex items-center">
+      <div class="max-w-4xl px-10 text-left">
+        <span
+          class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
+        >
+          The Fourth Essence | Amber 𑣲
+        </span>
+
+        <h1
+          class="text-white font-light leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          <span class="block font-light"> Of the Strength, She Bears </span>
+        </h1>
+
+        <p
+          id="fourth_essence"
+          class="mt-4 text-white/80 text-lg md:text-xl leading-relaxed tracking-wide max-w-3xl"
+        >
+          There is a strength in her that does not announce itself. It does not
+          ask to be seen, yet it endures, steady, patient, and unwavering in its
+          quiet resolve.
+          <br /><br />
+          She keeps going when things grow heavy, not out of obligation, but
+          from a deep commitment to try again, and again. Effort, for her, is
+          not loud determination, but a quiet choice made daily, even when no
+          one is watching.
+          <br /><br />
+          In that persistence lives something deeply admirable. A resilience
+          shaped not by force, but by care. A strength that warms rather than
+          hardens, glowing softly like amber, earned, lasting, and true.
+        </p>
+      </div>
+    </swiper-slide>
+    <!-- SLIDE 7 -->
+    <swiper-slide class="flex items-center">
+      <div class="max-w-4xl px-10 text-left">
+        <span
+          class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
+        >
+          The Fifth Essence | Pearl 𑣲
+        </span>
+
+        <h1
+          class="text-white font-light leading-[1.05] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+        >
+          <span class="block font-light"> Of the Person, She Is </span>
+        </h1>
+
+        <p
+          id="fifth_essence"
+          class="mt-4 text-white/80 text-lg md:text-xl leading-relaxed tracking-wide max-w-3xl"
+        >
+          She shows up with intention. She tries, even when it would be easier
+          not to. There is care in the way she approaches things, and effort in
+          the way she follows through.
+          <br /><br />
+          She values doing things well, not for recognition, but because it
+          matters to her. When things are difficult, she does not turn away, she
+          learns, adapts, and continues forward.
+          <br /><br />
+          What defines her most is consistency. A steady sense of
+          responsibility, sincerity, and purpose that shapes how she treats
+          others and how she carries herself through the world.
+        </p>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide class="flex items-center justify-center">
+      <div class="max-w-5xl px-10 text-center">
+        <h2
+          class="uppercase text-white font-light text-3xl md:text-4xl tracking-tight mb-2"
+        >
+          ✦. ── The Five Essences ── .✦ <br />
+          <span class="text-xs uppercase tracking-[0.3em] text-white/70"
+            >| My Five Reasons |<br />
+            ˗ˏˋ ♡ ˎˊ˗
+          </span>
+        </h2>
+
+        <!-- subtle divider -->
+        <div class="mx-auto mb-10 h-px w-24 bg-white/30"></div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 mb-12"
+        >
+          <div class="essence glow-sky">
+            <span class="essence-dot"></span>
+            <p>Calm</p>
+          </div>
+
+          <div class="essence glow-beige">
+            <span class="essence-dot"></span>
+            <p>Warmth</p>
+          </div>
+
+          <div class="essence glow-pink">
+            <span class="essence-dot"></span>
+            <p>Joy</p>
+          </div>
+
+          <div class="essence glow-amber">
+            <span class="essence-dot"></span>
+            <p>Strength</p>
+          </div>
+
+          <div class="essence glow-pearl">
+            <span class="essence-dot"></span>
+            <p>Character</p>
+          </div>
+        </div>
+
+        <!-- conclusion text -->
+        <p
+          class="mx-auto max-w-3xl text-white/75 text-lg md:text-xl leading-relaxed tracking-wide"
+        >
+          Together, these are not separate qualities, but parts of the same
+          whole. Calm that steadies, warmth that welcomes, joy that lifts,
+          strength that endures, and character that gives them meaning.
+        </p>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="flex items-center justify-center">
+      <div
+        class="relative z-10 flex h-full w-full flex-col items-center justify-center text-center gap-8 px-4"
+      >
+        <h1 class="text-white text-4xl md:text-6xl font-semibold tracking-wide">
+          ✧˖°. Continue... .ᐟ
+        </h1>
+        <div class="flex flex-col gap-6 mt-4">
+          <!-- Top row -->
+          <div class="flex flex-col md:flex-row gap-6 justify-center">
+            <a
+              routerLink="/sky"
+              class="w-64 py-3 rounded-full border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-200"
+            >
+              -`♡´- Still, The Sky Waits ࣪ ִֶָ☾.
+            </a>
+          </div>
+
+          <!-- Bottom centered -->
+          <div class="flex justify-center">
+            <a
+              routerLink="/cat"
+              class="w-64 py-3 rounded-full border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-200"
+            >
+              ✦ /ᐠ˵- ⩊ -˵マ
+            </a>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</section>
