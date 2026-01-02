@@ -59,13 +59,14 @@ export class App {
     });
   }
 
-  private handleRouteMusic(url: string) {
-    if (url.startsWith('/cat')) {
-      this.setPlaylist(this.catPlaylist);
-    } else {
-      this.setPlaylist(this.currentPlaylist);
-    }
+private handleRouteMusic(url: string) {
+  if (url.startsWith('/cat')) {
+    this.setPlaylist(this.catPlaylist);
+  } else {
+    this.setPlaylist(this.defaultPlaylist);
   }
+}
+
 
   private startLoading() {
     this.startTime = Date.now();
@@ -97,18 +98,21 @@ export class App {
     }
   }
 
-  private currentPlaylist: string[] = [
-    'songs/willow.mp3',
-    'songs/fragility.mp3',
-  ];
+private defaultPlaylist: string[] = [
+  'songs/willow.mp3',
+  'songs/fragility.mp3',
+];
 
-  private catPlaylist: string[] = [
-    'songs/chevy - uwu.mp3',
-    'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
-    'songs/aha.mp3',
-    'songs/Original Song- MondaySunday (by Emma) (1).mp3',
-    'songs/can we (feat. Emi Choi).mp3'
-  ];
+private catPlaylist: string[] = [
+  'songs/chevy - uwu.mp3',
+  'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
+  'songs/aha.mp3',
+  'songs/Original Song- MondaySunday (by Emma) (1).mp3',
+  'songs/can we (feat. Emi Choi).mp3'
+];
+
+private currentPlaylist: string[] = [];
+
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -133,18 +137,21 @@ export class App {
   showPlayHint = signal(false);
   private firstClickListenerAdded = false;
 
-  ngOnInit(): void {
-    this.audio.preload = 'auto';
-    this.audio.loop = false;
-    this.audio.volume = 0.3;
-    this.showWelcomePopup();
+ngOnInit(): void {
+  this.audio.preload = 'auto';
+  this.audio.loop = false;
+  this.audio.volume = 0.3;
 
-    this.setPlaylist(this.currentPlaylist);
+  this.showWelcomePopup();
 
-    this.audio.addEventListener('ended', () => {
-      this.next();
-    });
-  }
+  // start with default playlist
+  this.setPlaylist(this.defaultPlaylist);
+
+  this.audio.addEventListener('ended', () => {
+    this.next();
+  });
+}
+
 
   private handleFirstClick = () => {
     // Just unlock audio; do NOT restart the song
