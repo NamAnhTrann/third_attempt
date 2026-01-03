@@ -5,10 +5,13 @@ import {
   HostListener,
   ViewChild,
 } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { PageFlip } from 'page-flip';
 
 @Component({
   selector: 'app-sky-wait',
+    imports: [RouterLink],
+
   standalone: true,
   templateUrl: './sky-wait.html',
   styleUrl: './sky-wait.scss',
