@@ -118,7 +118,7 @@ private story_list: string[] = [
   'songs/Philharmonia Orchestra, Laufey - Let You Break My Heart Again (Karaoke Version).mp3',
   'songs/Love Story (Piano Version).mp3',
   'songs/Watashino Uso.mp3',
-  'sonsg/Chainsaw Man The Movie_ Reze Arc  OST -  04 - first glance.mp3'
+  'songs/Chainsaw Man The Movie_ Reze Arc  OST -  04 - first glance.mp3'
 
 ]
 
@@ -159,7 +159,7 @@ ngOnInit(): void {
   this.setPlaylist(this.defaultPlaylist);
 
   this.audio.addEventListener('ended', () => {
-    this.next();
+    this.playNextTrack();
   });
 }
 
@@ -200,11 +200,14 @@ ngOnInit(): void {
     this.currentSong.set(raw.replace(/\.[^/.]+$/, ''));
   }
 
-  private next() {
-    if (!this.currentPlaylist.length) return;
-    this.load(this.i + 1);
-    this.play();
-  }
+private playNextTrack() {
+  if (!this.currentPlaylist.length) return;
+
+  const nextIndex = (this.i + 1) % this.currentPlaylist.length;
+  this.load(nextIndex);
+  this.play();
+}
+
 
   private async play() {
     try {

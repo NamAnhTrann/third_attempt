@@ -73,7 +73,21 @@ this.pageFlip.loadFromImages([
   '/book/27.png',
   '/book/28.png',
   '/book/29.png',
+  '/book/30.png',
+  '/book/31.png',
+  '/book/32.png',
+  '/book/33.png',
+  '/book/34.png',
+  '/book/35.png',
+  '/book/36.png',
+  '/book/37.png',
+  '/book/38.png',
+  '/book/39.png',
+  '/book/40.png',
+  '/book/41.png',
+  'book/last.png'
 ]);
+
 
   }
 
