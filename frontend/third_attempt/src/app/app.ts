@@ -60,12 +60,15 @@ export class App {
   }
 
 private handleRouteMusic(url: string) {
-  if (url.startsWith('/cat')) {
+  if (url.startsWith('/sky')) {
+    this.setPlaylist(this.story_list);
+  } else if (url.startsWith('/cat')) {
     this.setPlaylist(this.catPlaylist);
   } else {
     this.setPlaylist(this.defaultPlaylist);
   }
 }
+
 
 
   private startLoading() {
@@ -110,6 +113,14 @@ private catPlaylist: string[] = [
   'songs/Original Song- MondaySunday (by Emma) (1).mp3',
   'songs/can we (feat. Emi Choi).mp3'
 ];
+
+private story_list: string[] = [
+  'songs/Philharmonia Orchestra, Laufey - Let You Break My Heart Again (Karaoke Version).mp3',
+  'songs/Love Story (Piano Version).mp3',
+  'songs/Watashino Uso.mp3',
+  'sonsg/Chainsaw Man The Movie_ Reze Arc  OST -  04 - first glance.mp3'
+
+]
 
 private currentPlaylist: string[] = [];
 

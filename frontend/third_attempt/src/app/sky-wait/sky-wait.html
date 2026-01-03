@@ -1,1 +1,221 @@
+<section
+  id="1"
+  class="relative w-full flex flex-col items-center justify-center"
+>
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+  >
+    <source src="/background/bg_1_optimized.mp4" type="video/mp4" />
+  </video>
+  <a
+    routerLink="/"
+    class="cursor-pointer fixed top-6 left-1/2 -translate-x-1/2 z-[9999] px-6 py-2 rounded-full text-[11px] tracking-[0.35em] uppercase font-medium text-neutral-900 /70 backdrop-blur-lg border border-black/10 shadow-[0_8px_25px_rgba(0,0,0,0.08)] transition-all duration-500 hover: hover:shadow-[0_0_40px_rgba(255,255,255,0.7)] hover:-translate-y-0.5 text-white"
+  >
+    <span class="relative z-10">EXIT</span>
 
+    <!-- soft glow halo -->
+    <span
+      class="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl"
+      style="
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.2),
+          transparent 70%
+        );
+      "
+    ></span>
+  </a>
+
+  <swiper-container
+    slides-per-view="1"
+    speed="500"
+    navigation="true"
+    class="w-full h-screen flex items-center justify-center [--swiper-navigation-size:22px] [--swiper-theme-color:#F4A7B9]"
+  >
+    <!-- Title Slide -->
+    <swiper-slide
+      class="relative h-screen w-full overflow-hidden flex items-center justify-center"
+    >
+      <div class="relative z-10 flex flex-col items-center justify-center px-6">
+        <!-- Small pre-title spacing -->
+        <div class="h-6"></div>
+
+        <!-- Main title -->
+        <h1
+          class="text-white text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-none text-center"
+        >
+          Still, The Sky Waits
+        </h1>
+
+        <!-- Divider -->
+        <div class="mt-10 w-20 h-px bg-gray-300"></div>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide
+      class="relative h-screen w-full overflow-hidden flex items-center justify-center"
+    >
+      <div
+        class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-10 px-6"
+      >
+        <!-- Main statement -->
+        <h1
+          class="text-white text-4xl md:text-6xl font-semibold tracking-tight leading-snug"
+        >
+          This is my final gift for you
+        </h1>
+
+        <!-- Gentle follow-up -->
+        <p class="text-white text-lg md:text-xl tracking-wide">
+          have fun reading!
+        </p>
+
+        <!-- Divider -->
+        <div class="w-16 h-px bg-gray-300 mt-2"></div>
+      </div>
+    </swiper-slide>
+
+<swiper-slide
+  class="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center book-slide gap-6"
+>
+  <!-- Book -->
+  <div
+    #book
+    class="w-[420px] h-[580px]
+           md:w-[550px] md:h-[730px]
+           shadow-2xl pointer-events-auto"
+  ></div>
+
+  <!-- Controls -->
+  <div class="flex gap-6">
+    <button
+      (click)="prevPage()"
+      class="px-4 py-2 text-xs tracking-widest uppercase
+             rounded-full border border-white/30
+             text-white hover:bg-white/10 transition"
+    >
+      Prev
+    </button>
+
+    <button
+      (click)="nextPage()"
+      class="px-4 py-2 text-xs tracking-widest uppercase
+             rounded-full border border-white/30
+             text-white hover:bg-white/10 transition"
+    >
+      Next
+    </button>
+  </div>
+</swiper-slide>
+
+
+    <swiper-slide
+      class="relative h-screen w-full overflow-hidden flex items-center justify-center"
+    >
+      <div
+        class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-10 px-6"
+      >
+        <!-- Small intro -->
+        <p class="text-sm uppercase tracking-[0.3em] text-gray-100">
+          Final few words
+        </p>
+
+        <!-- Main message -->
+        <h1
+          class="text-white text-3xl md:text-5xl font-medium leading-snug tracking-tight"
+        >
+          See,
+          <br class="hidden md:block" />
+          I didn’t lie when I said
+        </h1>
+
+        <!-- Emphasis line -->
+        <p class="text-2xl md:text-4xl font-semibold italic text-white">
+          “Let action prove it.”
+        </p>
+
+        <!-- Subtle divider -->
+        <div class="w-16 h-px bg-gray-300 mt-2"></div>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide
+      class="relative h-screen w-full overflow-hidden flex items-center justify-center"
+    >
+      <div
+        class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-8 px-6"
+      >
+        <!-- Opening line -->
+        <h1
+          class="text-white text-3xl md:text-4xl font-medium leading-snug tracking-tight"
+        >
+          There are so many more things I could say.
+        </h1>
+
+        <!-- Body -->
+        <p class="text-white text-lg md:text-xl leading-relaxed">
+          But for now, I think this is where this attempt should end.
+        </p>
+
+        <!-- Emphasis -->
+        <p class="text-white text-xl md:text-2xl font-semibold">
+          Maybe one day, you’ll decide to unblock me.
+        </p>
+
+        <!-- Closing -->
+        <p class="text-white text-base md:text-lg leading-relaxed max-w-xl">
+          Until then, I’ll say my goodbye here. I’ll be quite busy, and I won’t
+          be making more of this anytime soon... <br />(i dont even know if you
+          like it, i hope that u do haha)
+        </p>
+
+        <!-- Divider -->
+        <div class="w-12 h-px bg-gray-300 mt-2"></div>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide
+      class="relative h-screen w-full overflow-hidden flex items-center justify-center"
+    >
+      <div
+        class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-10 px-6"
+      >
+        <!-- Main line -->
+        <h1
+          class="text-white text-3xl md:text-5xl font-semibold tracking-tight leading-snug"
+        >
+          Goodbye!
+          <span
+            class="text-gray-200 text-sm md:text-base font-semibold tracking-tight leading-snug"
+          >
+            <br />
+            (pls unblock LOL)<br /><br />
+          </span>
+          ٩(ˊᗜˋ*)و ♡
+        </h1>
+
+        <!-- Divider -->
+        <div class="w-14 h-px bg-gray-100"></div>
+
+        <!-- Closing sentiment -->
+        <p
+          class="text-white text-lg md:text-xl leading-relaxed max-w-2xl text-center"
+        >
+          And please do always remember to smile, becasue (you guessed it),
+          <br class="hidden md:block" />
+          I love your smile
+        </p>
+
+        <p class="mt-6 text-white text-sm md:text-base italic tracking-wide">
+          BYE BYE <br />(i miss u)
+        </p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</section>
