@@ -4,7 +4,7 @@
            bg-white text-center px-6"
   >
     <img
-      src="/assets/skate.gif"
+      src="/assets/ea.gif"
       alt="Loading"
       class="w-32 md:w-40 mb-10 opacity-90"
     />
@@ -21,9 +21,21 @@
 
 <button
   (click)="toggleMusic()"
-  class="hidden"
+  class="fixed top-6 left-6 z-[9998]
+flex items-center gap-2 px-4 py-2
+rounded-full bg-white/90 backdrop-blur-md
+text-gray-800 text-sm font-medium
+shadow-lg hover:scale-105 transition
+pointer-events-auto
+"
 >
-  {{ isMusicOn() ? 'Music On' : 'Music Off' }}
+  <span class="text-lg leading-none">
+    {{ isMusicOn() ? '⏸' : '▶' }}
+  </span>
+  <span class="hidden md:inline">
+    {{ isMusicOn() ? 'Pause' : 'Play' }}
+  </span>
 </button>
+
 
 <router-outlet></router-outlet>
