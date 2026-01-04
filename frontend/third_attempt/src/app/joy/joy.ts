@@ -117,17 +117,37 @@ export class Joy implements AfterViewInit, OnDestroy {
 
   /* ===================== FIREWORKS ===================== */
 
-  private startFireworks() {
-    this.fireworkInterval = setInterval(() => {
-      if (document.hidden) return;
+private startFireworks() {
+  this.fireworkInterval = setInterval(() => {
+    if (document.hidden) return;
 
-      const burst = 2 + Math.floor(Math.random() * 3);
+    const MAX_ROCKETS = 3;
 
-      for (let i = 0; i < burst; i++) {
-        this.rockets.push(new FireworkRocket(this.width, this.height));
+    if (this.rockets.length >= MAX_ROCKETS) return;
+
+    // chance to launch this tick
+    const spawnChance = Math.random();
+
+    // 60% chance to spawn a rocket
+    if (spawnChance < 0.6) {
+      this.rockets.push(
+        new FireworkRocket(this.width, this.height)
+      );
+
+      // 25% chance to immediately launch a second one
+      if (
+        Math.random() < 0.25 &&
+        this.rockets.length < MAX_ROCKETS
+      ) {
+        this.rockets.push(
+          new FireworkRocket(this.width, this.height)
+        );
       }
-    }, 900);
-  }
+    }
+  }, 800);
+}
+
+
 
   /* ===================== LOOP ===================== */
 
@@ -140,7 +160,7 @@ export class Joy implements AfterViewInit, OnDestroy {
     for (const e of this.entities) e.update(this.ctx);
 
     this.rockets = this.rockets.filter((r) => {
-      drawRocketTrail(this.ctx, r.x, r.y, r.color);
+      // drawRocketTrail(this.ctx, r.x, r.y, r.color);
 
       r.update(this.ctx, this.particles);
 
@@ -329,7 +349,7 @@ class FireworkRocket {
   constructor(private width: number, private height: number) {
     this.x = Math.random() * width;
     this.y = height + 30;
-    this.vy = Math.random() * 1.5 + 4;
+    this.vy = Math.random() * 1 + 2.5;
     this.targetY = height * (0.25 + Math.random() * 0.3);
     this.color = FireworkPalette.random();
     const shapes: FireworkRocket['shape'][] = [
@@ -351,8 +371,8 @@ class FireworkRocket {
     this.x += this.vx + sway;
     this.y -= this.vy;
 
-    ctx.fillStyle = this.color;
-    ctx.fillRect(this.x, this.y, 2, 12);
+    // ctx.fillStyle = this.color;
+    // ctx.fillRect(this.x, this.y, 2, 12);
 
     if (this.y <= this.targetY) {
       this.explode(particles);
