@@ -9,6 +9,7 @@ import {
 } from '@angular/router';
 import { Header } from './header/header';
 import Swal from 'sweetalert2';
+import { ViewChild, ElementRef, effect } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,9 @@ export class App {
   isMenuOpen = false;
   loading = false;
   loadingMessage = '';
+@ViewChild('songText') songText!: ElementRef<HTMLElement>;
+
+shouldMarquee = signal(false);
 
   private minDuration = 3000;
   private startTime = 0;
@@ -58,6 +62,26 @@ export class App {
       }
     });
   }
+ngAfterViewInit() {
+  effect(() => {
+    // depend on song changes
+    this.currentSong();
+
+    requestAnimationFrame(() => {
+      const el = this.songText?.nativeElement;
+      if (!el) return;
+
+      const parent = el.parentElement;
+      if (!parent) return;
+
+      const overflow = el.scrollWidth > parent.clientWidth;
+      this.shouldMarquee.set(overflow);
+    });
+  });
+}
+
+
+
 
   private handleRouteMusic(url: string) {
     if (url.startsWith('/sky')) {

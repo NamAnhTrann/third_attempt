@@ -2,6 +2,7 @@
   id="1"
   class="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden"
 >
+
   <!-- Background video -->
   <video
     autoplay
@@ -35,7 +36,8 @@
     class="w-full min-h-[100svh] flex items-center justify-center
            [--swiper-navigation-size:16px]
            md:[--swiper-navigation-size:22px]
-           [--swiper-theme-color:#F4A7B9]"
+           [--swiper-theme-color:#F4A7B9]
+            md:[--swiper-navigation-sides-offset:40px]"
   >
     <!-- Slide 1 -->
     <swiper-slide
@@ -81,6 +83,8 @@
 <swiper-slide
   class="relative min-h-[100svh] w-full flex flex-col items-center justify-center gap-4 px-4"
 >
+  <div class="absolute inset-0 bg-black/20 z-0"></div>
+
   <div
     #book
     class="w-[220px] h-[330px]
@@ -89,7 +93,7 @@
            shadow-2xl pointer-events-auto"
   ></div>
 
-  <div class="flex gap-3">
+  <div class="flex gap-3 z-10">
     <button
       (click)="prevPage()"
       class="px-3 py-1.5 text-[9px] md:text-xs
@@ -246,7 +250,7 @@
           (˶ᵔ ᵕ ᵔ˶)
         </p>
 
-        <span class="text-sm opacity-90">
+        <span class="text-sm text-white opacity-90">
           If you wanna read on Canvas lol then click this <br />
           <a
             href="https://www.canva.com/design/DAG9Pr18wRc/cO82xryljvicXxb3Xb1iEA/view"
