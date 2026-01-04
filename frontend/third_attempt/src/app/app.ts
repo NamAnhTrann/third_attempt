@@ -133,7 +133,7 @@ ngAfterViewInit() {
   private catPlaylist: string[] = [
     'songs/chevy - uwu.mp3',
     'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
-    'songs/aha.mp3',
+    'songs/Bye, Summer - IU.mp3',
     'songs/Original Song- MondaySunday (by Emma) (1).mp3',
     'songs/can we (feat. Emi Choi).mp3',
   ];
