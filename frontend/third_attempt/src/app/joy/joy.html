@@ -25,6 +25,7 @@
 
   <!-- SINGLE SWIPER -->
   <swiper-container
+    id="mainSwiper"
     slides-per-view="1"
     speed="300"
     effect="fade"
@@ -95,8 +96,8 @@
     </swiper-slide>
 
     <!-- SLIDE 4 -->
-    <swiper-slide class="flex items-center">
-      <div class="max-w-4xl px-10 text-left">
+    <swiper-slide id="1" class="flex items-center">
+      <div class="max-w-4xl px-10 text-left ml-24">
         <span
           class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
         >
@@ -128,8 +129,8 @@
     </swiper-slide>
 
     <!-- SLIDE 5 -->
-    <swiper-slide class="flex items-center">
-      <div class="max-w-4xl px-10 text-left">
+    <swiper-slide id="2" class="flex items-center">
+      <div class="max-w-4xl px-10 text-left ml-24">
         <span
           class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
         >
@@ -161,8 +162,8 @@
       </div>
     </swiper-slide>
     <!-- SLIDE 6 -->
-    <swiper-slide class="flex items-center">
-      <div class="max-w-4xl px-10 text-left">
+    <swiper-slide id="3" class="flex items-center">
+      <div class="max-w-4xl px-10 text-left ml-24">
         <span
           class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
         >
@@ -195,8 +196,8 @@
       </div>
     </swiper-slide>
     <!-- SLIDE 7 -->
-    <swiper-slide class="flex items-center">
-      <div class="max-w-4xl px-10 text-left">
+    <swiper-slide id="4" class="flex items-center">
+      <div class="max-w-4xl px-10 text-left ml-24">
         <span
           class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
         >
@@ -229,8 +230,8 @@
       </div>
     </swiper-slide>
     <!-- SLIDE 7 -->
-    <swiper-slide class="flex items-center">
-      <div class="max-w-4xl px-10 text-left">
+    <swiper-slide id="5" class="flex items-center">
+      <div class="max-w-4xl px-10 text-left ml-24">
         <span
           class="block text-xs uppercase tracking-[0.3em] text-white/70 mb-3"
         >
@@ -280,27 +281,27 @@
         <div
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 mb-12"
         >
-          <div class="essence glow-sky">
+          <div class="essence glow-sky" (click)="goToSlide(4)">
             <span class="essence-dot"></span>
             <p>Calm</p>
           </div>
 
-          <div class="essence glow-beige">
+          <div class="essence glow-beige" (click)="goToSlide(5)">
             <span class="essence-dot"></span>
             <p>Warmth</p>
           </div>
 
-          <div class="essence glow-pink">
+          <div class="essence glow-pink" (click)="goToSlide(6)">
             <span class="essence-dot"></span>
             <p>Joy</p>
           </div>
 
-          <div class="essence glow-amber">
+          <div class="essence glow-amber" (click)="goToSlide(7)">
             <span class="essence-dot"></span>
             <p>Strength</p>
           </div>
 
-          <div class="essence glow-pearl">
+          <div class="essence glow-pearl" (click)="goToSlide(8)">
             <span class="essence-dot"></span>
             <p>Character</p>
           </div>

@@ -59,17 +59,17 @@ export class App {
     });
   }
 
-private handleRouteMusic(url: string) {
-  if (url.startsWith('/sky')) {
-    this.setPlaylist(this.story_list);
-  } else if (url.startsWith('/cat')) {
-    this.setPlaylist(this.catPlaylist);
-  } else {
-    this.setPlaylist(this.defaultPlaylist);
+  private handleRouteMusic(url: string) {
+    if (url.startsWith('/sky')) {
+      this.setPlaylist(this.story_list);
+    } else if (url.startsWith('/cat')) {
+      this.setPlaylist(this.catPlaylist);
+    } else if (url.startsWith('/joy')) {
+      this.setPlaylist(this.essence_playlist);
+    } else {
+      this.setPlaylist(this.defaultPlaylist);
+    }
   }
-}
-
-
 
   private startLoading() {
     this.startTime = Date.now();
@@ -101,29 +101,32 @@ private handleRouteMusic(url: string) {
     }
   }
 
-private defaultPlaylist: string[] = [
-  'songs/willow.mp3',
-  'songs/fragility.mp3',
-];
+  private defaultPlaylist: string[] = [
+    'songs/willow.mp3',
+    'songs/fragility.mp3',
+  ];
 
-private catPlaylist: string[] = [
-  'songs/chevy - uwu.mp3',
-  'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
-  'songs/aha.mp3',
-  'songs/Original Song- MondaySunday (by Emma) (1).mp3',
-  'songs/can we (feat. Emi Choi).mp3'
-];
+  private catPlaylist: string[] = [
+    'songs/chevy - uwu.mp3',
+    'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
+    'songs/aha.mp3',
+    'songs/Original Song- MondaySunday (by Emma) (1).mp3',
+    'songs/can we (feat. Emi Choi).mp3',
+  ];
 
-private story_list: string[] = [
-  'songs/Philharmonia Orchestra, Laufey - Let You Break My Heart Again (Karaoke Version).mp3',
-  'songs/Love Story (Piano Version).mp3',
-  'songs/Watashino Uso.mp3',
-  'songs/Chainsaw Man The Movie_ Reze Arc  OST -  04 - first glance.mp3'
+  private story_list: string[] = [
+    'songs/Philharmonia Orchestra, Laufey - Let You Break My Heart Again (Karaoke Version).mp3',
+    'songs/Love Story (Piano Version).mp3',
+    'songs/Watashino Uso.mp3',
+    'songs/Chainsaw Man The Movie_ Reze Arc  OST -  04 - first glance.mp3',
+  ];
 
-]
+  private essence_playlist: string[] = [
+    'songs/Watashino Uso.mp3',
+    'songs/forward.mp3',
+  ];
 
-private currentPlaylist: string[] = [];
-
+  private currentPlaylist: string[] = [];
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -148,21 +151,20 @@ private currentPlaylist: string[] = [];
   showPlayHint = signal(false);
   private firstClickListenerAdded = false;
 
-ngOnInit(): void {
-  this.audio.preload = 'auto';
-  this.audio.loop = false;
-  this.audio.volume = 0.3;
+  ngOnInit(): void {
+    this.audio.preload = 'auto';
+    this.audio.loop = false;
+    this.audio.volume = 0.3;
 
-  this.showWelcomePopup();
+    this.showWelcomePopup();
 
-  // start with default playlist
-  this.setPlaylist(this.defaultPlaylist);
+    // start with default playlist
+    this.setPlaylist(this.defaultPlaylist);
 
-  this.audio.addEventListener('ended', () => {
-    this.playNextTrack();
-  });
-}
-
+    this.audio.addEventListener('ended', () => {
+      this.playNextTrack();
+    });
+  }
 
   private handleFirstClick = () => {
     // Just unlock audio; do NOT restart the song
@@ -194,20 +196,19 @@ ngOnInit(): void {
       ((index % this.currentPlaylist.length) + this.currentPlaylist.length) %
       this.currentPlaylist.length;
 
-    this.audio.src = this.currentPlaylist[this.i]; 
+    this.audio.src = this.currentPlaylist[this.i];
 
     const raw = this.currentPlaylist[this.i].split('/').pop() ?? '';
     this.currentSong.set(raw.replace(/\.[^/.]+$/, ''));
   }
 
-private playNextTrack() {
-  if (!this.currentPlaylist.length) return;
+  private playNextTrack() {
+    if (!this.currentPlaylist.length) return;
 
-  const nextIndex = (this.i + 1) % this.currentPlaylist.length;
-  this.load(nextIndex);
-  this.play();
-}
-
+    const nextIndex = (this.i + 1) % this.currentPlaylist.length;
+    this.load(nextIndex);
+    this.play();
+  }
 
   private async play() {
     try {
@@ -237,10 +238,10 @@ private playNextTrack() {
 
   showWelcomePopup() {
     Swal.fire({
-      title: 'This Might Be Better On Laptop',
+      title: '"Relationship are so transactional now"',
       html: `
       <p style="font-size: 1rem; line-height: 1.6;">
-        Tried to optimise this on mobile but I am bad at frontend, UI stuff, sorry •ᴗ•
+        That's what you said, now I'm going to attempt to change your mind on that :)
       </p>
     `,
       width: '32rem',
@@ -264,11 +265,10 @@ private playNextTrack() {
 
   showNextPopup() {
     Swal.fire({
-      title:
-        'If you see redacted text, tap on them and PLEASE SELECT THE OPTION BY ORDER ( i know u wont but please remember to read all )',
+      title: 'If you are on mobile, switch to your laptop',
       html: `
       <p style="font-size: 1rem; line-height: 1.6;">
-        Have Fun.
+        Have Funnnn :>
       </p>
     `,
       width: '32rem',
