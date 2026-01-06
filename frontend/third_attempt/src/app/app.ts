@@ -126,8 +126,8 @@ ngAfterViewInit() {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/willow.mp3',
-    'songs/fragility.mp3',
+    'songs/Kiri T - Fuvk The Fairytale [Official Lyric Video] [PRK912MXw8o].mp3',
+    'songs/sora.wav - best part (ft. chevy).mp3',
   ];
 
   private catPlaylist: string[] = [
