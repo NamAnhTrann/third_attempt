@@ -85,13 +85,21 @@
 >
   <div class="absolute inset-0 bg-black/20 z-0"></div>
 
-  <div
-    #book
-    class="w-[220px] h-[330px]
-           sm:w-[280px] sm:h-[420px]
-           md:w-[550px] md:h-[730px]
-           shadow-2xl pointer-events-auto"
-  ></div>
+<div
+  #book
+  class="
+    w-[180px] h-[240px]
+    sm:w-[220px] sm:h-[330px]
+    md:w-[360px] md:h-[480px]
+    lg:w-[550px] lg:h-[730px]
+    shadow-2xl
+    pointer-events-auto
+    overflow-hidden
+    scale-[0.85] sm:scale-90 md:scale-95 lg:scale-100
+    origin-center
+  "
+></div>
+
 
   <div class="flex gap-3 z-10">
     <button
