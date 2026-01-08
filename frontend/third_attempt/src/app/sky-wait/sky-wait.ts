@@ -36,15 +36,17 @@ export class SkyWait {
     this.unlocked = true;
   }
 
-  ngAfterViewInit() {
-    this.pageFlip = new PageFlip(this.bookRef.nativeElement, {
-      width: 550,
-      height: 730,
-      showCover: false,
-      useMouseEvents: true,
-      mobileScrollSupport: true,
-      swipeDistance: 30,
-    });
+ngAfterViewInit() {
+  this.pageFlip = new PageFlip(this.bookRef.nativeElement, {
+    width: 460,
+    height: 580,
+    showCover: false,
+    useMouseEvents: true,
+    mobileScrollSupport: true,
+    swipeDistance: 30,
+  });
+
+
 
 this.pageFlip.loadFromImages([
   '/book/1.png',
