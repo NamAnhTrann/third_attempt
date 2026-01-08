@@ -38,8 +38,8 @@ export class SkyWait {
 
 ngAfterViewInit() {
   this.pageFlip = new PageFlip(this.bookRef.nativeElement, {
-    width: 460,
-    height: 580,
+    width: 410,
+    height: 590,
     showCover: false,
     useMouseEvents: true,
     mobileScrollSupport: true,
