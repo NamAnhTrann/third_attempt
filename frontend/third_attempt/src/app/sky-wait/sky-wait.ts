@@ -10,7 +10,7 @@ import { PageFlip } from 'page-flip';
 
 @Component({
   selector: 'app-sky-wait',
-    imports: [RouterLink],
+  imports: [RouterLink],
 
   standalone: true,
   templateUrl: './sky-wait.html',
@@ -36,64 +36,60 @@ export class SkyWait {
     this.unlocked = true;
   }
 
-ngAfterViewInit() {
-  this.pageFlip = new PageFlip(this.bookRef.nativeElement, {
-    width: 410,
-    height: 590,
-    showCover: false,
-    useMouseEvents: true,
-    mobileScrollSupport: true,
-    swipeDistance: 30,
-  });
+  ngAfterViewInit() {
+    this.pageFlip = new PageFlip(this.bookRef.nativeElement, {
+      width: 410,
+      height: 590,
+      showCover: false,
+      useMouseEvents: true,
+      mobileScrollSupport: true,
+      swipeDistance: 30,
+    });
 
-
-
-this.pageFlip.loadFromImages([
-  '/book/1.png',
-  '/book/2.png',
-  '/book/3.png',
-  '/book/4.png',
-  '/book/5.png',
-  '/book/6.png',
-  '/book/7.png',
-  '/book/8.png',
-  '/book/9.png',
-  '/book/10.png',
-  '/book/11.png',
-  '/book/12.png',
-  '/book/13.png',
-  '/book/14.png',
-  '/book/15.png',
-  '/book/16.png',
-  '/book/17.png',
-  '/book/18.png',
-  '/book/19.png',
-  '/book/20.png',
-  '/book/21.png',
-  '/book/22.png',
-  '/book/23.png',
-  '/book/24.png',
-  '/book/25.png',
-  '/book/26.png',
-  '/book/27.png',
-  '/book/28.png',
-  '/book/29.png',
-  '/book/30.png',
-  '/book/31.png',
-  '/book/32.png',
-  '/book/33.png',
-  '/book/34.png',
-  '/book/35.png',
-  '/book/36.png',
-  '/book/37.png',
-  '/book/38.png',
-  '/book/39.png',
-  '/book/40.png',
-  '/book/41.png',
-  'book/last.png'
-]);
-
-
+    this.pageFlip.loadFromImages([
+      '/book/1.png',
+      '/book/2.png',
+      '/book/3.png',
+      '/book/4.png',
+      '/book/5.png',
+      '/book/6.png',
+      '/book/7.png',
+      '/book/8.png',
+      '/book/9.png',
+      '/book/10.png',
+      '/book/11.png',
+      '/book/12.png',
+      '/book/13.png',
+      '/book/14.png',
+      '/book/15.png',
+      '/book/16.png',
+      '/book/17.png',
+      '/book/18.png',
+      '/book/19.png',
+      '/book/20.png',
+      '/book/21.png',
+      '/book/22.png',
+      '/book/23.png',
+      '/book/24.png',
+      '/book/25.png',
+      '/book/26.png',
+      '/book/27.png',
+      '/book/28.png',
+      '/book/29.png',
+      '/book/30.png',
+      '/book/31.png',
+      '/book/32.png',
+      '/book/33.png',
+      '/book/34.png',
+      '/book/35.png',
+      '/book/36.png',
+      '/book/37.png',
+      '/book/38.png',
+      '/book/39.png',
+      '/book/40.png',
+      '/book/41.png',
+      'book/last.png',
+    ]);
   }
 
   nextPage() {
