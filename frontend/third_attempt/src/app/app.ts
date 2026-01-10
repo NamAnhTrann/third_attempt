@@ -126,6 +126,7 @@ ngAfterViewInit() {
   }
 
   private defaultPlaylist: string[] = [
+    'songs/eill  フィナーレ (Official Music Video).mp3',
         'songs/Green Day - Last Night On Earth (cover).mp3',
 
     'songs/Kiri T - Fuvk The Fairytale [Official Lyric Video] [PRK912MXw8o].mp3',
