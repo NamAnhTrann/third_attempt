@@ -22,9 +22,9 @@ export class App {
   isMenuOpen = false;
   loading = false;
   loadingMessage = '';
-@ViewChild('songText') songText!: ElementRef<HTMLElement>;
+  @ViewChild('songText') songText!: ElementRef<HTMLElement>;
 
-shouldMarquee = signal(false);
+  shouldMarquee = signal(false);
 
   private minDuration = 3000;
   private startTime = 0;
@@ -62,26 +62,23 @@ shouldMarquee = signal(false);
       }
     });
   }
-ngAfterViewInit() {
-  effect(() => {
-    // depend on song changes
-    this.currentSong();
+  ngAfterViewInit() {
+    effect(() => {
+      // depend on song changes
+      this.currentSong();
 
-    requestAnimationFrame(() => {
-      const el = this.songText?.nativeElement;
-      if (!el) return;
+      requestAnimationFrame(() => {
+        const el = this.songText?.nativeElement;
+        if (!el) return;
 
-      const parent = el.parentElement;
-      if (!parent) return;
+        const parent = el.parentElement;
+        if (!parent) return;
 
-      const overflow = el.scrollWidth > parent.clientWidth;
-      this.shouldMarquee.set(overflow);
+        const overflow = el.scrollWidth > parent.clientWidth;
+        this.shouldMarquee.set(overflow);
+      });
     });
-  });
-}
-
-
-
+  }
 
   private handleRouteMusic(url: string) {
     if (url.startsWith('/sky')) {
@@ -126,10 +123,12 @@ ngAfterViewInit() {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/eill  フィナーレ (Official Music Video).mp3',
-        'songs/Sunsets With You - Cliff, Yden (Official Lyric Video).mp3',
-
+    'songs/cynical.mp3',
     'songs/dhruv  double take (Lyrics).mp3',
+
+    'songs/eill  フィナーレ (Official Music Video).mp3',
+    'songs/Sunsets With You - Cliff, Yden (Official Lyric Video).mp3',
+
     'songs/sora.wav - best part (ft. chevy).mp3',
   ];
 
@@ -160,23 +159,21 @@ ngAfterViewInit() {
   }
 
   public nextTrack() {
-  this.playNextTrack();
-}
-
-public prevTrack() {
-  if (!this.currentPlaylist.length) return;
-
-  const prevIndex =
-    (this.i - 1 + this.currentPlaylist.length) %
-    this.currentPlaylist.length;
-
-  this.load(prevIndex);
-
-  if (this.isMusicOn()) {
-    this.play();
+    this.playNextTrack();
   }
-}
 
+  public prevTrack() {
+    if (!this.currentPlaylist.length) return;
+
+    const prevIndex =
+      (this.i - 1 + this.currentPlaylist.length) % this.currentPlaylist.length;
+
+    this.load(prevIndex);
+
+    if (this.isMusicOn()) {
+      this.play();
+    }
+  }
 
   closeMenu() {
     this.isMenuOpen = false;
