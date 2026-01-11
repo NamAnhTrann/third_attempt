@@ -127,9 +127,9 @@ ngAfterViewInit() {
 
   private defaultPlaylist: string[] = [
     'songs/eill  フィナーレ (Official Music Video).mp3',
-        'songs/Green Day - Last Night On Earth (cover).mp3',
+        'songs/Sunsets With You - Cliff, Yden (Official Lyric Video).mp3',
 
-    'songs/Kiri T - Fuvk The Fairytale [Official Lyric Video] [PRK912MXw8o].mp3',
+    'songs/dhruv  double take (Lyrics).mp3',
     'songs/sora.wav - best part (ft. chevy).mp3',
   ];
 
