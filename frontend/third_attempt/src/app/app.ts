@@ -159,6 +159,25 @@ ngAfterViewInit() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  public nextTrack() {
+  this.playNextTrack();
+}
+
+public prevTrack() {
+  if (!this.currentPlaylist.length) return;
+
+  const prevIndex =
+    (this.i - 1 + this.currentPlaylist.length) %
+    this.currentPlaylist.length;
+
+  this.load(prevIndex);
+
+  if (this.isMusicOn()) {
+    this.play();
+  }
+}
+
+
   closeMenu() {
     this.isMenuOpen = false;
   }

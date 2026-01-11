@@ -16,17 +16,58 @@
 </div>
 }
 
-<button
-  (click)="toggleMusic()"
-  class="fixed top-6 left-6 z-[9998] flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md text-gray-800 text-sm font-medium shadow-lg hover:scale-105 transition pointer-events-auto"
+<div
+  class="fixed top-6 left-6 z-[9998] flex items-center gap-2 group pointer-events-auto"
 >
-  <span class="text-lg leading-none">
-    {{ isMusicOn() ? "⏸" : "▶" }}
-  </span>
-  <span class="hidden md:inline">
-    {{ isMusicOn() ? "Pause" : "Play" }}
-  </span>
-</button>
+  <!-- Play / Pause (always visible) -->
+  <button
+    (click)="toggleMusic()"
+    class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-md
+           text-gray-800 text-sm font-medium shadow-lg hover:scale-105 transition"
+  >
+    <span class="text-lg leading-none">
+      {{ isMusicOn() ? '⏸' : '▶' }}
+    </span>
+    <span class="hidden md:inline">
+      {{ isMusicOn() ? 'Pause' : 'Play' }}
+    </span>
+  </button>
+
+  <!-- Hidden group -->
+  <div
+    class="flex items-center gap-2
+           opacity-0 scale-95 translate-x-[-6px]
+           pointer-events-none
+           transition-all duration-200 ease-out
+           group-hover:opacity-100
+           group-hover:scale-100
+           group-hover:translate-x-0
+           group-hover:pointer-events-auto"
+  >
+    <!-- Previous -->
+    <button
+      (click)="prevTrack()"
+      class="w-10 h-10 rounded-full bg-white/80 backdrop-blur-md text-gray-800 shadow-lg
+             hover:bg-white hover:scale-105 transition flex items-center justify-center"
+      aria-label="Previous track"
+    >
+      ‹‹
+    </button>
+
+    <!-- Next -->
+    <button
+      (click)="nextTrack()"
+      class="w-10 h-10 rounded-full bg-white/80 backdrop-blur-md text-gray-800 shadow-lg
+             hover:bg-white hover:scale-105 transition flex items-center justify-center"
+      aria-label="Next track"
+    >
+      ››
+    </button>
+  </div>
+</div>
+
+
+
 <div
   class="fixed top-6 right-6 z-[9998]
          flex items-center
