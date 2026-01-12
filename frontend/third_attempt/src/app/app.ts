@@ -123,13 +123,11 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/cynical.mp3',
-    'songs/dhruv  double take (Lyrics).mp3',
+    'songs/kanegi. - honestly, maybe (official lyric video).mp3',
 
+    'songs/AKASAKIBunny Girl - NaturalMusic Video.mp3',
+    'songs/Love Wins All.mp3',
     'songs/eill  フィナーレ (Official Music Video).mp3',
-    'songs/Sunsets With You - Cliff, Yden (Official Lyric Video).mp3',
-
-    'songs/sora.wav - best part (ft. chevy).mp3',
   ];
 
   private catPlaylist: string[] = [
