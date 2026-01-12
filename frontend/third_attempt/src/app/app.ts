@@ -123,11 +123,11 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/kanegi. - honestly, maybe (official lyric video).mp3',
+    'songs/Seycara  I See The World In Her Eyes.mp3',
 
-    'songs/AKASAKIBunny Girl - NaturalMusic Video.mp3',
-    'songs/Love Wins All.mp3',
-    'songs/eill  フィナーレ (Official Music Video).mp3',
+    'songs/Kim Chaewon - Fly Me To The Moon [COVER] (Lyrics).mp3',
+    'songs/女性が歌う灰色と青菅田将暉米津玄師(Covered by コバソロ & 春茶).mp3',
+    'songs/[Shokoどん] Violet Evergarden ED - Michishirube  English Cover (Full).mp3',
   ];
 
   private catPlaylist: string[] = [
