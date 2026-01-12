@@ -123,10 +123,12 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/Seycara  I See The World In Her Eyes.mp3',
+    'songs/Glue Song - beabadoobee (cover).mp3',
+    'songs/chevy - uwu.mp3',
 
     'songs/Kim Chaewon - Fly Me To The Moon [COVER] (Lyrics).mp3',
-    'songs/女性が歌う灰色と青菅田将暉米津玄師(Covered by コバソロ & 春茶).mp3',
+    'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
+    'songs/Seycara  I See The World In Her Eyes.mp3',
     'songs/[Shokoどん] Violet Evergarden ED - Michishirube  English Cover (Full).mp3',
   ];
 
