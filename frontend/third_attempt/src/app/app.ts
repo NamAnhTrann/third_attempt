@@ -123,10 +123,10 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-        'songs/i love this song lyrisc.mp3',
-
-    'songs/seycara _ illusions of the heart [full album] [BT9ABOe-7S0].mp3',
-    'songs/Kim Chaewon - Fly Me To The Moon [COVER] (Lyrics).mp3',
+    'songs/冬が終わる前に  清水翔太 Covered by りりあriria. [Lyric Video].mp3',
+    'songs/你的行李 - 謝震廷 feat. 徐靖玟  澪Rei ft. @煌Kirali Cover.mp3',
+    'songs/小森生活主題曲--日が落ちるまで 中日羅字幕 [qOY80y2EZEI].mp3',
+    'songs/[MV] Paul Kim(폴킴)  Me After You(너를 만나).mp3',
   ];
 
   private catPlaylist: string[] = [
