@@ -123,13 +123,10 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/Glue Song - beabadoobee (cover).mp3',
-    'songs/chevy - uwu.mp3',
+        'songs/i love this song lyrisc.mp3',
 
+    'songs/seycara _ illusions of the heart [full album] [BT9ABOe-7S0].mp3',
     'songs/Kim Chaewon - Fly Me To The Moon [COVER] (Lyrics).mp3',
-    'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
-    'songs/Seycara  I See The World In Her Eyes.mp3',
-    'songs/[Shokoどん] Violet Evergarden ED - Michishirube  English Cover (Full).mp3',
   ];
 
   private catPlaylist: string[] = [
