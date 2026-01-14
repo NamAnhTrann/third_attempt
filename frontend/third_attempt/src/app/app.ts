@@ -123,10 +123,11 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/冬が終わる前に  清水翔太 Covered by りりあriria. [Lyric Video].mp3',
-    'songs/你的行李 - 謝震廷 feat. 徐靖玟  澪Rei ft. @煌Kirali Cover.mp3',
-    'songs/小森生活主題曲--日が落ちるまで 中日羅字幕 [qOY80y2EZEI].mp3',
-    'songs/[MV] Paul Kim(폴킴)  Me After You(너를 만나).mp3',
+    'songs/wedding_stuff.mp3',
+    'songs/wedding_stuff.mp3',
+    'songs/this song will reach you when the time is right.mp3',
+    'songs/kanegi. - delulu (official lyric video).mp3',
+    'songs/baby_youre_my_type.mp3',
   ];
 
   private catPlaylist: string[] = [
