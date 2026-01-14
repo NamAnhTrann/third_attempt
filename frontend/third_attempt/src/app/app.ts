@@ -123,11 +123,9 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/wedding_stuff.mp3',
-    'songs/wedding_stuff.mp3',
+
     'songs/this song will reach you when the time is right.mp3',
-    'songs/kanegi. - delulu (official lyric video).mp3',
-    'songs/baby_youre_my_type.mp3',
+
   ];
 
   private catPlaylist: string[] = [
