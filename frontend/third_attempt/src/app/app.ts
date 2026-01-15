@@ -124,7 +124,7 @@ export class App {
 
   private defaultPlaylist: string[] = [
 
-    'songs/this song will reach you when the time is right.mp3',
+    'songs/kanegi. - delulu (official lyric video).mp3',
 
   ];
 
