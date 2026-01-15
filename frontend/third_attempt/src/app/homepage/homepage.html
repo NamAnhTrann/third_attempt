@@ -81,46 +81,110 @@
           class="w-full overflow-visible space-y-6"
         >
           <!-- PAGE 1 -->
-          <swiper-slide class="space-y-5">
-            <h1
-              class="text-white text-base sm:text-lg md:text-2xl font-semibold tracking-wide break-words"
-            >
-              Daily Updates / Daily Check-up <br />
-              Day 8 - Mid Day Check | Songs Credited: Jolly |
-              Songs For Her:
-              <a
-                href="https://www.youtube.com/playlist?list=PLKFuSyb0Ab9w2MKL2JfKxN56OhSQv3sqf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="ml-1 underline underline-offset-4 decoration-white/60 hover:decoration-white transition"
-              >
-                here
-              </a>
-            </h1>
+<swiper-slide class="space-y-6">
+  <h1
+    class="text-white text-base sm:text-lg md:text-2xl font-semibold tracking-wide break-words"
+  >
+    Daily Updates / Daily Check-up <br />
+    Day 8 - Night Checkup | Songs Credited: Jolly |
+    Songs For Her:
+    <a
+      href="https://www.youtube.com/playlist?list=PLKFuSyb0Ab9w2MKL2JfKxN56OhSQv3sqf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="ml-1 underline underline-offset-4 decoration-white/60 hover:decoration-white transition"
+    >
+      here
+    </a>
+  </h1>
 
-            <p
-              class="text-xs sm:text-sm md:text-[18px] leading-[1.75] sm:leading-relaxed tracking-normal sm:tracking-wide text-gray-100 break-words overflow-wrap-anywhere whitespace-normal"
-            >
-              Open this later...
-            </p>
 
-            <!-- NAV -->
-            <div class="flex justify-center pt-4">
-              <button
-                onclick="this.closest('swiper-container').swiper.slideNext()"
-                class="px-5 py-2 rounded-full bg-white/90 backdrop-blur-md text-gray-800 text-sm font-medium shadow-lg hover:scale-105 transition"
-              >
-                Yipity Yapity Yap Yap <3
-              </button>
-            </div>
-          </swiper-slide>
+<!-- VIDEO WRAPPER -->
+<div
+  class="relative w-full max-w-xl mx-auto rounded-xl overflow-hidden
+         shadow-lg bg-black aspect-video"
+>
+  <!-- VIDEO -->
+  <video
+    class="w-full h-full object-cover"
+    preload="metadata"
+    playsinline
+    poster="/video/aaa_thumbnail.jpg"
+  >
+    <source src="/video/aaa_optimized.mp4" type="video/mp4" />
+  </video>
+
+  <!-- BLACK OVERLAY (tap target) -->
+  <div
+    class="absolute inset-0 bg-black/60
+           flex items-center justify-center
+           active:bg-black/70 transition"
+    onclick="
+      const video = this.previousElementSibling;
+      video.play();
+      this.classList.add('hidden');
+    "
+  >
+    <!-- PLAY BUTTON -->
+    <div
+      class="w-20 h-20 sm:w-16 sm:h-16
+             rounded-full bg-black/80
+             flex items-center justify-center
+             border border-white/40
+             active:scale-95 transition"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        class="w-10 h-10 sm:w-8 sm:h-8
+               fill-white translate-x-[1px]"
+      >
+        <path d="M8 5v14l11-7z"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+
+
+  <p
+    class="text-xs sm:text-sm md:text-[18px] leading-[1.75] sm:leading-relaxed
+           tracking-normal sm:tracking-wide text-gray-100 break-words
+           overflow-wrap-anywhere whitespace-normal text-center"
+  >
+    Pause Music When Play, its top left (OMG PLS DONT JUDGE) <br> if video doesn't work here's the link to google drive <br><a
+  href="https://drive.google.com/drive/folders/1HdLGdx8TcUNr4g3YHQSimnv9PY_E9m4k?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="inline-block px-4 py-2 rounded-full
+         bg-white/90 text-gray-900 text-sm font-medium
+         shadow-md transition
+         hover:bg-white hover:scale-105 hover:shadow-lg"
+>
+  Click This
+</a>
+
+  </p>
+
+  <!-- NAV -->
+  <div class="flex justify-center pt-4">
+    <button
+      onclick="this.closest('swiper-container').swiper.slideNext()"
+      class="px-5 py-2 rounded-full bg-white/90 backdrop-blur-md
+             text-gray-800 text-sm font-medium shadow-lg
+             hover:scale-105 transition"
+    >
+      Yipity Yapity Yap Yap &lt;3
+    </button>
+  </div>
+</swiper-slide>
+
+
 
           <!-- PAGE 2 -->
           <swiper-slide class="w-full space-y-5 pb-16">
             <p
               class="text-xs sm:text-sm md:text-[18px] leading-relaxed tracking-normal sm:tracking-wide text-gray-100 break-words overflow-wrap-anywhere whitespace-normal"
             >
-              read song lyrics, that's so me bro (tap/hover top right icon for song name)
+              WHAT, ARE YOU HERE TO JUDGE??!?!?!?!?! I DONT WANNA HEAR IT BLA BLA BLA BLA BLA BLA BLA 
             </p>
 
             <!-- NAV -->
@@ -144,7 +208,7 @@
             <p
               class="text-xs sm:text-sm md:text-[18px] leading-relaxed tracking-normal sm:tracking-wide text-gray-100 break-words overflow-wrap-anywhere whitespace-normal"
             >
-              Did you miss me ? I miss you hella
+              YES. <br> BUT, BUT BUT BUT, YES, I ADORE YOU, HAVE A GOODNIGHTTTTT I'LL SEE U TMR, 
             </p>
 
             <!-- NAV -->
