@@ -123,10 +123,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-
-         'songs/think of me once in a while [13xSgV8NyqE].mp3',
-
-
+    'songs/Another life, another you (Suno AI) - Her.mp3',
   ];
 
   private catPlaylist: string[] = [
@@ -292,14 +289,12 @@ export class App {
       allowEscapeKey: true,
     }).then((res) => {
       if (res.isConfirmed) {
-
+        this.unlockMusic();
       } else {
-        // User DISMISSED popup 1 (close, outside click, esc) -> play music
         this.unlockMusic();
       }
     });
   }
-
 
   private unlockMusic() {
     if (!this.firstClickListenerAdded) {
