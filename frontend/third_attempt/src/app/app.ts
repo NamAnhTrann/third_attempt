@@ -124,7 +124,8 @@ export class App {
 
   private defaultPlaylist: string[] = [
 
-    'songs/kanegi. - delulu (official lyric video).mp3',
+         'songs/Watashino Uso.mp3',
+
 
   ];
 
@@ -277,11 +278,9 @@ export class App {
 
   showWelcomePopup() {
     Swal.fire({
-      title: '"Relationship are so transactional now"',
+      title: ':)',
       html: `
-      <p style="font-size: 1rem; line-height: 1.6;">
-        That's what you said, now I'm going to attempt to change your mind on that :)
-      </p>
+
     `,
       width: '32rem',
       padding: '1.5rem',
@@ -293,8 +292,7 @@ export class App {
       allowEscapeKey: true,
     }).then((res) => {
       if (res.isConfirmed) {
-        // User pressed NEXT -> show popup 2, do NOT play music
-        this.showNextPopup();
+
       } else {
         // User DISMISSED popup 1 (close, outside click, esc) -> play music
         this.unlockMusic();
@@ -302,27 +300,6 @@ export class App {
     });
   }
 
-  showNextPopup() {
-    Swal.fire({
-      title: 'If you are on mobile, switch to your laptop',
-      html: `
-      <p style="font-size: 1rem; line-height: 1.6;">
-        Have Funnnn :>
-      </p>
-    `,
-      width: '32rem',
-      padding: '1.5rem',
-      background: 'rgba(0,0,0,1)',
-      color: '#ffffffff',
-      confirmButtonText: 'Close',
-      confirmButtonColor: '#444141ff',
-      allowOutsideClick: true,
-      allowEscapeKey: true,
-    }).then(() => {
-      // User closed popup 2 -> NOW play music
-      this.unlockMusic();
-    });
-  }
 
   private unlockMusic() {
     if (!this.firstClickListenerAdded) {
