@@ -124,7 +124,7 @@ export class App {
 
   private defaultPlaylist: string[] = [
 
-         'songs/Watashino Uso.mp3',
+         'songs/think of me once in a while [13xSgV8NyqE].mp3',
 
 
   ];
