@@ -123,8 +123,8 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
+    'songs/In another life.mp3',
     'songs/Another life, another you (Suno AI) - Her.mp3',
-    'songs/song_that_remind_me_of_her.mp3',
   ];
   private catPlaylist: string[] = [
     'songs/chevy - uwu.mp3',
