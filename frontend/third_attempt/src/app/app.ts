@@ -123,7 +123,6 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-
     'songs/At least we’re under the same sky.mp3',
     'songs/Another life, another you (Suno AI) - Her.mp3',
   ];
