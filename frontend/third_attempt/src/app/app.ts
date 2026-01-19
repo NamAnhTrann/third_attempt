@@ -123,27 +123,29 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-         'assets/songs/at-least-were-under-the-same-sky.mp3',
+        'songs/Another life, another you (Suno AI) - Her.mp3',
 
-     'assets/songs/Another life, another you (Suno AI) - Her.mp3',
-
+    'songs/In another life.mp3',
+    'songs/Another life, another you (Suno AI) - Her.mp3',
   ];
   private catPlaylist: string[] = [
-         'assets/songs/Another life, another you (Suno AI) - Her.mp3',
-
-     'assets/songs/at-least-were-under-the-same-sky.mp3',
+    'songs/chevy - uwu.mp3',
+    'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
+    'songs/Bye, Summer - IU.mp3',
+    'songs/Original Song- MondaySunday (by Emma) (1).mp3',
+    'songs/can we (feat. Emi Choi).mp3',
   ];
 
   private story_list: string[] = [
-         'assets/songs/Another life, another you (Suno AI) - Her.mp3',
-
-     'assets/songs/at-least-were-under-the-same-sky.mp3',
+    'songs/Philharmonia Orchestra, Laufey - Let You Break My Heart Again (Karaoke Version).mp3',
+    'songs/Love Story (Piano Version).mp3',
+    'songs/Watashino Uso.mp3',
+    'songs/Chainsaw Man The Movie_ Reze Arc  OST -  04 - first glance.mp3',
   ];
 
   private essence_playlist: string[] = [
-         'assets/songs/Another life, another you (Suno AI) - Her.mp3',
-
-     'assets/songs/at-least-were-under-the-same-sky.mp3',
+    'songs/Watashino Uso.mp3',
+    'songs/forward.mp3',
   ];
 
   private currentPlaylist: string[] = [];
