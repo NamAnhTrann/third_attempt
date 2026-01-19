@@ -123,19 +123,27 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
+         'assets/songs/at-least-were-under-the-same-sky.mp3',
 
-    '/songs/Another life, another you (Suno AI) - Her.mp3',
+     'assets/songs/Another life, another you (Suno AI) - Her.mp3',
+
   ];
   private catPlaylist: string[] = [
-    'songs/Another life, another you (Suno AI) - Her.mp3',
+         'assets/songs/Another life, another you (Suno AI) - Her.mp3',
+
+     'assets/songs/at-least-were-under-the-same-sky.mp3',
   ];
 
   private story_list: string[] = [
-    'songs/Another life, another you (Suno AI) - Her.mp3',
+         'assets/songs/Another life, another you (Suno AI) - Her.mp3',
+
+     'assets/songs/at-least-were-under-the-same-sky.mp3',
   ];
 
   private essence_playlist: string[] = [
-    'songs/Another life, another you (Suno AI) - Her.mp3',
+         'assets/songs/Another life, another you (Suno AI) - Her.mp3',
+
+     'assets/songs/at-least-were-under-the-same-sky.mp3',
   ];
 
   private currentPlaylist: string[] = [];
