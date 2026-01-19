@@ -124,21 +124,21 @@ export class App {
 
   private defaultPlaylist: string[] = [
 
-    'songs/A playlist for quiet hearts.mp3',
+    'songs/At least we’re under the same sky.mp3',
     'songs/Another life, another you (Suno AI) - Her.mp3',
   ];
   private catPlaylist: string[] = [
-   'songs/A playlist for quiet hearts.mp3',
+    'songs/At least we’re under the same sky.mp3',
     'songs/Another life, another you (Suno AI) - Her.mp3',
   ];
 
   private story_list: string[] = [
-    'songs/A playlist for quiet hearts.mp3',
+    'songs/At least we’re under the same sky.mp3',
     'songs/Another life, another you (Suno AI) - Her.mp3',
   ];
 
   private essence_playlist: string[] = [
-   'songs/A playlist for quiet hearts.mp3',
+    'songs/At least we’re under the same sky.mp3',
     'songs/Another life, another you (Suno AI) - Her.mp3',
   ];
 
