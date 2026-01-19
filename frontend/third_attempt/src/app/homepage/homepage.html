@@ -12,7 +12,7 @@
   </video>
 
   <!-- Dark overlay -->
-  <div class="absolute inset-0 bg-black/20 z-10"></div>
+  <div class="absolute inset-0 bg-black/55 z-10"></div>
 
   <!-- Swiper -->
   <swiper-container
@@ -21,129 +21,184 @@
     navigation="true"
     class="relative z-20 w-full h-full flex items-center justify-center [--swiper-navigation-size:22px] [--swiper-navigation-sides-offset:12px] md:[--swiper-navigation-sides-offset:40px] [--swiper-theme-color:white]"
   >
-    <!-- Slide 1 -->
-    <swiper-slide class="flex items-center justify-center px-4">
-      <div class="max-w-2xl text-center space-y-8">
-        <!-- Title -->
-        <h1 class="text-white font-semibold tracking-wide">
-          <span class="block text-4xl md:text-6xl">
-            <span
-              class="text-white text-2xl sm:text-3xl font-semibold tracking-wide"
-            >
-              Farewell -
-              My Final Goodbye <br> Last Edit - Time Skip <br> 18 · January · 2026
-            </span>
-          </span>
-        </h1>
-        <!-- Update note -->
-        <p class="text-sm md:text-base text-gray-200 leading-relaxed"></p>
-      </div>
-    </swiper-slide>
-
+    <!-- OUTER SLIDE -->
     <swiper-slide class="flex items-center justify-start px-4 sm:px-6">
       <div class="max-w-2xl w-full mx-auto">
-        <!-- Content wrapper pushed slightly down from exact center -->
         <div class="relative -translate-y-4 sm:-translate-y-8">
           <!-- Title -->
           <h2
-            class="text-white text-xl sm:text-2xl md:text-4xl font-semibold tracking-wide mb-5"
+            class="text-white/90 text-sm sm:text-base md:text-lg font-medium tracking-wide mb-4 mt-8"
           >
-            One day, you might find yourself here (bottom right) <br />
+            <span class="opacity-80">Personal Diary</span>
+            <span class="mx-2 text-white/40">|</span>
+            <span class="text-white/70">
+              Old Content:
+            </span>
+            <a
+              href="/old-content-page"
+              class="ml-1 text-pink-300 underline underline-offset-4 decoration-pink-300/60 hover:decoration-pink-300 transition"
+            >
+              Click This
+            </a>
           </h2>
 
-          <!-- Paragraphs -->
-          <div
-            class="space-y-3 sm:space-y-5 text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed sm:leading-loose tracking-wide text-left"
+          <!-- INNER SWIPER -->
+          <swiper-container
+            slides-per-view="1"
+            speed="400"
+            space-between="16"
+            pagination="true"
+            class="w-full"
           >
-            <p>Dear Jolie, these are my finals words to you.</p>
-            <p>One day, you’ll find yourself on this page, if you do.</p>
+            <!-- INNER SLIDE 1 -->
+            <swiper-slide>
+              <h2
+                class="text-white text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide mb-5"
+              >
+                Precaution: If this reaches you (Jolie), then this is my
+                reflection, try not to judge it. <br />
+              </h2>
+              <div
+                class="space-y-3 sm:space-y-5 text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed sm:leading-loose tracking-wide text-left"
+              >
+                <p>
+                  There are a few things I wanted to clear out. Since I know you
+                  don't visit this anymore, this is more like a self-reflection
+                  for me. But if you do, this is worth a read :) <br /><br />
+                  Recall back to the day you sent the message on Discord. At
+                  first, when I received it, I shaked a little, I didn't
+                  genuinely feel "pain" at first, but it got me thinking for the
+                  night. I kept asking 'why?' or asked 'what was I missing?' I
+                  couldn't really wrap my head around the message. This was the
+                  first stage, eventually I knocked myself to sleep for a few
+                  hours. This was when I was in a "Denial" Stage. <br /><br />
+                  The next morning is when it started to hurt, a lot. I missed
+                  finding new songs in your "emo playlist", seeing that it's
+                  gone. Despite that, I still put that aside and went for a jog.
+                  The jog works well, it clears my head, makes me thinks
+                  straight. With that energy, I continue my day. But if you ask
+                  me if it actually hurt ?
+                </p>
+              </div>
+            </swiper-slide>
 
-            <p>
-              Know that I understand your words, I know that you’re scared. and
-              sad. But you’re braver than I am.
-            </p>
+            <!-- INNER SLIDE 2 -->
+            <swiper-slide>
+              <div
+                class="space-y-3 sm:space-y-5 text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed sm:leading-loose tracking-wide text-left"
+              >
+                <p>
+                  Mhm, it does. Even though you're always in the back of my
+                  mind, even though i always found myself checking if the "emo
+                  playlist" maybe would be back. I gaslight myself quite a lot,
+                  <br /><br />
+                  "Maybe I'm too fat?" <br />
+                  "Maybe I'm too short?" <br />
+                  "My score is too low, maybe I'm dumb?" <br />
+                  "I express too much, maybe I'm just a weirdo" <br />
+                  "Maybe I'm just not as good as other people"
+                  <br /><br />
+                  On the night of that night, I accepted these points, these
+                  became the main objectives that I will focus on. Because if
+                  there is a next time, i won't lose to anyone again.
+                  Admittedly, I was also in the wrong, but I stopped caring
+                  about it, I was tired.<br /><br />
+                  I don't care, as long as I work harder, then at least, maybe,
+                  the next time I see her, I won't lose to anyone again.
+                  <br /><br />I don't feel anything against her, but rather
+                  adoration. I couldn't make myself hate her, forget her, or
+                  whatever people these days say it. <br /><br />
+                  How can you bring yourself to hate somebody that you adore so
+                  much ? She didn't do anything wrong to begin with, it was me
+                  who initiated. But even understanding that.
+                </p>
+              </div>
+            </swiper-slide>
 
-            <p>
-              Smile, don’t lose your Joy.
-              <br />
-              Everything will be fine, although It may sting a bit, wounds will
-              heal :)
-            </p>
+            <!-- INNER SLIDE 3 -->
+            <swiper-slide>
+              <div
+                class="space-y-3 sm:space-y-5 text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed sm:leading-loose tracking-wide text-left"
+              >
+                <p>
+                  I guess this is my toxic trait, I stopped caring about the
+                  fact that she has a boy. I just didn't want to lose to him.
+                  But in a sense, this is good. At least I have a valid reason
+                  to improve. There was no hatred. If anything, I wanted to
+                  redeem myself. With this mindset, I gaslighted myself.
+                  <br /><br />
+                  And it worked. <br /><br />
+                  I do have to admit, my ego is very high and I dislike losing
+                  the most. Of course, only in important matters, who would care
+                  losing in something that doesn't matter ? But now, it does. I
+                  lost to him, and her in the process. <br /><br />
+                  Do I hate him ? Of course not, I don't even know him. Do I
+                  feel anything aginst him ? No, I don't care about him. He can
+                  be replace with anyone, and I would still keep up this
+                  mindset. <br /><br />
+                  But I still haven't answer myself the question that I kept
+                  asking myself, and my friends asked me. <br /><br />
+                  Why Jolie? <br /><br />
+                  Now, I will tell you why :)
+                </p>
+              </div>
+            </swiper-slide>
 
-            <p>
-              Thank you for letting me say goodbye, even though it was short.
-            </p>
+            <swiper-slide>
+              <div
+                class="space-y-3 sm:space-y-5 text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed sm:leading-loose tracking-wide text-left"
+              >
+                <p>
+                  Her birthday is on 8th of October. I presume her favourite
+                  colour is among either Cherry Blossom or Skyblue. Although she
+                  did mentioned "Gray" when I gifted her a gift. Jolie and I met
+                  in postgraduate school. We were friends for a while. One of
+                  the thing I love the most about Jolie is her eyes and smile.
+                  She could go all day long and talk, words can easily lie and
+                  be twisted. But her eyes can hardly lie, her smile sparks Joy
+                  that anyone hardly sees. <br /><br />
+                  Her idea of care is subtle, even though she doesn't say it
+                  clearly, and one may not see it. It is in her actions that
+                  proves. After all, she was the only person in 4 years, after 3
+                  other people who dated. She was the only person that made me
+                  go to the extent I go to. How else could you say it ? She was
+                  my Lookout for Wednesday, my Hope for Thursday, and my Joy and
+                  Excitement for Friday. <br /><br />
 
-            <p>
-              Even though it was indirect, thank you.
-              <br />
-              I had loved you, even though, our memories are little. I enjoyed
-              every moment of it. You won't be forgotten.
-            </p>
+                  Have I answer your question ? the "me" that reads this ?
+                  <br />
+                  "No, not yet, more." <br />
+                  Fineee. <br /><br />
+                  Oh, how could I forgot, I can't ever forget things when it
+                  comes to her. The spark in here eyes, the smile that she hid
+                  but radiates Joy. When she received that "Gray" bunny, I
+                  couldn't help it but to love her. How can I not ? I think on
+                  that day, I told myself, "Nah, I don't care anymore, I just
+                  want her". I swear I can't never forget that, her reaction,
+                  her smile, her laughs, her eyes at that moment. If people read
+                  this, you wouldn't get it. <br /><br />
+                  I already lost hope in "real love or true love" or whatever
+                  people call it before her. But there she is, standing there,
+                  right infront of me for the whole 2 years.
+                </p>
+              </div>
+            </swiper-slide>
 
-            <p>
-              Aha, I really did expect to see you say “goodbye”. But that’s
-              alright. Maybe in another life :)
-            </p>
-
-            <p>
-              As always, remember your breakkie, and, farewell.<br />
-              <span class="text-xs sm:text-sm text-gray-300">
-                もし別の人生があるなら、
-                もしかしたら、その時は君と僕だったのかもしれない。
-                夕暮れの浜辺で君の手を握り、
-                夜のキッチンで君の笑い声を聞きながら、
-                できる限りの形で君を愛せたのかもしれない。
-                それまでは、どうか無事でいて。愛している。ずっと愛している。
-              </span>
-            </p>
-            <p>
-              Sincerely, <br />
-              Nam Tran - Stevie
-            </p>
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-
-    <!-- Slide 4 -->
-    <swiper-slide class="flex items-center justify-center">
-      <div class="text-center space-y-8 px-4">
-        <h1 class="text-white text-4xl md:text-6xl font-semibold tracking-wide">
-          ✧˖°. Memorial ₊˚⊹⋆ <br />
-          Left Untouched
-        </h1>
-
-        <div class="flex flex-col gap-6 mt-6">
-          <!-- 1. Essence -->
-          <div class="flex justify-center">
-            <a
-              routerLink="/joy"
-              class="cursor-pointer w-64 py-3 rounded-full border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
-            >
-              ✿ Essence of Joy ⊹ ࣪ ˖
-            </a>
-          </div>
-
-          <!-- 2. Hehe -->
-          <div class="flex justify-center">
-            <a
-              routerLink="/cat"
-              class="cursor-pointer w-64 py-3 rounded-full border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
-            >
-              ✦ ( ꈍ◡ꈍ) hehe 𖹭.ᐟ
-            </a>
-          </div>
-
-          <!-- 3. Sky -->
-          <div class="flex justify-center">
-            <a
-              routerLink="/sky"
-              class="cursor-pointer w-64 py-3 rounded-full border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
-            >
-              -`♡´- Still, The Sky Waits ࣪ ִֶָ☾.
-            </a>
-          </div>
+            <swiper-slide>
+              <div
+                class="space-y-3 sm:space-y-5 text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed sm:leading-loose tracking-wide text-left"
+              >
+                <p>
+                  I hope that answers "Why Jolie". And as for now. Yes, she has
+                  a boy, I respect her decision fully and I hope she's the very
+                  best. But, if there's a next time, I will not lose her, I will
+                  not lose to any boy. Until then, my mindset is as is. That is
+                  all for this reflection.
+                </p>
+              </div>
+            </swiper-slide>
+          </swiper-container>
+          <!-- END INNER SWIPER -->
         </div>
       </div>
     </swiper-slide>
@@ -162,63 +217,63 @@
       <div
         class="absolute bottom-full right-0 mb-3 w-[220px] sm:w-[260px] rounded-xl bg-black/70 backdrop-blur-md border border-white/10 p-3 text-[10px] sm:text-[12px] text-white/80 leading-relaxed text-left shadow-xl opacity-0 scale-95 translate-y-1 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
       >
-<p>
-  Update:
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    Jolie
-  </span>, if you read this. Let's go on a
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    Time Skip
-  </span>
-  with me. No more
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    action
-  </span>, no more
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    words
-  </span>, no more
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    songs
-  </span>, no more
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    visits
-  </span>. Aren't you curious what type of
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    person
-  </span>
-  we become if we do
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    see each other again by pure chance
-  </span>
-  ? Let's do it, let's do our
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    best
-  </span>, 
-  <span
-    class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
-  >
-    lock in
-  </span> :)
-</p>
-
+        <p>
+          Update:
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            Jolie </span
+          >, if you read this. Let's go on a
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            Time Skip
+          </span>
+          with me. No more
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            action </span
+          >, no more
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            words </span
+          >, no more
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            songs </span
+          >, no more
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            visits </span
+          >. Aren't you curious what type of
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            person
+          </span>
+          we become if we do
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            see each other again by pure chance
+          </span>
+          ? Let's do it, let's do our
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            best </span
+          >,
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            lock in
+          </span>
+          :)
+        </p>
       </div>
     </div>
   </div>

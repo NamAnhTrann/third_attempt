@@ -1,0 +1,253 @@
+<section id="1" class="relative w-full h-screen overflow-hidden">
+  <!-- GLOBAL BACKGROUND VIDEO -->
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+  >
+    <source src="/background/bg_1_optimized.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/20 z-10"></div>
+
+  <!-- Swiper -->
+  <swiper-container
+    slides-per-view="1"
+    speed="500"
+    navigation="true"
+    class="relative z-20 w-full h-full flex items-center justify-center [--swiper-navigation-size:22px] [--swiper-navigation-sides-offset:12px] md:[--swiper-navigation-sides-offset:40px] [--swiper-theme-color:white]"
+  >
+    Slide 1
+    <swiper-slide class="flex items-center justify-center px-4">
+      <div class="max-w-2xl text-center space-y-8">
+        <!-- Title -->
+        <h1 class="text-white font-semibold tracking-wide">
+          <span class="block text-4xl md:text-6xl">
+            <span
+              class="text-white text-2xl sm:text-3xl font-semibold tracking-wide"
+            >
+              Farewell - My Final Goodbye <br />
+              Last Edit - Time Skip <br />
+              18 · January · 2026 <br />
+              <span
+                class="text-2xl text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+              >
+                <a
+                  href="/"
+                  class="text-xs sm:text-sm text-white/60 hover:text-white/90 underline underline-offset-4 decoration-white/30 hover:decoration-white/70 transition"
+                >
+                  Back To Home
+                </a>
+              </span>
+            </span>
+          </span>
+        </h1>
+        <!-- Update note -->
+        <p class="text-sm md:text-base text-gray-200 leading-relaxed"></p>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide class="flex items-center justify-start px-4 sm:px-6">
+      <div class="max-w-2xl w-full mx-auto">
+        <!-- Content wrapper pushed slightly down from exact center -->
+        <div class="relative -translate-y-4 sm:-translate-y-8">
+          <!-- Title -->
+          <h2
+            class="text-white text-xl sm:text-2xl md:text-4xl font-semibold tracking-wide mb-5"
+          >
+            One day, you might find yourself here (bottom right) <br />
+          </h2>
+
+          <!-- Paragraphs -->
+          <div
+            class="space-y-3 sm:space-y-5 text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed sm:leading-loose tracking-wide text-left"
+          >
+            <p>Dear Jolie, these are my finals words to you.</p>
+            <p>One day, you’ll find yourself on this page, if you do.</p>
+
+            <p>
+              Know that I understand your words, I know that you’re scared. and
+              sad. But you’re braver than I am.
+            </p>
+
+            <p>
+              Smile, don’t lose your Joy.
+              <br />
+              Everything will be fine, although It may sting a bit, wounds will
+              heal :)
+            </p>
+
+            <p>
+              Thank you for letting me say goodbye, even though it was short.
+            </p>
+
+            <p>
+              Even though it was indirect, thank you.
+              <br />
+              I had loved you, even though, our memories are little. I enjoyed
+              every moment of it. You won't be forgotten.
+            </p>
+
+            <p>
+              Aha, I really did expect to see you say “goodbye”. But that’s
+              alright. Maybe in another life :)
+            </p>
+
+            <p>
+              As always, remember your breakkie, and, farewell.<br />
+              <span class="text-xs sm:text-sm text-gray-300">
+                もし別の人生があるなら、
+                もしかしたら、その時は君と僕だったのかもしれない。
+                夕暮れの浜辺で君の手を握り、
+                夜のキッチンで君の笑い声を聞きながら、
+                できる限りの形で君を愛せたのかもしれない。
+                それまでは、どうか無事でいて。愛している。ずっと愛している。
+              </span>
+            </p>
+            <p>
+              Sincerely, <br />
+              Nam Tran - Stevie
+            </p>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+
+    <!-- Slide 4 -->
+    <swiper-slide class="flex items-center justify-center">
+      <div class="text-center space-y-8 px-4">
+        <h1 class="text-white text-4xl md:text-6xl font-semibold tracking-wide">
+          ✧˖°. Memorial ₊˚⊹⋆ <br />
+          Left Untouched
+        </h1>
+
+        <div class="flex flex-col gap-6 mt-6">
+          <!-- 1. Essence -->
+          <div class="flex justify-center">
+            <a
+              routerLink="/joy"
+              class="cursor-pointer w-64 py-3 rounded-full border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
+            >
+              ✿ Essence of Joy ⊹ ࣪ ˖
+            </a>
+          </div>
+
+          <!-- 2. Hehe -->
+          <div class="flex justify-center">
+            <a
+              routerLink="/cat"
+              class="cursor-pointer w-64 py-3 rounded-full border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
+            >
+              ✦ ( ꈍ◡ꈍ) hehe 𖹭.ᐟ
+            </a>
+          </div>
+
+          <!-- 3. Sky -->
+          <div class="flex justify-center">
+            <a
+              routerLink="/sky"
+              class="cursor-pointer w-64 py-3 rounded-full border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 transition"
+            >
+              -`♡´- Still, The Sky Waits ࣪ ִֶָ☾.
+            </a>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+  <!-- bottom hint + expandable note -->
+  <div class="fixed bottom-3 right-3 sm:bottom-4 sm:right-4 z-40">
+    <div class="group relative">
+      <!-- hint -->
+      <div
+        class="text-[10px] sm:text-[12px] text-white/70 tracking-widest select-none cursor-pointer text-right"
+      >
+        ⟢ ₍^. .^₎⟆ ☁︎ (Tap Me)
+      </div>
+
+      <!-- popup -->
+      <div
+        class="absolute bottom-full right-0 mb-3 w-[220px] sm:w-[260px] rounded-xl bg-black/70 backdrop-blur-md border border-white/10 p-3 text-[10px] sm:text-[12px] text-white/80 leading-relaxed text-left shadow-xl opacity-0 scale-95 translate-y-1 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
+      >
+        <p>
+          Update:
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            Jolie </span
+          >, if you read this. Let's go on a
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            Time Skip
+          </span>
+          with me. No more
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            action </span
+          >, no more
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            words </span
+          >, no more
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            songs </span
+          >, no more
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            visits </span
+          >. Aren't you curious what type of
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            person
+          </span>
+          we become if we do
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            see each other again by pure chance
+          </span>
+          ? Let's do it, let's do our
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            best </span
+          >,
+          <span
+            class="font-semibold text-pink-300 underline underline-offset-4 decoration-pink-300/60"
+          >
+            lock in
+          </span>
+          :)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 z-40">
+    <div class="group relative">
+      <!-- hint -->
+      <div
+        class="text-[10px] sm:text-[12px] text-white/70 tracking-widest select-none cursor-pointer text-left"
+      >
+        <a
+          href="https://www.youtube.com/watch?v=miis5es9Nn4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ⟢ ˙ᵕ˙ ☁︎
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
