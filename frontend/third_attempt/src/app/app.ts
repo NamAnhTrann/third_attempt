@@ -123,28 +123,21 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-        '/songs/高瀬統也  Stay with me  (Official Lyric Video).mp3',
-
-    '/songs/same moon, different city.mp3',
-    '/songs/kanegi. - sip of your name (official lyric video) (1).mp3',
+    '/songs/mr. muffin - im_not_dumb.mp3',
+    '/songs/say that!.mp3',
     '/songs/Another life, another you (Suno AI) - Her.mp3',
-        '/songs/Porter Robinson & WEDNESDAY CAMPANELLA - fullmoon lullaby.mp3',
-
 
   ];
   private catPlaylist: string[] = [
     'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
-
   ];
 
   private story_list: string[] = [
-        'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
-
+    'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
 
   private essence_playlist: string[] = [
-        'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
-
+    'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
 
   private currentPlaylist: string[] = [];
