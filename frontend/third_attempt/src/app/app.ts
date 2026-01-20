@@ -123,11 +123,11 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-        'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
-
+        'songs/kanegi. - sip of your name (official lyric video) (1).mp3',
+        'songs/same moon, different city.mp3',
         'songs/Another life, another you (Suno AI) - Her.mp3',
 
-    'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
+ 
   ];
   private catPlaylist: string[] = [
     'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
@@ -273,7 +273,7 @@ export class App {
 
   showWelcomePopup() {
     Swal.fire({
-      title: ':)',
+      title: 'lol',
       html: `
 
     `,
@@ -281,7 +281,7 @@ export class App {
       padding: '1.5rem',
       background: 'rgba(0,0,0,1)',
       color: '#ffffffff',
-      confirmButtonText: 'Next',
+      confirmButtonText: 'exit',
       confirmButtonColor: '#444141ff',
       allowOutsideClick: true,
       allowEscapeKey: true,
