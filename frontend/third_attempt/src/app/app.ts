@@ -123,11 +123,11 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-        'songs/kanegi. - sip of your name (official lyric video) (1).mp3',
-        'songs/same moon, different city.mp3',
-        'songs/Another life, another you (Suno AI) - Her.mp3',
+    '/songs/Porter Robinson & WEDNESDAY CAMPANELLA - fullmoon lullaby.mp3',
+    '/songs/same moon, different city.mp3',
+    '/songs/kanegi. - sip of your name (official lyric video) (1).mp3',
+    '/songs/Another life, another you (Suno AI) - Her.mp3',
 
- 
   ];
   private catPlaylist: string[] = [
     'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
