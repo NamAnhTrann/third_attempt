@@ -123,6 +123,8 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
+        '/songs/高瀬統也  Stay with me  (Official Lyric Video).mp3',
+
     '/songs/same moon, different city.mp3',
     '/songs/kanegi. - sip of your name (official lyric video) (1).mp3',
     '/songs/Another life, another you (Suno AI) - Her.mp3',
