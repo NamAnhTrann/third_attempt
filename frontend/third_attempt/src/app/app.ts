@@ -123,8 +123,8 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    '/songs/mr. muffin - im_not_dumb.mp3',
-    '/songs/say that!.mp3',
+    '/songs/Mr. Muffin - You, Me, and My Existential Crisis  LYRICS.mp3',
+    '/songs/kanegi. - not because (official lyric video).mp3',
     '/songs/Another life, another you (Suno AI) - Her.mp3',
 
   ];
