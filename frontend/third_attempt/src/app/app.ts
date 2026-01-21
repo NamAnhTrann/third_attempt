@@ -123,10 +123,10 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    '/songs/Mr. Muffin - You, Me, and My Existential Crisis  LYRICS.mp3',
-    '/songs/kanegi. - not because (official lyric video).mp3',
-    '/songs/Another life, another you (Suno AI) - Her.mp3',
+    '/songs/the most heavenly voice.mp3',
 
+    '/songs/Mr. Muffin - You, Me, and My Existential Crisis  LYRICS.mp3',
+    '/songs/Another life, another you (Suno AI) - Her.mp3',
   ];
   private catPlaylist: string[] = [
     'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
