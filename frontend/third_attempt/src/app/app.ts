@@ -123,9 +123,10 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    '/songs/the most heavenly voice.mp3',
-
-    '/songs/Mr. Muffin - You, Me, and My Existential Crisis  LYRICS.mp3',
+    '/songs/Nancy Kwai 歸綽嶢 - Miss you in my ways (Official Audio).mp3',
+    '/songs/Way back home - SHAUN 高校生cover 1key.mp3',
+    '/songs/Kim Chaewon - Fly Me To The Moon [COVER] (Lyrics).mp3',
+    '/songs/how deep is your love l cover (ENG SUB).mp3',
     '/songs/Another life, another you (Suno AI) - Her.mp3',
   ];
   private catPlaylist: string[] = [
