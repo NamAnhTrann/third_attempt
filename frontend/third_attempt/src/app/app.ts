@@ -123,7 +123,8 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
+    'songs/kanegi. - blame me (official lyric video).mp3',
+    // 'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
   private catPlaylist: string[] = [
     'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
