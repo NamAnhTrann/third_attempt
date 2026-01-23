@@ -123,7 +123,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/kanegi. - blame me (official lyric video).mp3',
+    'songs/Glue Song - beabadoobee (cover).mp3',
     // 'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
   private catPlaylist: string[] = [
