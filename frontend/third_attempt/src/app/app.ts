@@ -123,11 +123,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    '/songs/Nancy Kwai 歸綽嶢 - Miss you in my ways (Official Audio).mp3',
-    '/songs/Way back home - SHAUN 高校生cover 1key.mp3',
-    '/songs/Kim Chaewon - Fly Me To The Moon [COVER] (Lyrics).mp3',
-    '/songs/how deep is your love l cover (ENG SUB).mp3',
-    '/songs/Another life, another you (Suno AI) - Her.mp3',
+    'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
   private catPlaylist: string[] = [
     'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
@@ -270,15 +266,15 @@ export class App {
 
   showWelcomePopup() {
     Swal.fire({
-      title: 'lol',
+      title: 'What If',
       html: `
-
+      A Fictional Perhaps
     `,
       width: '32rem',
       padding: '1.5rem',
       background: 'rgba(0,0,0,1)',
       color: '#ffffffff',
-      confirmButtonText: 'exit',
+      confirmButtonText: 'Continue',
       confirmButtonColor: '#444141ff',
       allowOutsideClick: true,
       allowEscapeKey: true,
