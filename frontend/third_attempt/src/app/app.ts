@@ -46,13 +46,30 @@ export class App {
           this.isFirstNavigation = false;
           return;
         }
+
+        const currentPath = this.router.url.split('#')[0];
+        const nextPath = event.url.split('#')[0];
+
+        // Ignore hash-only navigation (#2, #story, etc.)
+        if (currentPath === nextPath) {
+          return;
+        }
+
         this.startLoading();
       }
 
-      if (event instanceof NavigationEnd) {
-        this.handleRouteMusic(event.urlAfterRedirects);
-        this.stopLoading();
-      }
+   if (event instanceof NavigationEnd) {
+  const currentPath = this.router.url.split('#')[0];
+  const nextPath = event.urlAfterRedirects.split('#')[0];
+
+  // Ignore hash-only navigation
+  if (currentPath !== nextPath) {
+    this.handleRouteMusic(event.urlAfterRedirects);
+  }
+
+  this.stopLoading();
+}
+
 
       if (
         event instanceof NavigationCancel ||
@@ -123,7 +140,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/Glue Song - beabadoobee (cover).mp3',
+    'songs/melancholy.mp3 (1).mp3',
     // 'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
   private catPlaylist: string[] = [
