@@ -139,9 +139,8 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/melancholy.mp3 (1).mp3',
-    'songs/Love Story (Piano Version).mp3',
-
+    'songs/Mr. Muffin - Only You In My Ears (Vr.2)  Lyric Video (1).mp3',
+    
 
     // 'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
