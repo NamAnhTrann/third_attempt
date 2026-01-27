@@ -139,7 +139,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/its_3am_let_your_heart_rest.mp3',
+    'songs/her.mp3',
     // 'songs/Mr. Muffin - Only You In My Ears (Vr.2)  Lyric Video (1).mp3',
     
 
