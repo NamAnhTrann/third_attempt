@@ -286,9 +286,9 @@ export class App {
 
   showWelcomePopup() {
     Swal.fire({
-      title: 'What If',
+      title: '',
       html: `
-      A Fictional Perhaps
+      
     `,
       width: '32rem',
       padding: '1.5rem',
