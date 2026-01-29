@@ -139,7 +139,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/her.mp3',
+    'songs/kanegi. - blame me (official lyric video) (1).mp3',
     // 'songs/Mr. Muffin - Only You In My Ears (Vr.2)  Lyric Video (1).mp3',
     
 
