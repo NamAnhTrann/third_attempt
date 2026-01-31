@@ -139,7 +139,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/keshi - Dream (Instrumental).mp3',
+    'songs/her.mp3',
     // 'songs/Mr. Muffin - Only You In My Ears (Vr.2)  Lyric Video (1).mp3',
     
 
