@@ -139,23 +139,22 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/her.mp3',
-    // 'songs/Mr. Muffin - Only You In My Ears (Vr.2)  Lyric Video (1).mp3',
-    
+
+    'songs/chevy - i know a place.mp3',
+    'songs/hearts.mp3',
+    'songs/can we (feat. Emi Choi).mp3',
+    'songs/chevy - uwu (official audio w lyrics).mp3',
+    'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
+    'songs/sora.wav - best part (ft. chevy) (1).mp3',
+    'songs/Another life, another you (Suno AI) - Her.mp3'
 
     // 'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
-  private catPlaylist: string[] = [
-    'songs/melancholy.mp3 (1).mp3',
-  ];
+  private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
-  private story_list: string[] = [
-    'songs/melancholy.mp3 (1).mp3',
-  ];
+  private story_list: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
-  private essence_playlist: string[] = [
-    'songs/melancholy.mp3 (1).mp3',
-  ];
+  private essence_playlist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
   private currentPlaylist: string[] = [];
 
