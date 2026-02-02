@@ -139,6 +139,9 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
+    'songs/If I Could Ride a Bike.mp3',
+    'songs/my unsent love letter.mp3',
+    'songs/Kim Chaewon - Fly Me To The Moon [COVER] (Lyrics) (1).mp3',
 
     'songs/chevy - i know a place.mp3',
     'songs/hearts.mp3',
