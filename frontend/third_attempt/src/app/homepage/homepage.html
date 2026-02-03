@@ -111,19 +111,42 @@
       ></div>
 
       <div class="flex gap-3 z-10">
-        <button
-          (click)="prevPage()"
-          class="px-3 py-1.5 text-[9px] md:text-xs tracking-widest uppercase rounded-full border border-white/30 text-white hover:bg-white/10 transition"
-        >
-          Prev
-        </button>
+<button
+  (click)="prevPage()"
+  class="px-4 py-2
+         text-[10px] md:text-xs
+         tracking-[0.2em] uppercase
+         font-semibold
+         rounded-full
+         border border-sky-300
+         text-sky-900
+         bg-sky-200
+         hover:bg-sky-300
+         shadow-md
+         transition-all duration-300
+         hover:scale-105"
+>
+  Prev
+</button>
 
-        <button
-          (click)="nextPage()"
-          class="px-3 py-1.5 text-[9px] md:text-xs tracking-widest uppercase rounded-full border border-white/30 text-white hover:bg-white/10 transition"
-        >
-          Next
-        </button>
+<button
+  (click)="nextPage()"
+  class="px-4 py-2
+         text-[10px] md:text-xs
+         tracking-[0.2em] uppercase
+         font-semibold
+         rounded-full
+         border border-sky-300
+         text-sky-900
+         bg-sky-200
+         hover:bg-sky-300
+         shadow-md
+         transition-all duration-300
+         hover:scale-105"
+>
+  Next
+</button>
+
       </div>
     </swiper-slide>
 
