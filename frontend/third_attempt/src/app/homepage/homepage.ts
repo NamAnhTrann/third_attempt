@@ -32,7 +32,7 @@ export class Homepage {
 
     ngAfterViewInit() {
     this.pageFlip = new PageFlip(this.bookRef.nativeElement, {
-      width: 410,
+      width: 400,
       height: 550,
       showCover: false,
       useMouseEvents: true,
