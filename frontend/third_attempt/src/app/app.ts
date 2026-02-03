@@ -139,17 +139,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/If I Could Ride a Bike.mp3',
-    'songs/my unsent love letter.mp3',
-    'songs/Kim Chaewon - Fly Me To The Moon [COVER] (Lyrics) (1).mp3',
-
-    'songs/chevy - i know a place.mp3',
-    'songs/hearts.mp3',
-    'songs/can we (feat. Emi Choi).mp3',
-    'songs/chevy - uwu (official audio w lyrics).mp3',
-    'songs/Nancy Kwai 歸綽嶢 - Teaser (Official Audio).mp3',
-    'songs/sora.wav - best part (ft. chevy) (1).mp3',
-    'songs/Another life, another you (Suno AI) - Her.mp3'
+    'songs/Bryant Barnes - Want You All The Time (Lyric Visualizer) (1).mp3'
 
     // 'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
   ];
