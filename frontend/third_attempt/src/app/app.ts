@@ -139,7 +139,8 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/meant for you [c1r0iMQJli4].mp3',
+    'songs/I loved you, truly.  Playlist.mp3',
+
  
 
     // 'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
