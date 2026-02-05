@@ -139,7 +139,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/I loved you, truly.  Playlist.mp3',
+    'songs/Pasilyo - SunKissed Lola (English Cover by a!ka).mp3',
 
  
 
