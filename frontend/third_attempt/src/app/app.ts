@@ -139,7 +139,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/I like you the most - English version by SHAD  Lyrics  Estr.mp3',
+    'songs/唯獨你是不可取替 covered by 劉蘊晴Rachel ft. Judas Law.mp3',
 
  
 
