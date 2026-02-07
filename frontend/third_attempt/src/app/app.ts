@@ -139,7 +139,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/唯獨你是不可取替 covered by 劉蘊晴Rachel ft. Judas Law.mp3',
+    'songs/a playlist for when you feelin alone..mp3',
 
  
 
