@@ -139,7 +139,7 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/a playlist for when you feelin alone..mp3',
+    'songs/her.mp3',
 
  
 
