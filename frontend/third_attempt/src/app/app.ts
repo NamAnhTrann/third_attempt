@@ -280,9 +280,9 @@ export class App {
 
   showWelcomePopup() {
     Swal.fire({
-      title: 'February Stuff',
+      title: 'meow',
       html: `
-      Hey can u read on a bigger device today ? pls :>
+      meow ?
     `,
       width: '32rem',
       padding: '1.5rem',
