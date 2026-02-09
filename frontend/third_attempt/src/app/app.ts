@@ -139,11 +139,10 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-    'songs/Pasilyo - SunKissed Lola (English Cover by a!ka).mp3',
 
  
 
-    // 'songs/at-least-were-under-the-same-sky-v3.mp3.mp3',
+    'songs/3_am.mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
@@ -280,9 +279,9 @@ export class App {
 
   showWelcomePopup() {
     Swal.fire({
-      title: 'meow',
+      title: '',
       html: `
-      meow ?
+    
     `,
       width: '32rem',
       padding: '1.5rem',
