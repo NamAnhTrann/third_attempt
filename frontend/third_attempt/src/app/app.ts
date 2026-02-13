@@ -142,7 +142,7 @@ export class App {
 
  
 
-    'songs/3_am.mp3',
+    'songs/Goshintai.mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
