@@ -142,7 +142,7 @@ export class App {
 
  
 
-    'songs/Goshintai.mp3',
+    'songs/kanegi. - honestly, maybe (female ver.)  official lyric video.mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
