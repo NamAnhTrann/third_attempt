@@ -1,0 +1,46 @@
+# Vercel Web Analytics Implementation
+
+## Summary
+Cleaned up and optimized the Vercel Web Analytics implementation for this Angular application.
+
+## Changes Made
+
+### Modified Files
+
+1. **src/main.ts**
+   - Improved code formatting and added comments for clarity
+   - Uses the `inject()` function from `@vercel/analytics` to initialize Web Analytics
+   - This is the recommended approach for Angular applications (categorized as "other" frameworks in Vercel's documentation)
+   - Added proper spacing and comments to document initialization steps
+
+2. **src/index.html**
+   - Removed redundant analytics script tag `<script defer src="/_vercel/analytics/script.js"></script>`
+   - The script tag was creating a duplicate implementation alongside the `inject()` function
+   - For Angular, using the `inject()` function is the preferred method as it integrates better with the application lifecycle
+
+## Implementation Details
+
+The project follows Vercel's recommended pattern for Angular applications:
+
+- **Package**: `@vercel/analytics` (v1.6.1) was already installed
+- **Method**: Using the `inject()` function in main.ts (client-side initialization)
+- **Location**: Called in the main application bootstrap file before Angular initialization
+
+This implementation:
+- ✅ Tracks page views automatically
+- ✅ Runs only in the client (browser)
+- ✅ Integrates seamlessly with Angular's routing
+- ✅ Follows Vercel's best practices for framework integration
+
+## Testing
+
+- Build verification: ✅ Passed successfully
+- No new linting errors introduced
+- The build output confirms all dependencies are correctly bundled
+
+## Notes
+
+- The analytics will start tracking visitors and page views once deployed to Vercel
+- Data can be viewed in the Vercel dashboard under the Analytics tab
+- The implementation is lightweight and does not affect application performance
+- Route changes are automatically tracked
