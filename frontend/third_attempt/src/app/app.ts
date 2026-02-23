@@ -142,7 +142,7 @@ export class App {
 
  
 
-    'songs/kanegi. - honestly, maybe (female ver.)  official lyric video.mp3',
+    'songs/[Vietsub  Lyrics] Silent - Sam Ock.mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
