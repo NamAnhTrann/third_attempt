@@ -142,7 +142,7 @@ export class App {
 
  
 
-    'songs/[Vietsub  Lyrics] Silent - Sam Ock.mp3',
+    'songs/RADi - Maybe_ (Official Lyric Video).mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
