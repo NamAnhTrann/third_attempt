@@ -142,7 +142,7 @@ export class App {
 
  
 
-    'songs/RADi - Maybe_ (Official Lyric Video).mp3',
+    'songs/Im_glad_we_met.mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
