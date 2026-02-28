@@ -63,41 +63,67 @@
             speed="500"
             class="relative z-20 w-full max-w-4xl h-full flex items-center justify-center [--swiper-navigation-size:22px] [--swiper-navigation-sides-offset:1px] [--swiper-theme-color:#f9a8d4]"
           >
-            <swiper-slide class="flex px-4 justify-start">
-              <div class="max-w-xl text-left">
-                <div>
-                  <p class="text-white/80 text-sm sm:text-lg leading-relaxed">
-                    Been a while since I write :) <br />
-                    It's almost March, although It felt like eternity.
-                    <br /><br />
-                    How will you react if you see me ? Will you still remember
-                    how I looked ? What do you feel currently ? Excitement ?
-                    Kind off scareeeed ? For me, <br /><br />
-                    I'm a bit anxious, but also excitement, a lot of that. Do
-                    you think I would know what to say if I face you ? :)) I
-                    think I would stutter, struggling to form sentences, and
-                    thoughts flying all over the place <br /><br />
-                    But, I miss you, so much. I wish to have you in my life
-                    again. It's been months since I've seen you, felt like years
-                    though... <br><br>Can I see you at the bench near LTB ? or do you wanna do badminton? If you read this, give me a reply :) <br /><br />Swipe Next :>
-                  </p>
-                </div>
-              </div>
-            </swiper-slide>
+    <swiper-slide class="flex px-6 justify-start items-center min-h-[70vh]">
+  <div class="max-w-2xl text-left space-y-6">
 
-            <swiper-slide class="flex px-4 justify-start">
-              <div class="max-w-xl text-left">
-                <div>
-                  <p
-                    class="text-white/80 text-sm sm:text-lg leading-relaxed"
-                  >
-                    If I ever wanting to learn a new language, it would be Cantonese. <br><br> Will you help me ? <br><br> 君が愛おしい <br>:))
+    <p class="text-white/80 text-sm sm:text-lg leading-relaxed">
+      It’s been a while since I wrote something.
+      So I decided to make this instead.
+    </p>
 
-                
-                </p>
-                </div>
-              </div>
-            </swiper-slide>
+    <!-- Button -->
+    <a 
+      href="https://drive.google.com/file/d/1EMZVKbi2Dx3eOUORIW_5iaEMRKpz6U6g/view?usp=sharing"
+      target="_blank"
+      class="inline-flex items-center px-6 py-3 rounded-2xl 
+             bg-white/10 backdrop-blur-md
+             border border-white/20
+             text-white text-sm sm:text-base
+             hover:bg-white/20 hover:scale-105
+             transition-all duration-300"
+    >
+      Watch it here if vid below doesnt work 
+    </a>
+
+    <!-- Video -->
+ <div class="relative pt-4 group">
+
+  <video
+    #mainVideo
+    src="video/WIN_optimized.mp4"
+    class="w-full rounded-3xl shadow-2xl border border-white/10"
+    autoplay
+    muted
+    loop
+    playsinline
+  ></video>
+
+  <button
+    (click)="toggleVideo()"
+    class="absolute inset-0 flex items-center justify-center
+           opacity-0 group-hover:opacity-100
+           transition-opacity duration-300"
+  >
+    <div class="bg-black/40 backdrop-blur-md rounded-full p-4
+                border border-white/20 hover:scale-110 transition">
+@if (isPlaying) {
+  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M6 5h4v14H6zm8 0h4v14h-4z"/>
+  </svg>
+} @else {
+  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M8 5v14l11-7z"/>
+  </svg>
+}
+    </div>
+  </button>
+
+</div>
+
+  </div>
+</swiper-slide>
+
+
           </swiper-container>
           <!-- END INNER SWIPER -->
         </div>

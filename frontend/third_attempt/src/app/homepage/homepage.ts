@@ -81,5 +81,23 @@ export class Homepage {
 
   prevPage() {
     this.pageFlip.flipPrev();
+ 
+ 
   }
+
+  @ViewChild('mainVideo') videoRef!: ElementRef<HTMLVideoElement>;
+
+isPlaying = true;
+
+toggleVideo() {
+  const video = this.videoRef.nativeElement;
+
+  if (video.paused) {
+    video.play();
+    this.isPlaying = true;
+  } else {
+    video.pause();
+    this.isPlaying = false;
+  }
+}
 }
