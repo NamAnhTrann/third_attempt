@@ -142,7 +142,7 @@ export class App {
 
  
 
-    'songs/Im_glad_we_met.mp3',
+    'songs/Gumi - Amanojaku (LyricsLirik) cover by Akie秋 絵.mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
