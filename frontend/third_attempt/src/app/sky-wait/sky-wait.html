@@ -2,7 +2,6 @@
   id="1"
   class="relative w-full min-h-[100svh] flex flex-col items-center justify-center overflow-hidden"
 >
-
   <!-- Background video -->
   <video
     autoplay
@@ -14,17 +13,12 @@
   >
     <source src="/background/bg_1_optimized.mp4" type="video/mp4" />
   </video>
+  <div class="absolute inset-0 bg-black/30 z-100"></div>
 
   <!-- Exit button -->
   <a
     routerLink="/"
-    class="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[9999]
-           px-5 md:px-6 py-2 rounded-full
-           text-[10px] md:text-[11px] tracking-[0.3em]
-           uppercase font-medium text-white
-           backdrop-blur-lg border border-white/20
-           shadow-[0_8px_25px_rgba(0,0,0,0.08)]
-           transition-all duration-500 hover:-translate-y-0.5"
+    class="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[9999] px-5 md:px-6 py-2 rounded-full text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-medium text-white backdrop-blur-lg border border-white/20 shadow-[0_8px_25px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-0.5"
   >
     <span class="relative z-10">EXIT</span>
   </a>
@@ -33,27 +27,27 @@
     slides-per-view="1"
     speed="500"
     navigation="true"
-    class="w-full min-h-[100svh] flex items-center justify-center
-           [--swiper-navigation-size:16px]
-           md:[--swiper-navigation-size:22px]
-           [--swiper-theme-color:#F4A7B9]
-            md:[--swiper-navigation-sides-offset:40px]"
+    class="w-full min-h-[100svh] flex items-center justify-center [--swiper-navigation-size:16px] md:[--swiper-navigation-size:22px] [--swiper-theme-color:#F4A7B9] md:[--swiper-navigation-sides-offset:40px]"
   >
     <!-- Slide 1 -->
-    <swiper-slide
-      class="relative min-h-[100svh] w-full flex items-center justify-center px-4"
-    >
-      <div class="relative z-10 flex flex-col items-center justify-center">
-        <div class="h-6"></div>
+    <swiper-slide class="min-h-[100svh] flex items-center justify-center">
+      <div class="text-center max-w-3xl px-6">
+        <p class="text-gray-300 text-sm md:text-base italic mb-6">
+          Station <br />
+          <span class="text-pink-300 font-semibold text-base sm:text-2xl">
+            Still, The Sky Waits
+          </span>
+        </p>
 
-        <h1
-          class="text-white text-3xl md:text-6xl lg:text-7xl
-                 font-semibold tracking-tight leading-none text-center"
+        <p
+          class="text-gray-200 text-2xl md:text-4xl italic mb-6 leading-relaxed"
         >
-          ⋆˙⟡ Still, The Sky Waits ⋆｡ﾟ☁︎｡⋆
-        </h1>
-
-        <div class="mt-10 w-20 h-px bg-gray-300"></div>
+          Now arriving at station:
+          <span class="text-pink-300 font-semibold">Still, The Sky Waits</span>.
+          Please mind the gap between the train and the platform when leaving.
+          Doors will open on the right. Please remember to take all memories
+          with you, and as always, tap off with your memories card.
+        </p>
       </div>
     </swiper-slide>
 
@@ -62,8 +56,7 @@
       class="relative min-h-[100svh] w-full flex items-center justify-center px-4"
     >
       <div
-        class="relative z-10 max-w-3xl flex flex-col items-center justify-center
-               text-center gap-8"
+        class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-8"
       >
         <h1
           class="text-white text-3xl md:text-6xl font-semibold tracking-tight leading-snug"
@@ -80,55 +73,39 @@
     </swiper-slide>
 
     <!-- Slide 3 (Book) -->
-<swiper-slide
-  class="relative min-h-[100svh] w-full flex flex-col items-center justify-center gap-4 px-4"
->
-  <div class="absolute inset-0 bg-black/20 z-0"></div>
-
-<div
-  #book
-  class="
-   
-    shadow-2xl
-    pointer-events-auto
-    overflow-hidden
-    scale-[0.85] sm:scale-90 md:scale-95 lg:scale-100
-    origin-center
-  "
-></div>
-
-
-  <div class="flex gap-3 z-10">
-    <button
-      (click)="prevPage()"
-      class="px-3 py-1.5 text-[9px] md:text-xs
-             tracking-widest uppercase rounded-full
-             border border-white/30 text-white
-             hover:bg-white/10 transition"
+    <swiper-slide
+      class="relative min-h-[100svh] w-full flex flex-col items-center justify-center gap-4 px-4"
     >
-      Prev
-    </button>
+      <div class="absolute inset-0 bg-black/20 z-0"></div>
 
-    <button
-      (click)="nextPage()"
-      class="px-3 py-1.5 text-[9px] md:text-xs
-             tracking-widest uppercase rounded-full
-             border border-white/30 text-white
-             hover:bg-white/10 transition"
-    >
-      Next
-    </button>
-  </div>
-</swiper-slide>
+      <div
+        #book
+        class="shadow-2xl pointer-events-auto overflow-hidden scale-[0.85] sm:scale-90 md:scale-95 lg:scale-100 origin-center"
+      ></div>
 
+      <div class="flex gap-3 z-10">
+        <button
+          (click)="prevPage()"
+          class="px-3 py-1.5 text-[9px] md:text-xs tracking-widest uppercase rounded-full border border-white/30 text-white hover:bg-white/10 transition"
+        >
+          Prev
+        </button>
+
+        <button
+          (click)="nextPage()"
+          class="px-3 py-1.5 text-[9px] md:text-xs tracking-widest uppercase rounded-full border border-white/30 text-white hover:bg-white/10 transition"
+        >
+          Next
+        </button>
+      </div>
+    </swiper-slide>
 
     <!-- Slide 4 -->
     <swiper-slide
       class="relative min-h-[100svh] w-full flex items-center justify-center px-4"
     >
       <div
-        class="relative z-10 max-w-3xl flex flex-col items-center justify-center
-               text-center gap-8"
+        class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-8"
       >
         <p class="text-sm uppercase tracking-[0.3em] text-gray-100">
           Final few words
@@ -154,12 +131,9 @@
       class="relative min-h-[100svh] w-full flex items-center justify-center px-4"
     >
       <div
-        class="relative z-10 max-w-3xl flex flex-col items-center justify-center
-               text-center gap-8"
+        class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-8"
       >
-        <h1
-          class="text-white text-2xl md:text-4xl font-medium leading-snug"
-        >
+        <h1 class="text-white text-2xl md:text-4xl font-medium leading-snug">
           There are so many more things I could say.
         </h1>
 
@@ -186,18 +160,13 @@
       class="relative min-h-[100svh] w-full flex items-center justify-center px-4"
     >
       <div
-        class="relative z-10 max-w-3xl flex flex-col items-center justify-center
-               text-center gap-8"
+        class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-8"
       >
-        <h1
-          class="text-white text-2xl md:text-4xl font-medium leading-snug"
-        >
+        <h1 class="text-white text-2xl md:text-4xl font-medium leading-snug">
           One last thing...
         </h1>
 
-        <p
-          class="text-white/90 text-sm md:text-lg leading-relaxed max-w-2xl"
-        >
+        <p class="text-white/90 text-sm md:text-lg leading-relaxed max-w-2xl">
           Yes, I do have feelings for you, I cannot ever deny it.
           <br /><br />
           But what’s more important to me is your, uh, everything.
@@ -222,52 +191,37 @@
     </swiper-slide>
 
     <!-- Slide 7 -->
-    <swiper-slide
-      class="relative min-h-[100svh] w-full flex items-center justify-center px-4"
+<swiper-slide
+  class="relative min-h-[100svh] w-full flex items-center justify-center px-4"
+>
+  <div
+    class="relative z-10 max-w-3xl flex flex-col items-center justify-center text-center gap-8"
+  >
+    <h1 class="text-white text-3xl md:text-5xl font-semibold">
+    </h1>
+
+    <div class="w-14 h-px bg-gray-100"></div>
+
+    <p class="text-white text-sm md:text-xl leading-relaxed max-w-2xl">
+      And please do always remember to smile, because (you guessed it),
+      <br class="hidden md:block" />
+      I love your smile
+    </p>
+
+    <!-- Button -->
+    <button
+      routerLink="/adoration"
+      class="mt-4 px-8 py-3 rounded-full
+             bg-white/90 text-black
+             hover:bg-pink-200
+             transition-all duration-300
+             shadow-md hover:shadow-pink-300/40
+             text-sm md:text-base tracking-wide"
     >
-      <div
-        class="relative z-10 max-w-3xl flex flex-col items-center justify-center
-               text-center gap-8"
-      >
-        <h1
-          class="text-white text-3xl md:text-5xl font-semibold"
-        >
-          Goodbye!
-          <br />
-          <span class="text-gray-200 text-sm md:text-base">
-            (pls unblock LOL)
-          </span>
-          <br /><br />
-          <𝟑 .ᐟ
-        </h1>
+      Last Station: Adoration
+    </button>
 
-        <div class="w-14 h-px bg-gray-100"></div>
-
-        <p class="text-white text-sm md:text-xl leading-relaxed max-w-2xl">
-          And please do always remember to smile, becasue (you guessed it),
-          <br class="hidden md:block" />
-          I love your smile
-        </p>
-
-        <p class="text-white text-sm md:text-base italic tracking-wide">
-          BYE BYE <br />
-          (i miss u) <br />
-          (˶ᵔ ᵕ ᵔ˶)
-        </p>
-
-        <span class="text-sm text-white opacity-90">
-          If you wanna read on Canvas lol then click this <br />
-          <a
-            href="https://www.canva.com/design/DAG9Pr18wRc/cO82xryljvicXxb3Xb1iEA/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline underline-offset-4 decoration-white/60
-                   hover:decoration-white transition"
-          >
-            Click Me
-          </a>
-        </span>
-      </div>
-    </swiper-slide>
+  </div>
+</swiper-slide>
   </swiper-container>
 </section>

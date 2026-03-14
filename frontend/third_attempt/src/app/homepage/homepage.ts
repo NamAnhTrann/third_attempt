@@ -15,6 +15,8 @@ export class Homepage {
   private unlocked = false;
 
     private pageFlip!: PageFlip;
+    @ViewChild('swiperContainer', { static: false })
+swiperRef!: ElementRef;
 
   @HostListener('document:click')
   unlockAutoplay() {
@@ -28,6 +30,11 @@ export class Homepage {
 
     this.unlocked = true;
   }
+
+  nextSlide() {
+  const swiper = this.swiperRef.nativeElement.swiper;
+  swiper.slideNext();
+}
 
 
     ngAfterViewInit() {

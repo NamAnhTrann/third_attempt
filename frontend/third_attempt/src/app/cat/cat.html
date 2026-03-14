@@ -2,6 +2,11 @@
   id="1"
   class="relative w-full flex flex-col items-center justify-center"
 >
+  <img
+    src="/background/Blue Illustration Night Desktop Wallpaper.png"
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+  />
   <a
     routerLink="/"
     class="cursor-pointer fixed top-6 left-1/2 -translate-x-1/2 z-[9999] px-6 py-2 rounded-full text-[11px] tracking-[0.35em] uppercase font-medium text-neutral-900 bg-white/70 backdrop-blur-lg border border-black/10 shadow-[0_8px_25px_rgba(0,0,0,0.08)] transition-all duration-500 hover:bg-white hover:shadow-[0_0_40px_rgba(255,255,255,0.7)] hover:-translate-y-0.5"
@@ -26,23 +31,25 @@
     slides-per-view="1"
     speed="500"
     navigation="true"
-    class="w-full h-screen flex items-center justify-center [--swiper-navigation-size:22px] [--swiper-theme-color:blue]
+    class="w-full h-screen flex items-center justify-center [--swiper-navigation-size:22px] [--swiper-theme-color:white]
      md:[--swiper-navigation-sides-offset:40px]"
   >
     <!-- Slide 1 -->
-    <swiper-slide
-      class="relative h-screen w-full overflow-hidden flex items-center justify-center"
-    >
-      <div>
-        <h1
-          class="text-black text-4xl md:text-6xl font-semibold tracking-wide text-center"
-        >
-          (˵ ¬ᴗ¬˵)
-        </h1>
+    <swiper-slide class="flex items-center justify-center">
+      <div class="text-center max-w-3xl px-6">
+        <p class="text-gray-300 text-sm md:text-base italic mb-6">
+          Station: <br />
+          <span class="text-pink-300 font-semibold text-base sm:text-2xl"
+            >Jolie’s Future Ventures </span
+          >
+        </p>
 
-        <p id="typing" class="text-center mt-8 text-2xl">
-          So far, everything seems so corny and cliché, right? I got a new idea
-          when I was writing this website
+        <p class="text-gray-300 text-2xl md:text-4xl italic mb-6">
+          Now arriving at Station:
+          <span class="text-pink-300 font-semibold">Jolie’s Future Ventures</span>. Please mind
+          the gap between the train and the platform when leaving. Doors will
+          open on the right. And as always, remember to tap on and tap off with
+          your memories card
         </p>
       </div>
     </swiper-slide>
@@ -51,7 +58,7 @@
       class="relative h-screen w-full overflow-hidden flex items-center justify-center"
     >
       <div>
-        <h1 class="text-black text-4xl md:text-6xl tracking-wide text-center">
+        <h1 class="text-gray-300 text-4xl md:text-6xl tracking-wide text-center">
           Since you're the <br />
           " HR Director at AIESEC Monash "
         </h1>
@@ -62,7 +69,7 @@
       class="relative h-screen w-full overflow-hidden flex items-center justify-center"
     >
       <div>
-        <h1 class="text-black text-4xl md:text-6xl tracking-wide text-center">
+        <h1 class="text-gray-300 text-4xl md:text-6xl tracking-wide text-center">
           How about I submit my CV to the HR Director then? <br />
           <br />
           (¬ᴗ ´¬ )
@@ -75,20 +82,20 @@
     >
       <!-- Heading -->
       <h1
-        class="text-black text-xl sm:text-2xl md:text-6xl font-semibold tracking-wide text-center"
+        class="text-gray-300 text-xl sm:text-2xl md:text-6xl font-semibold tracking-wide text-center"
       >
         ⟡ MY PAPER WORK ⟡
         <br />
 
         <span
-          class="block mt-1 sm:mt-2 text-[10px] sm:text-xs md:text-lg tracking-[0.22em] uppercase text-gray-600 font-medium"
+          class="block mt-1 sm:mt-2 text-[10px] sm:text-xs md:text-lg tracking-[0.22em] uppercase text-gray-200 font-medium"
         >
           applying for
-          <span class="font-semibold text-gray-900">Jolie's Future</span>
+          <span class="font-semibold text-gray-300">Jolie’s Future Ventures</span>
         </span>
 
         <span
-          class="block mt-1 text-[10px] sm:text-xs md:text-base tracking-[0.16em] text-gray-500 opacity-90"
+          class="block mt-1 text-[10px] sm:text-xs md:text-base tracking-[0.16em] text-gray-300 opacity-90"
         >
           position · long-term consideration <br> click to view
         </span>
@@ -101,12 +108,12 @@
         <a
           target="_blank"
           rel="noopener"
-          class="w-full h-[160px] sm:h-[200px] md:aspect-square md:h-auto rounded-xl border border-black flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-6 text-sm sm:text-lg md:text-3xl font-medium text-center transition-all duration-300 hover:scale-[1.03] hover:bg-sky-100 hover:text-sky-900 hover:shadow-[0_0_40px_rgba(56,189,248,0.45)]"
+          class="w-full text-gray-300 h-[160px] sm:h-[200px] md:aspect-square md:h-auto rounded-xl border border-black flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-6 text-sm sm:text-lg md:text-3xl font-medium text-center transition-all duration-300 hover:scale-[1.03] hover:bg-sky-100 hover:text-sky-900 hover:shadow-[0_0_40px_rgba(56,189,248,0.45)]"
         >
           <span>
-            Cover Letter <br>(unblock to unlock)
+            Cover Letter <br>(unblock to unlock, ITS MARCH)
             <br />
-            <span class="text-[10px] sm:text-2xl opacity-70 text-gray-500"
+            <span class="text-[10px] sm:text-2xl opacity-70 text-gray-300"
               >my version  <br><span class=text-base>(pause top left when view)</span></span
             >
           </span>
@@ -122,11 +129,11 @@
           href="/assets/CV.pdf"
           target="_blank"
           rel="noopener"
-          class="w-full h-[160px] sm:h-[200px] md:aspect-square md:h-auto rounded-xl border border-black flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-6 text-sm sm:text-lg md:text-3xl font-medium text-center transition-all duration-300 hover:scale-[1.03] hover:bg-sky-100 hover:text-sky-900 hover:shadow-[0_0_40px_rgba(56,189,248,0.45)]"
+          class="w-full text-gray-300 h-[160px] sm:h-[200px] md:aspect-square md:h-auto rounded-xl border border-black flex flex-col items-center justify-center gap-2 sm:gap-3 md:gap-6 text-sm sm:text-lg md:text-3xl font-medium text-center transition-all duration-300 hover:scale-[1.03] hover:bg-sky-100 hover:text-sky-900 hover:shadow-[0_0_40px_rgba(56,189,248,0.45)]"
         >
           <span class="flex flex-col items-center leading-tight">
             Resume
-            <span class="text-[10px] sm:text-2xl mt-1 opacity-70 text-gray-500">
+            <span class="text-[10px] sm:text-2xl mt-1 opacity-70 text-gray-300">
               (double click if doesn’t open)
             </span>
           </span>
@@ -142,14 +149,14 @@
     <swiper-slide
       class="relative h-screen w-full overflow-hidden flex items-center justify-center"
     >
-      <h1 class="text-black text-4xl md:text-6xl tracking-wide text-center">
+      <h1 class="text-gray-300 text-4xl md:text-6xl tracking-wide text-center">
         manifesting an email that starts with “Congratulations”
         <br />
         and not…
         <span class="text-gray-400">“Unfortunately”</span>
         <br />
         <span
-          class="uppercase text-gray-500 text-base md:text-lg tracking-wide"
+          class="uppercase text-gray-300 text-base md:text-lg tracking-wide"
         >
           but hey, one can hope, right <br />(ᵕ—ᴗ—)
         </span>
@@ -159,29 +166,21 @@
       <div
         class="relative z-10 flex h-full w-full flex-col items-center justify-center text-center gap-8 px-4"
       >
-        <h1 class="text-black text-4xl md:text-6xl font-semibold tracking-wide">
-          ✧˖°. Continue (or re-read)... .ᐟ
+        <h1 class="text-gray-300 text-4xl md:text-6xl font-semibold tracking-wide">
+          ✧˖°. Continue to the next station .ᐟ
         </h1>
         <div class="flex flex-col gap-6 mt-4">
           <!-- Top row -->
           <div class="flex flex-col md:flex-row gap-6 justify-center">
             <a
               routerLink="/sky"
-              class="w-64 py-3 rounded-full border border-black/40 text-black bg-black/10 backdrop-blur-md hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-200"
+              class="w-64 py-3 rounded-full border border-black/40 text-gray-300 bg-black/10 backdrop-blur-md hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-200"
             >
-              -`♡´- Still, The Sky Waits ࣪ ִֶָ☾. <br>(This Next)
+              -`♡´- Still, The Sky Waits ࣪ ִֶָ☾. <br>
             </a>
           </div>
 
-          <!-- Bottom centered -->
-          <div class="flex justify-center">
-            <a
-              routerLink="/joy"
-              class="w-64 py-3 rounded-full border border-black/40 text-black bg-black/10 backdrop-blur-md hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-200"
-            >
-              ✿ Essence of Joy ⊹ ࣪ ˖ 
-            </a>
-          </div>
+
         </div>
       </div>
     </swiper-slide>
