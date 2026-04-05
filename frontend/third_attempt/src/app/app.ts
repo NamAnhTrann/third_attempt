@@ -115,9 +115,9 @@ export class App {
   }
 
   private messages = [
-    'Just a moment..., it’s finding its way 𖹭.ᐟ',
-    'Patience... good things are arriving 𖹭.ᐟ',
-    'One tiny moment... I promise 𖹭.ᐟ',
+    'Just a moment... 𖹭.ᐟ',
+    'Just a moment... 𖹭.ᐟ',
+    'Just a moment... 𖹭.ᐟ',
   ];
 
   private pickRandomMessage() {
@@ -142,7 +142,7 @@ export class App {
 
  
 
-    'songs/Time Flows Ever Onward (Piano Cover).mp3',
+    'songs/raur.mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
