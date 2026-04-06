@@ -57,6 +57,7 @@ swiperRef!: ElementRef;
       '/book_3/7.png',
       '/book_3/8.png',
       '/book_3/9.png',
+      '/book_3/10.png',
 
     ]);
   }
