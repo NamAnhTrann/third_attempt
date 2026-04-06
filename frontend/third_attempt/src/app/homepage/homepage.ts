@@ -39,7 +39,7 @@ swiperRef!: ElementRef;
 
     ngAfterViewInit() {
     this.pageFlip = new PageFlip(this.bookRef.nativeElement, {
-      width: 400,
+      width: 450,
       height: 550,
       showCover: false,
       useMouseEvents: true,
@@ -48,36 +48,15 @@ swiperRef!: ElementRef;
     });
 
     this.pageFlip.loadFromImages([
-      '/book_2/1.jpg',
-      '/book_2/2.jpg',
-      '/book_2/3.jpg',
-      '/book_2/4.jpg',
-      '/book_2/5.jpg',
-      '/book_2/6.jpg',
-      '/book_2/7.jpg',
-      '/book_2/8.jpg',
-      '/book_2/9.jpg',
-      '/book_2/10.jpg',
-      '/book_2/11.jpg',
-      '/book_2/12.jpg',
-      '/book_2/13.jpg',
-      '/book_2/14.jpg',
-      '/book_2/15.jpg',
-      '/book_2/16.jpg',
-      '/book_2/17.jpg',
-      '/book_2/18.jpg',
-      '/book_2/19.jpg',
-      '/book_2/20.jpg',
-      '/book_2/21.jpg',
-      '/book_2/22.jpg',
-      '/book_2/23.jpg',
-      '/book_2/24.jpg',
-      '/book_2/25.jpg',
-      '/book_2/26.jpg',
-      '/book_2/27.jpg',
-      '/book_2/28.jpg',
-      '/book_2/29.jpg',
-      '/book_2/30.jpg',
+      '/book_3/1.png',
+      '/book_3/2.png',
+      '/book_3/3.png',
+      '/book_3/4.png',
+      '/book_3/5.png',
+      '/book_3/6.png',
+      '/book_3/7.png',
+      '/book_3/8.png',
+      '/book_3/9.png',
 
     ]);
   }
