@@ -142,7 +142,7 @@ export class App {
 
  
 
-    'songs/Indila - Love Story (Slowed-Reverb).mp3',
+    // 'songs/Indila - Love Story (Slowed-Reverb).mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
@@ -280,7 +280,7 @@ export class App {
   showWelcomePopup() {
     Swal.fire({
       title: '',
-      html: ` Sorry for the "TikTok song", but I wanted to use this song for such a long time for my writings, this is a rare one :)
+      html: ` '
     
     `,
       width: '32rem',
