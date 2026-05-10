@@ -279,10 +279,7 @@ export class App {
 
   showWelcomePopup() {
     Swal.fire({
-      title: '',
-      html: ` '
-    
-    `,
+      title: 'Use Desktop/Laptop For Better Experience',
       width: '32rem',
       padding: '1.5rem',
       background: 'rgba(0,0,0,1)',

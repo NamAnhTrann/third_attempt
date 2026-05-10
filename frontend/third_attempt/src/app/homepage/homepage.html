@@ -1,82 +1,626 @@
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<section class="train-journey" aria-label="Train journey love story">
+  <!-- <nav class="route-progress" aria-label="Story stops">
+    <div class="route-progress__rail" aria-hidden="true">
+      <span
+        class="route-progress__fill"
+        [style.width.%]="routeProgress"
+      ></span>
+    </div>
 
-<section id="2">
-  <swiper-container
-    slides-per-view="1"
-    speed="500"
-    navigation="true"
-    class="w-full min-h-[100svh] flex items-center justify-center [--swiper-navigation-size:16px] md:[--swiper-navigation-size:22px] [--swiper-theme-color:#F4A7B9] md:[--swiper-navigation-sides-offset:40px]"
-  >
-    <swiper-slide
-      class="relative min-h-[100svh] w-full flex items-center justify-center px-6"
-    >
-      <!-- Background -->
-      <img
-        src="/background/Blue Illustration Night Desktop Wallpaper.png"
-        alt=""
-        class="absolute inset-0 w-full h-full object-cover z-0"
-      />
-
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/50 z-[1]"></div>
-
-      <!-- Content -->
-      <section
-        class="relative z-10 max-w-xl w-full flex flex-col gap-6 text-left"
+    @for (stop of stops; track stop.id; let i = $index) {
+      <button
+        type="button"
+        class="route-progress__stop"
+        [class.is-active]="activeStopIndex === i"
+        (click)="goToStop(i)"
+        [attr.aria-label]="'Go to ' + stop.title"
       >
-        <!-- Title -->
-        <h1
-          class="text-white text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug"
-        >
-          It's been a while (Swipe)
-        </h1>
+        <span>{{ stop.stop }}</span>
+      </button>
+    }
+  </nav> -->
 
-        <!-- INNER SWIPER -->
-        <swiper-container
-          direction="horizontal"
-          slides-per-view="1"
-          space-between="20"
-          mousewheel="true"
-          class="h-[200px] w-full"
-        >
-          <swiper-slide class="flex items-start">
-            <p class="text-gray-200 text-base sm:text-lg leading-relaxed">
-              I didn't want to disturb you by texting you on your alt nor
-              Discord. I looked pretty desperate doing that lol. But, if you ever opened this website again, then here I am, and I just wanted to say <br><br> Hi, its been a while :)
-            </p>
-          </swiper-slide>
+  <main class="mobile-route" aria-label="Mobile train route">
+    @for (stop of stops; track stop.id; let i = $index) {
+      <article
+        [class]="'train-stop train-stop--' + stop.id"
+        [class.is-active]="activeStopIndex === i"
+        [attr.data-stop-index]="i"
+      >
+        <ng-container
+          [ngTemplateOutlet]="storyStop"
+          [ngTemplateOutletContext]="{ stop: stop, index: i }"
+        ></ng-container>
+      </article>
+    }
+  </main>
 
-          <swiper-slide class="flex items-start">
+  <swiper-container
+    #desktopJourney
+    class="desktop-route"
+    slides-per-view="1"
+    speed="900"
+    mousewheel="false"
+    keyboard="true"
+    grab-cursor="true"
+    (swiperslidechange)="onDesktopSlideChange($event)"
+  >
+    @for (stop of stops; track stop.id; let i = $index) {
+      <swiper-slide>
+        @if (i === 0) {
+          <swiper-container
+            #beginningChildJourney
+            class="beginning-child-journey h-[100dvh] w-full"
+            direction="vertical"
+            slides-per-view="1"
+            speed="700"
+            nested="true"
+            mousewheel="false"
+            grab-cursor="true"
+          >
+            <swiper-slide>
+              <article
+                [class]="'train-stop train-stop--' + stop.id"
+                [class.is-active]="activeStopIndex === i"
+              >
+                <ng-container
+                  [ngTemplateOutlet]="storyStop"
+                  [ngTemplateOutletContext]="{ stop: stop, index: i }"
+                ></ng-container>
 
-              <p class="text-gray-200 text-base sm:text-lg leading-relaxed">
-             How are you ? I hope you're doing good, as always. It's been a while since this website is up again. Many things to say that didn't get the chance to. I know you prefer it that way, words you might have, but you prefer to let it be. <br><br> There hasn't been a day that I don't think of you. It doesn't affect my performance, so don't worry about it. It's just that, I miss you, and it would be better if you were here. 
-            </p>
-           
-          </swiper-slide>
+                <button
+                  type="button"
+                  class="inner-next-arrow absolute left-1/2 bottom-8 z-[5] grid h-16 w-16 -translate-x-1/2 place-items-center rounded-full border border-white/20 text-3xl text-white/75 transition duration-300 hover:border-[rgba(217,164,111,0.65)] hover:text-[rgba(255,226,184,0.95)]"
+                  (click)="goToBeginningMemory($event, beginningChildJourney)"
+                  aria-label="Go to the next memory"
+                >
+                  <span> &#8595; </span>
+                </button>
+              </article>
+            </swiper-slide>
 
-              <swiper-slide class="flex items-start">
+            <swiper-slide>
+              <article
+                class="inner-memory !flex items-center justify-start bg-[linear-gradient(rgba(8,10,18,0.35),rgba(0,0,0,0.75)),url('/background/img3.png')] bg-cover bg-center px-6 md:px-[min(8vw,6rem)]"
+              >
+                <section
+                  class="story-reveal w-[min(31rem,100%)] rounded-lg border border-white/20 bg-[rgba(8,10,18,0.48)] p-8 text-left text-[rgba(246,240,231,0.82)]"
+                >
+                  <span
+                    class="mb-4 block text-xs uppercase text-[rgba(217,164,111,0.88)]"
+                    >Arrival at Eldermere
+                  </span>
+                  <p class="story-reveal story-line">
+                    It has been a long by carriage, through the sleeping woods
+                    and stone paths. Finally, the lark of Eldermere appeared
+                    beneath the morning's light. It walls were pale beneathe the
+                    afternoon sun, stretching across the valley. <br /><br />
+                    Ahead, the bridge led towards the town entrance, they began
+                    walking toward the entrance of Eldermere, ready to explore
+                    The Town Of Memories
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="inner-next-arrow absolute left-1/2 bottom-8 z-[5] grid h-16 w-16 -translate-x-1/2 place-items-center rounded-full border border-white/20 text-3xl text-white/75 transition duration-300 hover:border-[rgba(217,164,111,0.65)] hover:text-[rgba(255,226,184,0.95)]"
+                  (click)="goToBeginningMemory($event, beginningChildJourney)"
+                  aria-label="Go to the next memory"
+                >
+                  <span> &#8595; </span>
+                </button>
+              </article>
+            </swiper-slide>
 
-              <p class="text-gray-200 text-base sm:text-lg leading-relaxed">
-             I still keep your playlist, although don't listen to it very often anymore. I still do time to time though. Everyday for me, seems normal, a bit too normal without your presence. I won't keep this writing too long. 
-            </p>
-           
-          </swiper-slide>
+            <swiper-slide>
+              <article
+                class="inner-memory !flex items-center justify-start bg-[linear-gradient(rgba(8,10,18,0.35),rgba(0,0,0,0.75)),url('/background/img4.jpg')] bg-cover bg-center px-6 md:px-[min(8vw,6rem)]"
+              >
+                <section
+                  class="w-[min(31rem,100%)] rotate-[-1.2deg] border border-white/20 bg-[rgba(8,10,18,0.48)] px-6 py-5 text-[rgba(246,240,231,0.82)]"
+                >
+                  <span
+                    class="mb-4 block text-xs uppercase text-[rgba(217,164,111,0.88)]"
+                    >Arrival at Eldermere</span
+                  >
+                  <h2 class="text-4xl md:text-6xl leading-none text-white mb-4">
+                    Inside Eldermere
+                  </h2>
+                  <p class="story-reveal story-line">
+                    The town was quiet, but not empty! Flags moved gently above
+                    the stone streets, old houses leaned toward the warmth
+                    lights of the sun, and the fountain in the square flows
+                    softly beneath the morning breezes. <br /><br />
+                    For a moment, everything felt quiet... <br />
+                    The air around the fountain grew slightly... and
+                    slightly...<br /><br />
+                    Jolie's noticed an old lady stood beneath the shade nearby
+                    the archway... watching them as if she had been waiting
+                    there for a long time
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="inner-next-arrow absolute left-1/2 bottom-8 z-[5] grid h-16 w-16 -translate-x-1/2 place-items-center rounded-full border border-white/20 text-3xl text-white/75 transition duration-300 hover:border-[rgba(217,164,111,0.65)] hover:text-[rgba(255,226,184,0.95)]"
+                  (click)="goToBeginningMemory($event, beginningChildJourney)"
+                  aria-label="Go to the next memory"
+                >
+                  <span> &#8595; </span>
+                </button>
+              </article>
+            </swiper-slide>
 
-                   <swiper-slide class="flex items-start">
+            <swiper-slide>
+              <article
+                class="inner-memory !flex items-center justify-start bg-[linear-gradient(rgba(8,10,18,0.35),rgba(0,0,0,0.75)),url('/background/img5.jpg')] bg-cover bg-center px-4 py-20 md:px-[min(8vw,6rem)]"
+              >
+                <section
+                  class="dialogue-panel flex max-h-[calc(100dvh-8.5rem)] w-[min(46rem,100%)] flex-col overflow-hidden rounded-lg border border-white/20 bg-[rgba(8,10,18,0.66)] text-left text-[rgba(246,240,231,0.86)] backdrop-blur-md"
+                >
+                  <header class="border-b border-white/10 px-4 py-3 md:px-6">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <span
+                          class="block text-xs uppercase text-[rgba(217,164,111,0.88)]"
+                        >
+                          Arrival at Eldermere
+                        </span>
+                        <h2
+                          class="mt-1 text-2xl leading-none text-white md:text-4xl"
+                        >
+                          Elowen
+                        </h2>
+                      </div>
+                      <button
+                        type="button"
+                        class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                        (click)="resetEldermereConversation()"
+                      >
+                        Restart
+                      </button>
+                    </div>
+                  </header>
 
-              <p class="text-gray-200 text-base sm:text-lg leading-relaxed">
-             But if you're curious, or ever to open this. Just know that I'm still here, still the same, still think about you often, and I hope one day, we can be friends again :) <br><br> Take care :)
-            </p>
-           
-          </swiper-slide>
+                  <div class="min-h-0 flex-1 overflow-y-auto px-4 py-4 md:px-6">
+                    @if (eldermereStep === 0) {
+                      <p
+                        class="dialogue-line text-sm leading-relaxed text-white/80 md:text-base"
+                        [style.animation-delay.ms]="eldermereStep % 2"
+                      >
+                        "Welcome to Eldermere, the Town of Memories. Most
+                        visitors come here looking for something they lost."
+                      </p>
+                    }
 
-          
+                    @if (eldermereStep === 1) {
+                      <p
+                        class="dialogue-line text-sm leading-relaxed text-white/80 md:text-base"
+                        [style.animation-delay.ms]="eldermereStep % 2"
+                      >
+                        "But memories are not lost things. They are living
+                        things. If you touch them carelessly, they may answer in
+                        ways you do not expect."
+                      </p>
+                    }
 
-          
+                    @if (eldermereStep === 2 && selectedEldermereChoice) {
+                      <div
+                        class="dialogue-line border-l border-[rgba(217,164,111,0.55)] pl-4"
+                        [style.animation-delay.ms]="eldermereStep % 2"
+                      >
+                        <p
+                          class="text-xs uppercase text-[rgba(217,164,111,0.88)]"
+                        >
+                          Elowen answers
+                        </p>
+                        <p
+                          class="mt-2 text-sm leading-relaxed text-white/80 md:text-base"
+                        >
+                          "{{ selectedEldermereChoice.reply }}"
+                        </p>
+                      </div>
+                    }
 
+                    @if (eldermereStep === 3) {
+                      <p
+                        class="dialogue-line text-sm leading-relaxed text-white/75 md:text-base"
+                        [style.animation-delay.ms]="eldermereStep % 2"
+                      >
+                        Elowen turns toward the street. Her smile remains, but
+                        her eyes become serious.
+                        <br /><br />
+                        "There are two paths open to you now."
+                      </p>
+                    }
 
-        </swiper-container>
-      </section>
-    </swiper-slide>
+                    @if (eldermereStep === 4 && selectedEldermerePath) {
+                      <div
+                        class="dialogue-line rounded border border-[rgba(217,164,111,0.28)] bg-black/20 p-3"
+                        [style.animation-delay.ms]="eldermereStep % 2"
+                      >
+                        <p
+                          class="text-xs uppercase text-[rgba(217,164,111,0.88)]"
+                        >
+                          {{ selectedEldermerePath.scene }}
+                        </p>
+                        <p class="mt-2 text-sm leading-relaxed text-white/80">
+                          "{{ selectedEldermerePath.reply }}" <br /><br />
+                          {{ selectedEldermerePath.narration }}
+                        </p>
+                        <p class="mt-3 text-xs leading-relaxed text-white/55">
+                          {{ selectedEldermerePath.theme }} ·
+                          {{ selectedEldermerePath.task }} ·
+                          {{ selectedEldermerePath.focus }}
+                        </p>
+                      </div>
+                    }
+                  </div>
+
+                  <div
+                    class="grid shrink-0 gap-2 border-t border-white/10 bg-black/20 p-3 md:grid-cols-2 md:p-4"
+                  >
+                    @if (eldermereStep < 2) {
+                      <button
+                        type="button"
+                        class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                        (click)="advanceEldermereDialogue()"
+                      >
+                        Continue
+                      </button>
+                    }
+
+                    @if (eldermereStep === 2) {
+                      <div
+                        class="md:col-span-2 flex items-center justify-between gap-3 text-xs uppercase text-white/45"
+                      >
+                        <span>
+                          Topics {{ completedEldermereChoiceIds.length }}/{{
+                            eldermereChoices.length
+                          }}
+                        </span>
+                        <span>Ask everything before choosing a path</span>
+                      </div>
+                      @for (choice of eldermereChoices; track choice.id) {
+                        <button
+                          type="button"
+                          class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-xs leading-snug text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:bg-[rgba(217,164,111,0.11)] hover:text-white md:text-sm"
+                          [class.opacity-50]="
+                            hasCompletedEldermereChoice(choice.id)
+                          "
+                          [class.border-[rgba(217,164,111,0.7)]]="
+                            choice.id === 'keeps'
+                          "
+                          (click)="chooseEldermereDialogue(choice.id)"
+                        >
+                          @if (choice.id === "keeps") {
+                            <span
+                              class="mb-1 inline-block text-[0.65rem] uppercase text-[rgba(217,164,111,0.95)]"
+                            >
+                              Main quest
+                            </span>
+                          }
+                          @if (hasCompletedEldermereChoice(choice.id)) {
+                            <span
+                              class="mb-1 inline-block text-[0.65rem] uppercase text-white/40"
+                            >
+                              Asked
+                            </span>
+                          }
+                          Jolie: "{{ choice.prompt }}"
+                        </button>
+                      }
+                    }
+
+                    @if (eldermereStep === 3) {
+                      <button
+                        type="button"
+                        class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                        (click)="continueEldermereAfterReply()"
+                      >
+                        {{
+                          completedEldermereChoiceIds.length ===
+                          eldermereChoices.length
+                            ? "Choose a path"
+                            : "Ask another question"
+                        }}
+                      </button>
+                    }
+
+                    @if (eldermereStep === 4) {
+                      @for (path of eldermerePaths; track path.id) {
+                        <button
+                          type="button"
+                          class="dialogue-choice border border-white/15 bg-black/20 px-3 py-2 text-left text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                          [class.border-[rgba(217,164,111,0.78)]]="
+                            path.id === 'shrine'
+                          "
+                          [class.bg-[rgba(217,164,111,0.12)]]="
+                            path.id === 'shrine'
+                          "
+                          (click)="chooseEldermerePath(path.id)"
+                        >
+                          @if (path.id === "shrine") {
+                            <span
+                              class="mb-1 block text-[0.65rem] uppercase text-[rgba(217,164,111,0.95)]"
+                            >
+                              Main quest
+                            </span>
+                          }
+                          {{ path.option }}
+                        </button>
+                      }
+                    }
+                  </div>
+                  
+                </section>
+
+                @if (showMainQuestPopup) {
+                  <div
+                    class="quest-popup absolute left-1/2 top-1/2 z-[8] w-[min(24rem,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2 border border-[rgba(217,164,111,0.55)] bg-[rgba(8,10,18,0.86)] p-5 text-center text-white shadow-2xl backdrop-blur-md"
+                  >
+                    <p class="text-xs uppercase text-[rgba(217,164,111,0.95)]">
+                      Main quest accepted
+                    </p>
+                    <h3 class="mt-2 text-2xl leading-tight">
+                      The Memory Shrine
+                    </h3>
+                    <p class="mt-3 text-sm leading-relaxed text-white/65">
+                      Walk softly. Some candles remember the hands that lit
+                      them.
+                    </p>
+                    <button
+                      type="button"
+                      class="mt-4 border border-white/15 px-4 py-2 text-sm text-white/70 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                      (click)="continueMainQuest($event, beginningChildJourney)"
+                    >
+                      Continue
+                    </button>
+                  </div>
+                }
+                
+              </article>
+            </swiper-slide>
+
+            <swiper-slide>
+              <article
+                class="inner-memory !flex items-center justify-start bg-[linear-gradient(rgba(8,10,18,0.35),rgba(0,0,0,0.75)),url('/background/img6.jpg')] bg-cover bg-[center_76%] px-4 py-20 md:px-[min(8vw,6rem)]"
+              >
+                <section
+                  class="dialogue-panel shrine-panel flex max-h-[calc(100dvh-8.5rem)] w-[min(47rem,100%)] flex-col overflow-hidden rounded-lg border border-white/20 bg-[rgba(8,10,18,0.68)] text-left text-[rgba(246,240,231,0.86)] backdrop-blur-md"
+                >
+                  <header class="border-b border-white/10 px-4 py-3 md:px-6">
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <span class="block text-xs uppercase text-[rgba(217,164,111,0.88)]">
+                          Main quest
+                        </span>
+                        <h2 class="mt-1 text-2xl leading-none text-white md:text-4xl">
+                          Memorial Shrine
+                        </h2>
+                      </div>
+                      <button
+                        type="button"
+                        class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                        (click)="resetShrineScene()"
+                      >
+                        Restart
+                      </button>
+                    </div>
+                  </header>
+
+                  <div class="min-h-0 flex-1 overflow-y-auto px-4 py-4 md:px-6">
+                    @if (!shrineSolved && !isShrineQuestionOpen) {
+                      @for (beat of currentShrineBeatList; track shrineSceneStep) {
+                      <div
+                        [class]="'dialogue-line speaker-line ' + getShrineSpeakerClass(beat.speaker)"
+                      >
+                        <p class="speaker-name text-xs uppercase">
+                          {{ beat.speaker }}
+                        </p>
+                        <p class="mt-2 text-sm leading-relaxed text-white/82 md:text-base">
+                          {{ beat.text }}
+                        </p>
+                      </div>
+                      }
+                    }
+
+                    @if (isShrineQuestionOpen) {
+                      <div
+                        class="dialogue-line speaker-line speaker-line--shrine"
+                      >
+                        <p class="speaker-name text-xs uppercase">
+                          The statue answers
+                        </p>
+                        <p class="mt-2 text-sm leading-relaxed text-white/75 md:text-base">
+                          Moss darkens across the stone. A pale line of light
+                          opens beneath the statue's hands, and the clearing
+                          grows quiet enough to hear a memory arrive.
+                        </p>
+                      </div>
+                    }
+
+                    @if (shrineSolved) {
+                      @for (beat of currentShrineAfterBeatList; track shrineAfterStep) {
+                      <div
+                        class="dialogue-line"
+                      >
+                        @if (beat.speaker === 'Memory Clue 01') {
+                          <div class="memory-clue">
+                            <p class="text-xs uppercase text-[rgba(217,164,111,0.95)]">
+                              {{ beat.speaker }}
+                            </p>
+                            <p class="mt-2 text-sm leading-relaxed text-white/80 md:text-base">
+                              {{ beat.text }}
+                            </p>
+                          </div>
+                        } @else {
+                          <div
+                            [class]="'speaker-line ' + getShrineSpeakerClass(beat.speaker)"
+                          >
+                            <p class="speaker-name text-xs uppercase">
+                              {{ beat.speaker }}
+                            </p>
+                            <p class="mt-2 text-sm leading-relaxed text-white/82 md:text-base">
+                              {{ beat.text }}
+                            </p>
+                          </div>
+                        }
+                      </div>
+                      }
+                    }
+                  </div>
+
+                  <div class="grid shrink-0 gap-2 border-t border-white/10 bg-black/20 p-3 md:grid-cols-2 md:p-4">
+                    @if (!shrineSolved && !isShrineQuestionOpen) {
+                      <button
+                        type="button"
+                        class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                        (click)="advanceShrineScene()"
+                      >
+                        Continue
+                      </button>
+                    }
+
+                    @if (isShrineQuestionOpen) {
+                      <p class="md:col-span-2 text-xs uppercase tracking-[0.18em] text-[rgba(217,164,111,0.72)]">
+                        The shrine is waiting for your answer
+                      </p>
+                    }
+
+                    @if (shrineSolved) {
+                      <button
+                        type="button"
+                        class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                        (click)="continueShrineAfterAnswer()"
+                      >
+                        {{
+                          shrineAfterStep === shrineAfterBeats.length - 1
+                            ? "The clue stays with you"
+                            : "Continue"
+                        }}
+                      </button>
+                    }
+                  </div>
+                </section>
+
+                @if (isShrineQuestionOpen) {
+                  <div
+                    class="shrine-question-popup absolute left-1/2 top-1/2 z-[8] w-[min(34rem,calc(100vw-2rem))] max-h-[calc(100dvh-2rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto border border-[rgba(217,164,111,0.55)] bg-[rgba(8,10,18,0.9)] p-5 text-left text-white shadow-2xl backdrop-blur-md md:p-6"
+                  >
+                    <p class="text-xs uppercase tracking-[0.22em] text-[rgba(217,164,111,0.95)]">
+                      Shrine question
+                    </p>
+                    <h3 class="mt-2 text-2xl leading-tight md:text-3xl">
+                      Where did the first memory begin?
+                    </h3>
+                    <p class="mt-4 text-sm leading-relaxed text-white/72 md:text-base">
+                      I began with a group of strangers,<br />
+                      a shared task,<br />
+                      and a name not yet familiar.
+                      <br /><br />
+                      Before the work truly began, someone reached out from a
+                      small glowing window.
+                      <br /><br />
+                      Not with a formal greeting. Not with a serious promise.
+                      With a playful line, as if finding her was already part of
+                      the adventure.
+                    </p>
+                    <p class="mt-5 border-l border-[rgba(217,164,111,0.46)] pl-3 text-sm font-medium text-white">
+                      What did she tell him to do if he could not find her first day of class?
+                    </p>
+
+                    @if (shrineWrongAnswer) {
+                      <p class="mt-4 border border-white/15 bg-black/25 p-3 text-sm leading-relaxed text-white/62">
+                        Old Lady (Elowen): "No. That sounds ordinary, but this memory did
+                        not begin ordinarily. It began with something playful
+                        enough to stay. Try again."
+                      </p>
+                    }
+
+                    <div class="mt-5 grid gap-2 md:grid-cols-2">
+                      @for (answer of shrineAnswers; track answer.id) {
+                        <button
+                          type="button"
+                          class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-xs leading-snug text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:bg-[rgba(217,164,111,0.11)] hover:text-white md:text-sm"
+                          [class.border-[rgba(217,164,111,0.78)]]="selectedShrineAnswerId === answer.id"
+                          [class.bg-[rgba(217,164,111,0.12)]]="selectedShrineAnswerId === answer.id"
+                          (click)="chooseShrineAnswer(answer.id)"
+                        >
+                          {{ answer.label }}
+                        </button>
+                      }
+                    </div>
+                  </div>
+                }
+
+                <button
+                  type="button"
+                  class="inner-next-arrow absolute left-1/2 bottom-8 z-[5] grid h-16 w-16 -translate-x-1/2 place-items-center rounded-full border border-white/20 text-3xl text-white/75 transition duration-300 hover:border-[rgba(217,164,111,0.65)] hover:text-[rgba(255,226,184,0.95)]"
+                  (click)="goToBeginningMemory($event, beginningChildJourney)"
+                  aria-label="Go to the next memory"
+                >
+                  <span> &#8595; </span>
+                </button>
+              </article>
+            </swiper-slide>
+          </swiper-container>
+        } @else {
+          <article
+            [class]="'train-stop train-stop--' + stop.id"
+            [class.is-active]="activeStopIndex === i"
+          >
+            <ng-container
+              [ngTemplateOutlet]="storyStop"
+              [ngTemplateOutletContext]="{ stop: stop, index: i }"
+            ></ng-container>
+          </article>
+        }
+      </swiper-slide>
+    }
   </swiper-container>
+
+  <ng-template #storyStop let-stop="stop" let-index="index">
+    <div class="train-stop__mood" aria-hidden="true"></div>
+
+    <section class="story-window">
+      <header class="story-reveal station-label">
+        <span>{{ stop.stop }}</span>
+        <strong>{{ stop.station }}</strong>
+      </header>
+
+      <h1 class="story-reveal stop-title">{{ stop.title }}</h1>
+
+      <div class="story-lines">
+        @for (line of stop.lines; track line.before; let lineIndex = $index) {
+          <p class="story-reveal story-line" [style.--line-order]="lineIndex">
+            {{ line.before }}
+            @if (line.hidden) {
+              <button
+                type="button"
+                class="hidden-word"
+                [class.is-revealed]="isHiddenWordRevealed(stop.id, lineIndex)"
+                (click)="revealHiddenWord(stop.id, lineIndex)"
+              >
+                <span class="hidden-word__text">{{ line.hidden }}</span>
+              </button>
+            }
+            {{ line.after }}
+          </p>
+        }
+      </div>
+
+      <button
+        type="button"
+        class="story-reveal ticket-note"
+        [class.is-open]="isNoteOpen(stop.id)"
+        (click)="toggleNote(stop.id)"
+      >
+        <span class="ticket-note__label">{{ stop.noteLabel }}</span>
+        <span class="ticket-note__message">{{ stop.note }}</span>
+      </button>
+
+      <footer class="story-reveal stop-footer">
+        <span class="route-dot" aria-hidden="true"></span>
+      </footer>
+    </section>
+  </ng-template>
 </section>
