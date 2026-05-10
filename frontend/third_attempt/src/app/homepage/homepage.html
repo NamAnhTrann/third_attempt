@@ -1,4 +1,4 @@
-<section class="train-journey" aria-label="Train journey love story">
+﻿<section class="train-journey" aria-label="Train journey love story">
   <!-- <nav class="route-progress" aria-label="Story stops">
     <div class="route-progress__rail" aria-hidden="true">
       <span
@@ -60,6 +60,72 @@
           >
             <swiper-slide>
               <article
+                class="inner-memory !flex items-center justify-start bg-[linear-gradient(90deg,rgba(5,7,13,0.82),rgba(5,7,13,0.42),rgba(0,0,0,0.78)),url('/background/img_intro.jpg')] bg-cover bg-center px-5 py-16 md:px-[min(8vw,6rem)]"
+              >
+                <section
+                  class="dialogue-panel w-[min(43rem,100%)] border border-white/20 bg-[rgba(8,10,18,0.58)] p-6 text-left text-[rgba(246,240,231,0.86)] backdrop-blur-md md:p-8"
+                >
+                  <span
+                    class="mb-4 inline-flex border border-[rgba(217,164,111,0.35)] bg-black/20 px-3 py-1 text-xs uppercase tracking-[0.18em] text-[rgba(217,164,111,0.92)]"
+                  >
+                    {{ translateText("Prologue") }}
+                  </span>
+                  <h1 class="text-4xl font-semibold leading-none text-white md:text-7xl">
+                    {{ translateText("The Town of Memories") }}
+                  </h1>
+                  <p class="mt-5 max-w-[34rem] text-sm leading-relaxed text-white/72 md:text-base">
+                    {{
+                      translateText(
+                        "An interactive story about searching through missing memories, following the memories she left behind, and trying to find the way back to her."
+                      )
+                    }}
+                  </p>
+
+                  <div class="mt-7">
+                    <p class="text-xs uppercase tracking-[0.18em] text-white/45">
+                      {{ translateText("Choose language") }}
+                    </p>
+                    <div class="mt-3 grid gap-2 sm:grid-cols-3">
+                      @for (language of introLanguages; track language.id) {
+                        <button
+                          type="button"
+                          class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-3 text-left text-sm text-white/70 transition hover:border-[rgba(217,164,111,0.65)] hover:bg-[rgba(217,164,111,0.1)] hover:text-white"
+                          [class.border-[rgba(217,164,111,0.75)]]="selectedIntroLanguage === language.id"
+                          [class.bg-[rgba(217,164,111,0.13)]]="selectedIntroLanguage === language.id"
+                          (click)="selectIntroLanguage(language.id)"
+                        >
+                          <span class="block text-xs uppercase text-white/42">
+                            {{ translateText(language.label) }}
+                          </span>
+                          <strong class="mt-1 block font-medium">
+                            {{ language.nativeLabel }}
+                          </strong>
+                        </button>
+                      }
+                    </div>
+                  </div>
+
+                  <div
+                    class="mt-7 flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.16em] text-white/45"
+                  >
+                    <span class="h-px w-10 bg-[rgba(217,164,111,0.58)]"></span>
+                    <span>{{ translateText("Begin when the train doors open") }}</span>
+                  </div>
+                </section>
+
+                <button
+                  type="button"
+                  class="inner-next-arrow absolute left-1/2 bottom-8 z-[5] grid h-16 w-16 -translate-x-1/2 place-items-center rounded-full border border-white/20 text-3xl text-white/75 transition duration-300 hover:border-[rgba(217,164,111,0.65)] hover:text-[rgba(255,226,184,0.95)]"
+                  (click)="goToBeginningMemory($event, beginningChildJourney)"
+                  aria-label="Begin the story"
+                >
+                  <span> &#8595; </span>
+                </button>
+              </article>
+            </swiper-slide>
+
+            <swiper-slide>
+              <article
                 [class]="'train-stop train-stop--' + stop.id"
                 [class.is-active]="activeStopIndex === i"
               >
@@ -88,16 +154,20 @@
                 >
                   <span
                     class="mb-4 block text-xs uppercase text-[rgba(217,164,111,0.88)]"
-                    >Arrival at Eldermere
+                    >{{ translateText("Arrival at Eldermere") }}
                   </span>
                   <p class="story-reveal story-line">
-                    It has been a long by carriage, through the sleeping woods
-                    and stone paths. Finally, the lark of Eldermere appeared
-                    beneath the morning's light. It walls were pale beneathe the
-                    afternoon sun, stretching across the valley. <br /><br />
-                    Ahead, the bridge led towards the town entrance, they began
-                    walking toward the entrance of Eldermere, ready to explore
-                    The Town Of Memories
+                    {{
+                      translateText(
+                        "It has been a long by carriage, through the sleeping woods and stone paths. Finally, the lark of Eldermere appeared beneath the morning's light. It walls were pale beneathe the afternoon sun, stretching across the valley."
+                      )
+                    }}
+                    <br /><br />
+                    {{
+                      translateText(
+                        "Ahead, the bridge led towards the town entrance, they began walking toward the entrance of Eldermere, ready to explore The Town Of Memories"
+                      )
+                    }}
                   </p>
                 </section>
                 <button
@@ -120,22 +190,27 @@
                 >
                   <span
                     class="mb-4 block text-xs uppercase text-[rgba(217,164,111,0.88)]"
-                    >Arrival at Eldermere</span
+                    >{{ translateText("Arrival at Eldermere") }}</span
                   >
                   <h2 class="text-4xl md:text-6xl leading-none text-white mb-4">
-                    Inside Eldermere
+                    {{ translateText("Inside Eldermere") }}
                   </h2>
                   <p class="story-reveal story-line">
-                    The town was quiet, but not empty! Flags moved gently above
-                    the stone streets, old houses leaned toward the warmth
-                    lights of the sun, and the fountain in the square flows
-                    softly beneath the morning breezes. <br /><br />
-                    For a moment, everything felt quiet... <br />
-                    The air around the fountain grew slightly... and
-                    slightly...<br /><br />
-                    Jolie's noticed an old lady stood beneath the shade nearby
-                    the archway... watching them as if she had been waiting
-                    there for a long time
+                    {{
+                      translateText(
+                        "The town was quiet, but not empty! Flags moved gently above the stone streets, old houses leaned toward the warmth lights of the sun, and the fountain in the square flows softly beneath the morning breezes."
+                      )
+                    }}
+                    <br /><br />
+                    {{ translateText("For a moment, everything felt quiet...") }}
+                    <br />
+                    {{ translateText("The air around the fountain grew slightly... and slightly...") }}
+                    <br /><br />
+                    {{
+                      translateText(
+                        "Jolie's noticed an old lady stood beneath the shade nearby the archway... watching them as if she had been waiting there for a long time"
+                      )
+                    }}
                   </p>
                 </section>
                 <button
@@ -162,7 +237,7 @@
                         <span
                           class="block text-xs uppercase text-[rgba(217,164,111,0.88)]"
                         >
-                          Arrival at Eldermere
+                          {{ translateText("Arrival at Eldermere") }}
                         </span>
                         <h2
                           class="mt-1 text-2xl leading-none text-white md:text-4xl"
@@ -175,7 +250,7 @@
                         class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
                         (click)="resetEldermereConversation()"
                       >
-                        Restart
+                        {{ translateText("Restart") }}
                       </button>
                     </div>
                   </header>
@@ -186,8 +261,11 @@
                         class="dialogue-line text-sm leading-relaxed text-white/80 md:text-base"
                         [style.animation-delay.ms]="eldermereStep % 2"
                       >
-                        "Welcome to Eldermere, the Town of Memories. Most
-                        visitors come here looking for something they lost."
+                        "{{
+                          translateText(
+                            "Welcome to Eldermere, the Town of Memories. Most visitors come here looking for something they lost."
+                          )
+                        }}"
                       </p>
                     }
 
@@ -196,9 +274,11 @@
                         class="dialogue-line text-sm leading-relaxed text-white/80 md:text-base"
                         [style.animation-delay.ms]="eldermereStep % 2"
                       >
-                        "But memories are not lost things. They are living
-                        things. If you touch them carelessly, they may answer in
-                        ways you do not expect."
+                        "{{
+                          translateText(
+                            "But memories are not lost things. They are living things. If you touch them carelessly, they may answer in ways you do not expect."
+                          )
+                        }}"
                       </p>
                     }
 
@@ -210,12 +290,12 @@
                         <p
                           class="text-xs uppercase text-[rgba(217,164,111,0.88)]"
                         >
-                          Elowen answers
+                          {{ translateText("Elowen answers") }}
                         </p>
                         <p
                           class="mt-2 text-sm leading-relaxed text-white/80 md:text-base"
                         >
-                          "{{ selectedEldermereChoice.reply }}"
+                          "{{ translateText(selectedEldermereChoice.reply) }}"
                         </p>
                       </div>
                     }
@@ -225,10 +305,13 @@
                         class="dialogue-line text-sm leading-relaxed text-white/75 md:text-base"
                         [style.animation-delay.ms]="eldermereStep % 2"
                       >
-                        Elowen turns toward the street. Her smile remains, but
-                        her eyes become serious.
+                        {{
+                          translateText(
+                            "Elowen turns toward the street. Her smile remains, but her eyes become serious."
+                          )
+                        }}
                         <br /><br />
-                        "There are two paths open to you now."
+                        "{{ translateText("There are two paths open to you now.") }}"
                       </p>
                     }
 
@@ -240,16 +323,16 @@
                         <p
                           class="text-xs uppercase text-[rgba(217,164,111,0.88)]"
                         >
-                          {{ selectedEldermerePath.scene }}
+                          {{ translateText(selectedEldermerePath.scene) }}
                         </p>
                         <p class="mt-2 text-sm leading-relaxed text-white/80">
-                          "{{ selectedEldermerePath.reply }}" <br /><br />
-                          {{ selectedEldermerePath.narration }}
+                          "{{ translateText(selectedEldermerePath.reply) }}" <br /><br />
+                          {{ translateText(selectedEldermerePath.narration) }}
                         </p>
                         <p class="mt-3 text-xs leading-relaxed text-white/55">
-                          {{ selectedEldermerePath.theme }} ·
-                          {{ selectedEldermerePath.task }} ·
-                          {{ selectedEldermerePath.focus }}
+                          {{ translateText(selectedEldermerePath.theme) }} Â·
+                          {{ translateText(selectedEldermerePath.task) }} Â·
+                          {{ translateText(selectedEldermerePath.focus) }}
                         </p>
                       </div>
                     }
@@ -264,7 +347,7 @@
                         class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
                         (click)="advanceEldermereDialogue()"
                       >
-                        Continue
+                        {{ translateText("Continue") }}
                       </button>
                     }
 
@@ -273,11 +356,11 @@
                         class="md:col-span-2 flex items-center justify-between gap-3 text-xs uppercase text-white/45"
                       >
                         <span>
-                          Topics {{ completedEldermereChoiceIds.length }}/{{
+                        {{ translateText("Topics") }} {{ completedEldermereChoiceIds.length }}/{{
                             eldermereChoices.length
                           }}
                         </span>
-                        <span>Ask everything before choosing a path</span>
+                        <span>{{ translateText("Ask everything before choosing a path") }}</span>
                       </div>
                       @for (choice of eldermereChoices; track choice.id) {
                         <button
@@ -295,17 +378,17 @@
                             <span
                               class="mb-1 inline-block text-[0.65rem] uppercase text-[rgba(217,164,111,0.95)]"
                             >
-                              Main quest
+                              {{ translateText("Main quest") }}
                             </span>
                           }
                           @if (hasCompletedEldermereChoice(choice.id)) {
                             <span
                               class="mb-1 inline-block text-[0.65rem] uppercase text-white/40"
                             >
-                              Asked
+                              {{ translateText("Asked") }}
                             </span>
                           }
-                          Jolie: "{{ choice.prompt }}"
+                          {{ translateText("Jolie") }}: "{{ translateText(choice.prompt) }}"
                         </button>
                       }
                     }
@@ -319,8 +402,8 @@
                         {{
                           completedEldermereChoiceIds.length ===
                           eldermereChoices.length
-                            ? "Choose a path"
-                            : "Ask another question"
+                            ? translateText("Choose a path")
+                            : translateText("Ask another question")
                         }}
                       </button>
                     }
@@ -342,10 +425,10 @@
                             <span
                               class="mb-1 block text-[0.65rem] uppercase text-[rgba(217,164,111,0.95)]"
                             >
-                              Main quest
+                              {{ translateText("Main quest") }}
                             </span>
                           }
-                          {{ path.option }}
+                          {{ translateText(path.option) }}
                         </button>
                       }
                     }
@@ -358,21 +441,20 @@
                     class="quest-popup absolute left-1/2 top-1/2 z-[8] w-[min(24rem,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2 border border-[rgba(217,164,111,0.55)] bg-[rgba(8,10,18,0.86)] p-5 text-center text-white shadow-2xl backdrop-blur-md"
                   >
                     <p class="text-xs uppercase text-[rgba(217,164,111,0.95)]">
-                      Main quest accepted
+                      {{ translateText("Main quest accepted") }}
                     </p>
                     <h3 class="mt-2 text-2xl leading-tight">
-                      The Memory Shrine
+                      {{ translateText("The Memory Shrine") }}
                     </h3>
                     <p class="mt-3 text-sm leading-relaxed text-white/65">
-                      Walk softly. Some candles remember the hands that lit
-                      them.
+                      {{ translateText("Walk softly. Some candles remember the hands that lit them.") }}
                     </p>
                     <button
                       type="button"
                       class="mt-4 border border-white/15 px-4 py-2 text-sm text-white/70 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
                       (click)="continueMainQuest($event, beginningChildJourney)"
                     >
-                      Continue
+                      {{ translateText("Continue") }}
                     </button>
                   </div>
                 }
@@ -391,10 +473,10 @@
                     <div class="flex items-start justify-between gap-4">
                       <div>
                         <span class="block text-xs uppercase text-[rgba(217,164,111,0.88)]">
-                          Main quest
+                          {{ translateText("Arrival at Eldermere") }}
                         </span>
                         <h2 class="mt-1 text-2xl leading-none text-white md:text-4xl">
-                          Memorial Shrine
+                          {{ translateText("Memorial Shrine") }}
                         </h2>
                       </div>
                       <button
@@ -402,7 +484,7 @@
                         class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
                         (click)="resetShrineScene()"
                       >
-                        Restart
+                        {{ translateText("Restart") }}
                       </button>
                     </div>
                   </header>
@@ -414,10 +496,10 @@
                         [class]="'dialogue-line speaker-line ' + getShrineSpeakerClass(beat.speaker)"
                       >
                         <p class="speaker-name text-xs uppercase">
-                          {{ beat.speaker }}
+                          {{ translateText(beat.speaker) }}
                         </p>
                         <p class="mt-2 text-sm leading-relaxed text-white/82 md:text-base">
-                          {{ beat.text }}
+                          {{ translateText(beat.text) }}
                         </p>
                       </div>
                       }
@@ -428,12 +510,14 @@
                         class="dialogue-line speaker-line speaker-line--shrine"
                       >
                         <p class="speaker-name text-xs uppercase">
-                          The statue answers
+                          {{ translateText("The statue answers") }}
                         </p>
                         <p class="mt-2 text-sm leading-relaxed text-white/75 md:text-base">
-                          Moss darkens across the stone. A pale line of light
-                          opens beneath the statue's hands, and the clearing
-                          grows quiet enough to hear a memory arrive.
+                          {{
+                            translateText(
+                              "Moss darkens across the stone. A pale line of light opens beneath the statue's hands, and the clearing grows quiet enough to hear a memory arrive."
+                            )
+                          }}
                         </p>
                       </div>
                     }
@@ -446,10 +530,10 @@
                         @if (beat.speaker === 'Memory Clue 01') {
                           <div class="memory-clue">
                             <p class="text-xs uppercase text-[rgba(217,164,111,0.95)]">
-                              {{ beat.speaker }}
+                              {{ translateText(beat.speaker) }}
                             </p>
                             <p class="mt-2 text-sm leading-relaxed text-white/80 md:text-base">
-                              {{ beat.text }}
+                              {{ translateText(beat.text) }}
                             </p>
                           </div>
                         } @else {
@@ -457,10 +541,10 @@
                             [class]="'speaker-line ' + getShrineSpeakerClass(beat.speaker)"
                           >
                             <p class="speaker-name text-xs uppercase">
-                              {{ beat.speaker }}
+                              {{ translateText(beat.speaker) }}
                             </p>
                             <p class="mt-2 text-sm leading-relaxed text-white/82 md:text-base">
-                              {{ beat.text }}
+                              {{ translateText(beat.text) }}
                             </p>
                           </div>
                         }
@@ -476,13 +560,13 @@
                         class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
                         (click)="advanceShrineScene()"
                       >
-                        Continue
+                        {{ translateText("Continue") }}
                       </button>
                     }
 
                     @if (isShrineQuestionOpen) {
                       <p class="md:col-span-2 text-xs uppercase tracking-[0.18em] text-[rgba(217,164,111,0.72)]">
-                        The shrine is waiting for your answer
+                        {{ translateText("The shrine is waiting for your answer") }}
                       </p>
                     }
 
@@ -494,8 +578,8 @@
                       >
                         {{
                           shrineAfterStep === shrineAfterBeats.length - 1
-                            ? "The clue stays with you"
-                            : "Continue"
+                            ? translateText("Claim the memory")
+                            : translateText("Continue")
                         }}
                       </button>
                     }
@@ -507,32 +591,26 @@
                     class="shrine-question-popup absolute left-1/2 top-1/2 z-[8] w-[min(34rem,calc(100vw-2rem))] max-h-[calc(100dvh-2rem)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto border border-[rgba(217,164,111,0.55)] bg-[rgba(8,10,18,0.9)] p-5 text-left text-white shadow-2xl backdrop-blur-md md:p-6"
                   >
                     <p class="text-xs uppercase tracking-[0.22em] text-[rgba(217,164,111,0.95)]">
-                      Shrine question
+                      {{ translateText("Shrine question") }}
                     </p>
                     <h3 class="mt-2 text-2xl leading-tight md:text-3xl">
-                      Where did the first memory begin?
+                      {{ translateText("Where did the first memory begin?") }}
                     </h3>
                     <p class="mt-4 text-sm leading-relaxed text-white/72 md:text-base">
-                      I began with a group of strangers,<br />
-                      a shared task,<br />
-                      and a name not yet familiar.
-                      <br /><br />
-                      Before the work truly began, someone reached out from a
-                      small glowing window.
-                      <br /><br />
-                      Not with a formal greeting. Not with a serious promise.
-                      With a playful line, as if finding her was already part of
-                      the adventure.
+                      {{
+                        translateText(
+                          "I began with a group of strangers, a shared task, and a name not yet familiar. Before the work truly began, someone reached out from a small glowing window. Not with a formal greeting. Not with a serious promise. With a playful line, as if finding her was already part of the adventure."
+                        )
+                      }}
                     </p>
                     <p class="mt-5 border-l border-[rgba(217,164,111,0.46)] pl-3 text-sm font-medium text-white">
-                      What did she tell him to do if he could not find her first day of class?
+                      {{ translateText("What did she tell him to do if he could not find her first day of class?") }}
                     </p>
 
                     @if (shrineWrongAnswer) {
                       <p class="mt-4 border border-white/15 bg-black/25 p-3 text-sm leading-relaxed text-white/62">
-                        Old Lady (Elowen): "No. That sounds ordinary, but this memory did
-                        not begin ordinarily. It began with something playful
-                        enough to stay. Try again."
+                        {{ translateText("Old Lady (Elowen)") }}:
+                        "{{ translateText("No. That sounds ordinary, but this memory did not begin ordinarily. It began with something playful enough to stay. Try again.") }}"
                       </p>
                     }
 
@@ -545,21 +623,95 @@
                           [class.bg-[rgba(217,164,111,0.12)]]="selectedShrineAnswerId === answer.id"
                           (click)="chooseShrineAnswer(answer.id)"
                         >
-                          {{ answer.label }}
+                          {{ translateText(answer.label) }}
                         </button>
                       }
                     </div>
                   </div>
                 }
 
-                <button
-                  type="button"
-                  class="inner-next-arrow absolute left-1/2 bottom-8 z-[5] grid h-16 w-16 -translate-x-1/2 place-items-center rounded-full border border-white/20 text-3xl text-white/75 transition duration-300 hover:border-[rgba(217,164,111,0.65)] hover:text-[rgba(255,226,184,0.95)]"
-                  (click)="goToBeginningMemory($event, beginningChildJourney)"
-                  aria-label="Go to the next memory"
+                @if (showFirstClueAchievedPopup) {
+                  <div
+                    class="quest-popup absolute left-1/2 top-1/2 z-[9] w-[min(25rem,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2 border border-[rgba(217,164,111,0.58)] bg-[rgba(8,10,18,0.9)] p-5 text-center text-white shadow-2xl backdrop-blur-md"
+                  >
+                    <p class="text-xs uppercase tracking-[0.2em] text-[rgba(217,164,111,0.95)]">
+                      {{ translateText("First Memory achieved") }}
+                    </p>
+                    <h3 class="mt-2 text-2xl leading-tight">
+                      {{ translateText("The First Approach") }}
+                    </h3>
+                    <p class="mt-3 text-sm leading-relaxed text-white/65">
+                      {{
+                        translateText(
+                          "A playful line that made the beginning impossible to forget."
+                        )
+                      }}
+                    </p>
+                    <button
+                      type="button"
+                      class="mt-4 border border-white/15 px-4 py-2 text-sm text-white/70 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                      (click)="showFirstClueAchievedPopup = false"
+                      (click)="goToBeginningMemory($event, beginningChildJourney)"
+                    >
+                      {{ translateText("Continue") }}
+                      
+                    </button>
+                  </div>
+                }
+
+
+              </article>
+            </swiper-slide>
+
+                <swiper-slide>
+              <article
+                class="inner-memory !flex items-center justify-start bg-[linear-gradient(rgba(8,10,18,0.28),rgba(0,0,0,0.78)),url('/background/img7.jpg')] bg-cover bg-center px-4 py-20 md:px-[min(8vw,6rem)]"
+              >
+                <section
+                  class="dialogue-panel max-h-[calc(100dvh-8rem)] w-[min(42rem,100%)] overflow-y-auto border border-white/20 bg-[rgba(8,10,18,0.62)] px-6 py-5 text-left text-[rgba(246,240,231,0.82)] backdrop-blur-md md:px-7 md:py-6"
                 >
-                  <span> &#8595; </span>
-                </button>
+                  <span
+                    class="mb-4 block text-xs uppercase text-[rgba(217,164,111,0.88)]"
+                    >{{ translateText("Nightfall in Eldermere") }}</span
+                  >
+                  <h2 class="text-4xl md:text-6xl leading-none text-white mb-4">
+                    {{ translateText("After the Shrine") }}
+                  </h2>
+                  @for (beat of currentNightfallBeatList; track nightfallStep) {
+                    <div
+                      [class]="'dialogue-line text-sm leading-relaxed md:text-base ' + getNightfallBeatClass(beat.speaker)"
+                    >
+                      <p class="mb-2 text-xs uppercase opacity-70">
+                        {{ translateText(beat.speaker) }}
+                      </p>
+                      <p>
+                        @if (beat.speaker === "Jolie's inner thought") {
+                          "{{ translateText(beat.text) }}"
+                        } @else {
+                          {{ translateText(beat.text) }}
+                        }
+                      </p>
+                    </div>
+                  }
+
+                  <div class="mt-5 flex items-center justify-between gap-4 border-t border-white/10 pt-4">
+                    <p class="text-xs uppercase tracking-[0.16em] text-white/40">
+                      {{ nightfallStep + 1 }}/{{ nightfallBeats.length }}
+                    </p>
+                    <button
+                      type="button"
+                      class="dialogue-choice border border-white/15 bg-white/[0.04] px-4 py-2 text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                      (click)="advanceNightfall()"
+                    >
+                      {{
+                        isNightfallComplete
+                          ? translateText("The night keeps the question")
+                          : translateText("Continue")
+                      }}
+                    </button>
+                  </div>
+                </section>
+           
               </article>
             </swiper-slide>
           </swiper-container>
@@ -583,16 +735,16 @@
 
     <section class="story-window">
       <header class="story-reveal station-label">
-        <span>{{ stop.stop }}</span>
-        <strong>{{ stop.station }}</strong>
+        <span>{{ translateText(stop.stop) }}</span>
+        <strong>{{ translateText(stop.station) }}</strong>
       </header>
 
-      <h1 class="story-reveal stop-title">{{ stop.title }}</h1>
+      <h1 class="story-reveal stop-title">{{ translateText(stop.title) }}</h1>
 
       <div class="story-lines">
         @for (line of stop.lines; track line.before; let lineIndex = $index) {
           <p class="story-reveal story-line" [style.--line-order]="lineIndex">
-            {{ line.before }}
+            {{ translateText(line.before) }}
             @if (line.hidden) {
               <button
                 type="button"
@@ -600,10 +752,10 @@
                 [class.is-revealed]="isHiddenWordRevealed(stop.id, lineIndex)"
                 (click)="revealHiddenWord(stop.id, lineIndex)"
               >
-                <span class="hidden-word__text">{{ line.hidden }}</span>
+                <span class="hidden-word__text">{{ translateText(line.hidden) }}</span>
               </button>
             }
-            {{ line.after }}
+            {{ translateText(line.after) }}
           </p>
         }
       </div>
@@ -614,8 +766,8 @@
         [class.is-open]="isNoteOpen(stop.id)"
         (click)="toggleNote(stop.id)"
       >
-        <span class="ticket-note__label">{{ stop.noteLabel }}</span>
-        <span class="ticket-note__message">{{ stop.note }}</span>
+        <span class="ticket-note__label">{{ translateText(stop.noteLabel) }}</span>
+        <span class="ticket-note__message">{{ translateText(stop.note) }}</span>
       </button>
 
       <footer class="story-reveal stop-footer">

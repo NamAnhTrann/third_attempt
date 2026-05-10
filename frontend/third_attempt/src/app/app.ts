@@ -139,10 +139,8 @@ export class App {
   }
 
   private defaultPlaylist: string[] = [
-
- 
-
-    // 'songs/Indila - Love Story (Slowed-Reverb).mp3',
+     'songs/Ripples in a River of Time.mp3',
+     'songs/An Afternoon Date.mp3',
   ];
   private catPlaylist: string[] = ['songs/melancholy.mp3 (1).mp3'];
 
@@ -279,21 +277,39 @@ export class App {
 
   showWelcomePopup() {
     Swal.fire({
-      title: 'Use Desktop/Laptop For Better Experience',
-      width: '32rem',
-      padding: '1.5rem',
-      background: 'rgba(0,0,0,1)',
-      color: '#ffffffff',
-      confirmButtonText: 'Continue',
-      confirmButtonColor: '#444141ff',
+      title: 'Memories Lane',
+      html: `
+        <div style="text-align:left">
+          <p style="margin:0 0 0.85rem;color:rgba(246,240,231,0.72);line-height:1.65">
+            This story is built like a journey through memory. A desktop
+            or laptop gives the smoothest view, dialogue, and
+            small hidden clues.
+          </p>
+          <p style="margin:0;color:rgba(217,164,111,0.9);font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase">
+            Headphones recommended
+          </p>
+        </div>
+      `,
+      width: '34rem',
+      padding: '1.6rem',
+      background:
+        'linear-gradient(180deg, rgba(18,20,30,0.98), rgba(5,7,13,0.98))',
+      color: '#f6f0e7',
+      confirmButtonText: 'Begin the journey',
+      confirmButtonColor: '#8a613d',
+      buttonsStyling: true,
+      showClass: {
+        popup: 'swal2-show',
+        backdrop: 'swal2-backdrop-show',
+      },
+      customClass: {
+        popup: 'rounded-lg border border-white/20 shadow-2xl',
+        title: 'text-white',
+      },
       allowOutsideClick: true,
       allowEscapeKey: true,
-    }).then((res) => {
-      if (res.isConfirmed) {
-        this.unlockMusic();
-      } else {
-        this.unlockMusic();
-      }
+    }).then(() => {
+      this.unlockMusic();
     });
   }
 
