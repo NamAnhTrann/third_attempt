@@ -80,7 +80,7 @@ export const INTRO_COPY_LINES: string[] = [
   'An interactive fantasy story about memories that were forgotten, moments that stayed, and the journey to understand what they became.',
   'You will play as Frieren, carrying your own name through each town and every memory.',
   'Your task is to explore, choose, solve, and uncover the missing pieces left behind.',
-  'Some memories are not meant to be rushed.',
+  'Take your time, aaanddd...',
   'Maybe, when the journey ends, you will find something worth returning to :D'
   ];
 
