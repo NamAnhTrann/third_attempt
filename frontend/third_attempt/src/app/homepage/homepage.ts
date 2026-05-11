@@ -179,7 +179,7 @@ export class Homepage implements AfterViewInit, OnDestroy {
     this.selectedEldermerePath = this.eldermerePaths.find(
       (path) => path.id === pathId,
     );
-    this.eldermereStep = 5;
+    this.eldermereStep = 6;
     this.showMainQuestPopup = pathId === 'shrine';
     this.showSideQuestPopup = pathId === 'duelist';
   }
@@ -351,6 +351,10 @@ export class Homepage implements AfterViewInit, OnDestroy {
         : 2;
   }
 
+  showEldermerePaths(): void {
+    this.eldermereStep = 5;
+  }
+
   hasCompletedEldermereChoice(choiceId: string): boolean {
     return this.completedEldermereChoiceIds.includes(choiceId);
   }
@@ -419,4 +423,3 @@ export class Homepage implements AfterViewInit, OnDestroy {
     return `${stopId}-${lineIndex}`;
   }
 }
-

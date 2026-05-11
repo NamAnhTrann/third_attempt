@@ -321,7 +321,7 @@
                       </p>
                     }
 
-                    @if (eldermereStep === 2 && selectedEldermereChoice) {
+                    @if (eldermereStep === 3 && selectedEldermereChoice) {
                       <div
                         class="dialogue-line border-l border-[rgba(217,164,111,0.55)] pl-4"
                         [style.animation-delay.ms]="eldermereStep % 2"
@@ -339,7 +339,7 @@
                       </div>
                     }
 
-                    @if (eldermereStep === 3) {
+                    @if (eldermereStep === 4) {
                       <p
                         class="dialogue-line text-sm leading-relaxed text-white/75 md:text-base"
                         [style.animation-delay.ms]="eldermereStep % 2"
@@ -354,7 +354,7 @@
                       </p>
                     }
 
-                    @if (eldermereStep === 4 && selectedEldermerePath) {
+                    @if (eldermereStep === 6 && selectedEldermerePath) {
                       <div
                         class="dialogue-line rounded border border-[rgba(217,164,111,0.28)] bg-black/20 p-3"
                         [style.animation-delay.ms]="eldermereStep % 2"
@@ -448,6 +448,16 @@
                     }
 
                     @if (eldermereStep === 4) {
+                      <button
+                        type="button"
+                        class="dialogue-choice border border-white/15 bg-white/[0.04] px-3 py-2 text-left text-sm text-white/75 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                        (click)="showEldermerePaths()"
+                      >
+                        {{ translateText(homepageText.eldermere.choosePath) }}
+                      </button>
+                    }
+
+                    @if (eldermereStep === 5) {
                       @for (path of eldermerePaths; track path.id) {
                         <button
                           type="button"

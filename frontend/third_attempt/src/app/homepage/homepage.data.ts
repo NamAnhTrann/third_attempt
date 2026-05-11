@@ -80,7 +80,7 @@ export const INTRO_COPY_LINES: string[] = [
   'An interactive fantasy story about memories that were forgotten, moments that stayed, and the journey to understand what they became.',
   'You will play as Frieren, carrying your own name through each town and every memory.',
   'Your task is to explore, choose, solve, and uncover the missing pieces left behind.',
-  'Take your time, aaanddd...',
+  'Take your time, aaanddd... (yes i use ChatGPT to translate)',
   'Maybe, when the journey ends, you will find something worth returning to :D'
   ];
 
@@ -674,7 +674,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       'The First Approach': '最初嘅靠近',
       'A group project. A small glowing window. A playful line that made the beginning impossible to forget.':
         '一個小組功課。一個細細發光嘅視窗。一句玩笑說話，令個開始再都忘記唔到。',
-      'It has been a long by carriage, through the sleeping woods and stone paths. Finally, the lark of Eldermere appeared beneath the morning\'s light. It walls were pale beneathe the afternoon sun, stretching across the valley.':
+      'It has been a long by carriage, through the sleeping woods and stone paths. Finally, the lake of Eldermere appeared beneath the morning\'s light. It walls were pale beneathe the afternoon sun, stretching across the valley.':
         '馬車行咗好耐，穿過沉睡嘅樹林同石路。終於，Eldermere 喺晨光之下出現，淡色嘅城牆喺午後陽光入面伸展過山谷。',
       'Ahead, the bridge led towards the town entrance, they began walking toward the entrance of Eldermere, ready to explore The Town Of Memories':
         '前面條橋通向城鎮入口，佢哋開始向 Eldermere 行去，準備探索呢座記憶之城。',
@@ -724,10 +724,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
         '咁就輕輕咁行。神殿唔會懲罰太響嘅腳步，但佢會記得。',
       'Elowen begins walking toward a narrow road lined with white flowers. The air grows colder with each step, and the sound of the fountain fades behind them.':
         'Elowen 向一條種滿白花嘅窄路行去。每行一步，空氣就凍一啲，噴泉聲喺身後慢慢淡開。',
-      'emotional, reflective, puzzle-based': '感性、反思、解謎',
-      'light candles in the correct memory order': '按正確記憶次序點亮蠟燭',
-      'first message, first laugh, first thought that stayed':
-        '第一個訊息、第一次笑、第一個留低嘅念頭',
+   
       'Then keep your hand near your staff. Some memories do not cry when they are hurt. Some become teeth.':
         '咁你隻手就唔好離開法杖。有啲記憶受傷時唔會喊，佢哋會變成牙齒。',
       'Elowen leads them toward the market shadow, where sunlight no longer reaches the stones. Somewhere ahead, metal scrapes against the ground.':
@@ -1120,9 +1117,7 @@ export const ELDERMERE_PATHS: EldermerePath[] = [
       narration:
         'Elowen begins walking toward a narrow road lined with white flowers. The air grows colder with each step, and the sound of the fountain fades behind them.',
       scene: 'The Memory Shrine',
-      theme: 'emotional, reflective, puzzle-based',
-      task: 'light candles in the correct memory order',
-      focus: 'first message, first laugh, first thought that stayed',
+      
     },
 
   ];

@@ -26,9 +26,9 @@ export type EldermerePath = {
   reply: string;
   narration: string;
   scene: string;
-  theme: string;
-  task: string;
-  focus: string;
+  theme?: string;
+  task?: string;
+  focus?: string;
 };
 
 export type ShrineBeat = {
