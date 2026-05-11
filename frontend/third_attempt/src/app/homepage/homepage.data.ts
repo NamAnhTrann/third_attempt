@@ -48,7 +48,7 @@ export const HOMEPAGE_TEXT: HomepageText = {
       mainQuestAccepted: 'Main quest accepted',
       shrineTitle: 'The Memory Shrine',
       shrineHint: 'Walk softly. Some candles remember the hands that lit them.',
-      pathsOpen: 'There are two paths open to you now.',
+      pathsOpen: 'The path open to you now.',
     },
     shrine: {
       title: 'Memorial Shrine',
@@ -125,7 +125,7 @@ export const EMOTIONAL_DIALOGUE: Record<string, string> = {
     'Take us to the Memory Shrine.': 'Then... take us to the Memory Shrine.',
     'Then walk softly. The shrine does not punish loud footsteps, but it remembers them.':
       'Then walk softly. The shrine does not punish loud footsteps... but it remembers them.',
-    'There are two paths open to you now.': 'There are two paths open to you now...',
+    'The path is open to you now.': 'The path is open to you now...',
     'This is the Memorial Shrine.': 'Hm... this is the Memorial Shrine.',
     'It does not look like a shrine.': 'It does not look like a shrine...',
     'No. It does not ask to be noticed.': 'No. It does not ask to be noticed.',
