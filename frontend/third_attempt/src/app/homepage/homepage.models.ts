@@ -41,7 +41,7 @@ export type ShrineAnswer = {
   label: string;
 };
 
-export type LanguageId = 'english' | 'japanese' | 'cantonese';
+export type LanguageId = 'english' | 'cantonese';
 
 export type IntroLanguage = {
   id: LanguageId;
