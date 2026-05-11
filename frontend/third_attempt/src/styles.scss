@@ -7,3 +7,253 @@ html,body {
   font-family: "Playfair Display", serif;
   overflow: hidden;
 }
+
+app-homepage .dialogue-panel h2,
+app-homepage .dialogue-panel h3,
+app-homepage .quest-popup h3,
+app-homepage .shrine-question-popup h3 {
+  font-size: clamp(1.75rem, 4vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+app-homepage .dialogue-panel p,
+app-homepage .quest-popup p,
+app-homepage .shrine-question-popup p,
+app-homepage .dialogue-choice {
+  font-size: clamp(0.95rem, 1.35vw, 1.05rem);
+  line-height: 1.7;
+}
+
+app-homepage .dialogue-panel span,
+app-homepage .quest-popup > p:first-child,
+app-homepage .shrine-question-popup > p:first-child,
+app-homepage .speaker-name {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+}
+
+app-homepage .dialogue-line {
+  animation: homepage-dialogue-line 620ms cubic-bezier(0.2, 0.8, 0.22, 1) both;
+}
+
+app-homepage .intro-copy-line {
+  animation: homepage-dialogue-line 620ms cubic-bezier(0.2, 0.8, 0.22, 1) both !important;
+}
+
+app-homepage .train-journey {
+  animation: homepage-whole-fade-in 900ms ease both;
+}
+
+app-homepage swiper-slide > article,
+app-homepage swiper-slide > .inner-memory {
+  opacity: 0;
+  transform: translateY(0.7rem);
+  transition:
+    opacity 820ms ease,
+    transform 820ms ease;
+}
+
+app-homepage swiper-slide.swiper-slide-active > article,
+app-homepage swiper-slide.swiper-slide-active > .inner-memory {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+app-homepage swiper-slide:not(.swiper-slide-active) .dialogue-line,
+app-homepage swiper-slide:not(.swiper-slide-active) .story-reveal,
+app-homepage swiper-slide:not(.swiper-slide-active) .dialogue-choice {
+  opacity: 0;
+  transform: translateY(0.45rem);
+}
+
+app-homepage swiper-slide > article :is(h1, h2, h3, p, span, strong, button):not(.hidden-word):not(.hidden-word__text),
+app-homepage .mobile-route .train-stop :is(h1, h2, h3, p, span, strong, button):not(.hidden-word):not(.hidden-word__text) {
+  opacity: 0;
+  transform: translateY(0.55rem);
+  transition:
+    opacity 620ms ease,
+    transform 620ms cubic-bezier(0.2, 0.8, 0.22, 1);
+  transition-delay: 320ms;
+}
+
+app-homepage swiper-slide.swiper-slide-active > article :is(h1, h2, h3, p, span, strong, button):not(.hidden-word):not(.hidden-word__text),
+app-homepage .mobile-route .train-stop.is-active :is(h1, h2, h3, p, span, strong, button):not(.hidden-word):not(.hidden-word__text) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+app-homepage swiper-slide.swiper-slide-active > article :is(h1, h2, h3, p, span, strong, button):nth-child(2),
+app-homepage .mobile-route .train-stop.is-active :is(h1, h2, h3, p, span, strong, button):nth-child(2) {
+  transition-delay: 390ms;
+}
+
+app-homepage swiper-slide.swiper-slide-active > article :is(h1, h2, h3, p, span, strong, button):nth-child(3),
+app-homepage .mobile-route .train-stop.is-active :is(h1, h2, h3, p, span, strong, button):nth-child(3) {
+  transition-delay: 460ms;
+}
+
+app-homepage swiper-slide.swiper-slide-active > article section:not(.dialogue-panel) :is(h1, h2, h3, p, span, strong):not(.hidden-word__text),
+app-homepage swiper-slide.swiper-slide-active > article .story-window :is(h1, h2, h3, p, span, strong):not(.hidden-word__text) {
+  animation: homepage-hidden-text-reveal 1100ms cubic-bezier(0.22, 1, 0.36, 1) 380ms both;
+}
+
+app-homepage .dialogue-panel > *,
+app-homepage .story-window,
+app-homepage .story-window > *,
+app-homepage .quest-popup > *,
+app-homepage .shrine-question-popup > *,
+app-homepage .dialogue-choice,
+app-homepage .inner-next-arrow {
+  animation: homepage-fade-in 720ms ease both;
+}
+
+app-homepage .dialogue-panel > :nth-child(2),
+app-homepage .story-window > :nth-child(2),
+app-homepage .quest-popup > :nth-child(2),
+app-homepage .shrine-question-popup > :nth-child(2) {
+  animation-delay: 80ms;
+}
+
+app-homepage .dialogue-panel > :nth-child(3),
+app-homepage .story-window > :nth-child(3),
+app-homepage .quest-popup > :nth-child(3),
+app-homepage .shrine-question-popup > :nth-child(3) {
+  animation-delay: 140ms;
+}
+
+app-homepage .quest-popup {
+  overflow: visible;
+}
+
+app-homepage .quest-popup::before {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  z-index: -1;
+  width: 8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(185, 241, 255, 0.24), rgba(246, 194, 214, 0.14) 45%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0.35);
+  animation: quest-shock 900ms ease-out both;
+}
+
+@keyframes homepage-dialogue-line {
+  from {
+    opacity: 0;
+    transform: translateY(0.55rem);
+  }
+}
+
+@keyframes homepage-dialogue-line-alt {
+  from {
+    opacity: 0;
+    transform: translateY(0.55rem);
+  }
+}
+
+@keyframes homepage-hidden-text-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+    filter: blur(5px);
+    opacity: 0;
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes homepage-whole-fade-in {
+  from {
+    opacity: 0;
+    filter: brightness(0.82);
+  }
+}
+
+@keyframes homepage-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+}
+
+@keyframes quest-shock {
+  70% {
+    opacity: 0.55;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3.2);
+  }
+}
+
+@media (max-width: 767px) {
+  app-homepage .inner-memory,
+  app-homepage .train-stop {
+    align-items: center;
+    justify-content: center;
+    padding: 4.5rem 0.75rem 5.5rem !important;
+  }
+
+  app-homepage .dialogue-panel,
+  app-homepage .story-window {
+    width: min(100%, calc(100vw - 1.5rem)) !important;
+    max-height: calc(100dvh - 7rem) !important;
+  }
+
+  app-homepage .dialogue-panel {
+    border-radius: 0.5rem;
+  }
+
+  app-homepage .dialogue-panel header {
+    padding: 0.85rem 1rem;
+  }
+
+  app-homepage .dialogue-panel h1,
+  app-homepage .dialogue-panel h2,
+  app-homepage .dialogue-panel h3,
+  app-homepage .stop-title {
+    font-size: clamp(2rem, 11vw, 3.15rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  app-homepage .dialogue-panel p,
+  app-homepage .dialogue-choice,
+  app-homepage .story-line,
+  app-homepage .ticket-note__message {
+    font-size: clamp(0.9rem, 4vw, 1rem) !important;
+    line-height: 1.58 !important;
+  }
+
+  app-homepage .dialogue-panel .grid,
+  app-homepage .dialogue-panel footer,
+  app-homepage .dialogue-panel header > div {
+    gap: 0.65rem;
+  }
+
+  app-homepage .dialogue-choice,
+  app-homepage .dialogue-panel button,
+  app-homepage .ticket-note {
+    min-height: 2.75rem;
+  }
+
+  app-homepage .inner-next-arrow {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+    bottom: 1rem !important;
+    font-size: 1.75rem !important;
+  }
+
+  app-homepage .shrine-question-popup,
+  app-homepage .quest-popup {
+    width: min(100%, calc(100vw - 1.25rem)) !important;
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+  }
+}
