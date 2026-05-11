@@ -166,9 +166,9 @@ export const EMOTIONAL_DIALOGUE: Record<string, string> = {
     'That is a strange first instruction.': 'That is a strange first instruction...',
     'Maybe. But some people enter a memory exactly like that. They arrive with a sentence you did not expect, and somehow, the day becomes easier to remember.':
       'Maybe. But some people enter a memory exactly like that. They arrive with a sentence you did not expect... and somehow, the day becomes easier to remember.',
-    'So that was the first clue?': 'So... that was the first clue?',
-    'Yes. The first clue is important because it became the place everything started from.':
-      'Yes. The first clue is important because it became the place everything started from.',
+    'So that was the first memory?': 'So... that was the first memory?',
+    'Yes. The first memory is important because it became the place everything started from.':
+      'Yes. The first memory is important because it became the place everything started from.',
     'A group project and an Instagram message.':
       'A group project... and an Instagram message.',
     'Many stories begin with less. The next memory is not kept here. It is somewhere louder. A memory carried by sound. The first laugh.':
@@ -644,7 +644,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       English: '英文',
       Cantonese: '廣東話',
       'The Town of Memories': '記憶之城',
-      'A quiet interactive story about searching through missing memories, following the clues she left behind, and trying to find the way back to her before the last light fades.':
+      'A quiet interactive story about searching through missing memories, following the memorys she left behind, and trying to find the way back to her before the last light fades.':
         '一個安靜嘅互動故事，關於喺失落嘅記憶入面尋找，跟住佢留下嘅線索，喺最後一點光消失之前，試住搵返通往佢身邊嘅路。',
       'Choose language': '選擇語言',
       'Arrival at Eldermere': '抵達 Eldermere',
@@ -669,8 +669,8 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       'The market shadow stirs. Some memories do not ask to be healed. They ask to be answered.':
         '市場嘅陰影開始郁。有啲記憶唔係想被治癒，只係想有人回答。',
       'Keep it': '收好佢',
-      'Claim the clue': '領取線索',
-      'First clue achieved': '獲得第一條線索',
+      'Claim the memory': '領取線索',
+      'First memory achieved': '獲得第一條線索',
       'The First Approach': '最初嘅靠近',
       'A group project. A small glowing window. A playful line that made the beginning impossible to forget.':
         '一個小組功課。一個細細發光嘅視窗。一句玩笑說話，令個開始再都忘記唔到。',
@@ -689,7 +689,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       'Old Lady (Elowen)': '老婆婆（Elowen）',
       Jolie: 'Jolie',
       Fern: 'Fern',
-      'Memory Clue 01': '記憶線索 01',
+      'Memory memory 01': '記憶線索 01',
       'The statue answers': '石像回應',
       'Shrine question': '神殿之問',
       'Where did the first memory begin?': '第一段記憶由邊度開始？',
@@ -827,7 +827,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       'Maybe they begin as nothing.': '可能佢哋一開始只係冇乜嘢。',
       'Then one day, someone looks back and realises it was the start of everything.':
         '然後有一日，有人回望，先發現嗰個原來係一切嘅開始。',
-      'She looked toward the moon. The first clue had been found. But somehow, it felt less like an answer and more like a question.':
+      'She looked toward the moon. The first memory had been found. But somehow, it felt less like an answer and more like a question.':
         '佢望向月亮。第一條線索已經搵到。但唔知點解，佢感覺唔似答案，反而更似一條問題。',
       'If that was the beginning... what else did he remember?':
         '如果嗰個就係開始……咁佢仲記得啲咩？',
@@ -885,7 +885,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       'But the memory had followed her back.': '但段記憶跟住佢返咗嚟。',
       called: '被呼喚',
       cantonese: '廣東話',
-      'Claim the memory': '領取記憶',
+      'Claim the clue': '領取記憶',
       'Credit: Frieren The Anime': '靈感來源：Frieren 動畫',
       'Did I say other things like that?': '我有冇講過其他咁樣嘅說話？',
       'Do not choose the most beautiful answer. Choose the true one.':
@@ -1002,7 +1002,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       shrine: '神殿',
       'Small things. Careless things. Things I forgot five minutes later.':
         '細小嘅事。冇留心嘅事。五分鐘之後我就忘記咗嘅事。',
-      'So that was the first clue?': '所以嗰個就係第一條線索？',
+      'So that was the first memory?': '所以嗰個就係第一條線索？',
       'So the shrine tests visitors?': '所以神殿會考驗訪客？',
       'Some hostile creatures do not hunt loudly. They wait for quiet footsteps.':
         '有啲敵意生物唔會大聲狩獵。佢哋會等安靜嘅腳步聲。',
@@ -1071,7 +1071,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       'What else did he remember?': '佢仲記得啲咩？',
       'Yes. That was the beginning. Not a grand meeting. Not a dramatic promise.':
         '係。嗰個就係開始。唔係盛大嘅相遇。唔係戲劇性嘅承諾。',
-      'Yes. The first clue is important because it became the place everything started from.':
+      'Yes. The first memory is important because it became the place everything started from.':
         '係。第一條線索好重要，因為佢變成咗一切開始嘅地方。',
       'You will play as Frieren, carrying your own name through each town and every memory.':
         '你會扮演 Frieren，帶住你自己嘅名字，穿過每個城鎮同每一段記憶。',
@@ -1259,7 +1259,7 @@ export const SHRINE_AFTER_BEATS: ShrineBeat[] = [
         'Maybe. But some people enter a memory exactly like that. They arrive with a sentence you did not expect, and somehow, the day becomes easier to remember.',
     },
     {
-      speaker: 'Memory Clue 01',
+      speaker: 'Memory 01',
       text:
         'The First Approach: She first approached through Instagram during a group project. "If you cannot find me, try screaming my name."',
     },
@@ -1270,12 +1270,12 @@ export const SHRINE_AFTER_BEATS: ShrineBeat[] = [
     },
     {
       speaker: 'Jolie',
-      text: 'So that was the first clue?',
+      text: 'So that was the first memory?',
     },
     {
       speaker: 'Old Lady (Elowen)',
       text:
-        'Yes. The first clue is important because it became the place everything started from.',
+        'Yes. The first memory is important because it became the place everything started from.',
     },
     {
       speaker: 'Fern',
