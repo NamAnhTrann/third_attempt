@@ -284,13 +284,23 @@
                           {{ translateText(homepageText.eldermere.speaker) }}
                         </h2>
                       </div>
-                      <button
-                        type="button"
-                        class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
-                        (click)="resetEldermereConversation()"
-                      >
-                        {{ translateText(homepageText.common.restart) }}
-                      </button>
+                      <div class="flex shrink-0 items-center gap-2">
+                        <button
+                          type="button"
+                          class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-white/15 disabled:hover:text-white/55"
+                          [disabled]="!canRetreatEldermereDialogue"
+                          (click)="retreatEldermereDialogue()"
+                        >
+                          {{ translateText(homepageText.intro.back) }}
+                        </button>
+                        <button
+                          type="button"
+                          class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                          (click)="resetEldermereConversation()"
+                        >
+                          {{ translateText(homepageText.common.restart) }}
+                        </button>
+                      </div>
                     </div>
                   </header>
 
@@ -528,13 +538,23 @@
                           {{ translateText(homepageText.shrine.title) }}
                         </h2>
                       </div>
-                      <button
-                        type="button"
-                        class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
-                        (click)="resetShrineScene()"
-                      >
-                        {{ translateText(homepageText.common.restart) }}
-                      </button>
+                      <div class="flex shrink-0 items-center gap-2">
+                        <button
+                          type="button"
+                          class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-white/15 disabled:hover:text-white/55"
+                          [disabled]="!canRetreatShrineScene"
+                          (click)="retreatShrineScene()"
+                        >
+                          {{ translateText(homepageText.intro.back) }}
+                        </button>
+                        <button
+                          type="button"
+                          class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                          (click)="resetShrineScene()"
+                        >
+                          {{ translateText(homepageText.common.restart) }}
+                        </button>
+                      </div>
                     </div>
                   </header>
 
@@ -729,13 +749,23 @@
                           {{ translateText(homepageText.nightfall.title) }}
                         </h2>
                       </div>
-                      <button
-                        type="button"
-                        class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
-                        (click)="resetNightfall()"
-                      >
-                        {{ translateText(homepageText.common.restart) }}
-                      </button>
+                      <div class="flex shrink-0 items-center gap-2">
+                        <button
+                          type="button"
+                          class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-white/15 disabled:hover:text-white/55"
+                          [disabled]="nightfallStep === 0"
+                          (click)="retreatNightfall()"
+                        >
+                          {{ translateText(homepageText.intro.back) }}
+                        </button>
+                        <button
+                          type="button"
+                          class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                          (click)="resetNightfall()"
+                        >
+                          {{ translateText(homepageText.common.restart) }}
+                        </button>
+                      </div>
                     </div>
                   </header>
 
@@ -798,13 +828,23 @@
                           {{ translateText(homepageText.ending.title) }}
                         </h2>
                       </div>
-                      <button
-                        type="button"
-                        class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
-                        (click)="resetEpilogue()"
-                      >
-                        {{ translateText(homepageText.common.restart) }}
-                      </button>
+                      <div class="flex shrink-0 items-center gap-2">
+                        <button
+                          type="button"
+                          class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-white/15 disabled:hover:text-white/55"
+                          [disabled]="epilogueStep === 0"
+                          (click)="retreatEpilogue()"
+                        >
+                          {{ translateText(homepageText.intro.back) }}
+                        </button>
+                        <button
+                          type="button"
+                          class="border border-white/15 px-3 py-1 text-xs uppercase text-white/55 transition hover:border-[rgba(217,164,111,0.65)] hover:text-white"
+                          (click)="resetEpilogue()"
+                        >
+                          {{ translateText(homepageText.common.restart) }}
+                        </button>
+                      </div>
                     </div>
                   </header>
 

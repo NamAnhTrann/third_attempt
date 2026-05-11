@@ -161,6 +161,20 @@ export class Homepage implements AfterViewInit, OnDestroy {
     this.eldermereStep = Math.min(this.eldermereStep + 1, 2);
   }
 
+  retreatEldermereDialogue(): void {
+    if (this.showMainQuestPopup || this.showSideQuestPopup) {
+      this.showMainQuestPopup = false;
+      this.showSideQuestPopup = false;
+      return;
+    }
+
+    this.eldermereStep = Math.max(this.eldermereStep - 1, 0);
+  }
+
+  get canRetreatEldermereDialogue(): boolean {
+    return this.eldermereStep > 0 || this.showMainQuestPopup || this.showSideQuestPopup;
+  }
+
   chooseEldermereDialogue(choiceId: string): void {
     this.selectedEldermereChoice = this.eldermereChoices.find(
       (choice) => choice.id === choiceId,
@@ -285,6 +299,10 @@ export class Homepage implements AfterViewInit, OnDestroy {
     );
   }
 
+  retreatNightfall(): void {
+    this.nightfallStep = Math.max(this.nightfallStep - 1, 0);
+  }
+
   resetNightfall(): void {
     this.nightfallStep = 0;
   }
@@ -294,6 +312,10 @@ export class Homepage implements AfterViewInit, OnDestroy {
       this.epilogueStep + 1,
       this.epilogueBeats.length - 1,
     );
+  }
+
+  retreatEpilogue(): void {
+    this.epilogueStep = Math.max(this.epilogueStep - 1, 0);
   }
 
   resetEpilogue(): void {
@@ -310,6 +332,42 @@ export class Homepage implements AfterViewInit, OnDestroy {
     this.shrineSceneStep = Math.min(
       this.shrineSceneStep + 1,
       this.shrineIntroBeats.length,
+    );
+  }
+
+  retreatShrineScene(): void {
+    if (this.showFirstClueAchievedPopup) {
+      this.showFirstClueAchievedPopup = false;
+      return;
+    }
+
+    if (this.shrineSolved) {
+      if (this.shrineAfterStep > 0) {
+        this.shrineAfterStep -= 1;
+        return;
+      }
+
+      this.shrineSolved = false;
+      this.selectedShrineAnswerId = undefined;
+      this.shrineWrongAnswer = false;
+      return;
+    }
+
+    if (this.shrineWrongAnswer) {
+      this.selectedShrineAnswerId = undefined;
+      this.shrineWrongAnswer = false;
+      return;
+    }
+
+    this.shrineSceneStep = Math.max(this.shrineSceneStep - 1, 0);
+  }
+
+  get canRetreatShrineScene(): boolean {
+    return (
+      this.shrineSceneStep > 0 ||
+      this.shrineSolved ||
+      this.shrineWrongAnswer ||
+      this.showFirstClueAchievedPopup
     );
   }
 
