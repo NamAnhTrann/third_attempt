@@ -1057,6 +1057,241 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
         '佢差啲笑咗。依家聽落好傻。但可能就係因為咁，佢先留低咗。',
       'Some memories did not become important because they were beautiful. Some became important because they were ordinary, and somehow, someone remembered them anyway.':
         '有啲記憶唔係因為美麗先重要。有啲係因為普通，而偏偏有人記得，所以先變得重要。',
+      'A group project and an Instagram message.':
+        '一個小組功課同一個 Instagram 訊息。',
+      'A group project.': '一個小組功課。',
+      'A playful line she had almost forgotten.':
+        '一句佢差啲已經唔記得嘅玩笑說話。',
+      'A playful sentence.': '一句玩笑說話。',
+      'A sentence she had written without thinking much of it.':
+        '一句佢當時冇諗太多就寫低嘅說話。',
+      'A small spark rose, then disappeared into the dark.':
+        '一粒細細嘅火星升起，然後消失喺黑暗入面。',
+      'About where the memory began.': '關於段記憶係喺邊度開始。',
+      'After leaving the Memorial Shrine, the forest path felt colder than before.':
+        '離開紀念神殿之後，森林小路比之前感覺更凍。',
+      'After some time, she found an old tree with roots large enough to shelter beneath. The roots curved around the ground like the walls of a small room, dark and quiet, hidden from the path.':
+        '過咗一陣，佢搵到一棵老樹，樹根大到可以喺下面避一避。啲根沿住地面彎起，好似一間細房嘅牆，黑暗、安靜，仲畀小路遮住咗。',
+      'Alone?': '一個人？',
+      'An Instagram message.': '一個 Instagram 訊息。',
+      'An interactive fantasy story about memories that were forgotten, moments that stayed, and the journey to understand what they became.':
+        '一個互動奇幻故事，關於被遺忘嘅記憶、留下嚟嘅瞬間，同埋一段去理解佢哋最後變成咩嘅旅程。',
+      'And somehow, that made it harder to ignore.':
+        '但唔知點解，正正因為咁，佢反而更難忽視。',
+      'Are you coming?': '你嚟唔嚟？',
+      'As if the past had become a fragile object in her hands.':
+        '好似過去變成咗一件脆弱嘅嘢，落喺佢手入面。',
+      'At the end of the path stood a moss-covered statue, older than the houses in town, peaceful as if it had been waiting without becoming tired.':
+        '小路盡頭企住一座鋪滿青苔嘅石像，比鎮入面啲屋仲古老，安靜得好似等咗好耐都未覺得攰。',
+      Back: '返回',
+      'Back then, it had felt simple.': '嗰陣，佢覺得好簡單。',
+      'Begin the story': '開始故事',
+      beginning: '開始',
+      'But careful.': '但變得小心。',
+      'But he remembered because the moment became something else to him.':
+        '但佢記得，因為嗰一刻對佢嚟講已經變成咗另一樣嘢。',
+      'But he remembered it.': '但佢記得咗。',
+      'But Jolie did not move yet.': '但 Jolie 仲未郁。',
+      'But most memories begin smaller than that. A look. A sentence. A laugh. A word sent without knowing it would be kept.':
+        '但大部分記憶其實由更細嘅嘢開始。一個眼神。一句說話。一聲笑。一句送出去時根本唔知道會被留住嘅字。',
+      'But now, sitting alone beneath the roots of an old tree, Jolie wondered if simple things were the easiest to underestimate.':
+        '但而家，Jolie 一個人坐喺老樹根下面，佢開始諗，係咪越簡單嘅嘢，就越容易被低估。',
+      'But the memory had followed her back.': '但段記憶跟住佢返咗嚟。',
+      called: '被呼喚',
+      cantonese: '廣東話',
+      'Claim the memory': '領取記憶',
+      'Credit: Frieren The Anime': '靈感來源：Frieren 動畫',
+      'Did I say other things like that?': '我有冇講過其他咁樣嘅說話？',
+      'Do not choose the most beautiful answer. Choose the true one.':
+        '唔好揀最靚嘅答案。揀真實嗰個。',
+      'Do not take too long.': '唔好太耐。',
+      Elowen: 'Elowen',
+      english: '英文',
+      'Fern frowned slightly.': 'Fern 微微皺起眉。',
+      'Fern hesitated.': 'Fern 猶豫咗一下。',
+      'Fern stopped and looked back.': 'Fern 停低，回頭望佢。',
+      'Fern was probably already annoyed.': 'Fern 可能已經有啲嬲。',
+      'First Memory achieved': '第一段記憶已完成',
+      'For a while, Jolie stayed where she was.':
+        '有一段時間，Jolie 企喺原地冇郁。',
+      'For the first time since entering Eldermere, she felt that the town was not only showing his memories.':
+        '自從入到 Eldermere 之後，佢第一次覺得，呢個城鎮唔只係展示緊佢嘅記憶。',
+      'Go to the next memory': '前往下一段記憶',
+      group: '小組',
+      'Her eyes moved across the page, yet her mind kept returning to the shrine.':
+        '佢雙眼掃過書頁，但個心一直返去神殿嗰度。',
+      'Honest about what?': '對咩誠實？',
+      'I know. I just need to think for a little while.':
+        '我知。我只係需要諗一陣。',
+      'I thought it was just a message.': '我以為嗰個只係一個訊息。',
+      'I’ll catch up.': '我一陣追返你哋。',
+      'If he kept that first message...': '如果佢一直留住第一個訊息……',
+      'If he remembered that...': '如果佢連嗰個都記得……',
+      'In Progress!': '製作中！',
+      'It asks whether you are honest.': '佢問你係咪誠實。',
+      'It can be. But memory is not always pain.':
+        '可以係。但記憶唔一定永遠都係痛。',
+      'It does not look like a shrine.': '佢睇落唔似神殿。',
+      'It had not shown a dramatic promise.': '佢冇展示一個戲劇性嘅承諾。',
+      'It had not shown a goodbye under rain or anything that would obviously belong in a story.':
+        '佢冇展示雨中告別，亦冇展示任何一睇就似故事情節嘅畫面。',
+      'It had shown a beginning so ordinary that she almost missed the weight of it.':
+        '佢展示嘅開始太普通，普通到佢差啲錯過咗當中嘅重量。',
+      'It was asking her to remember too.': '佢亦都係叫佢去記返。',
+      'Its warmth reached her hands, but not the strange feeling in her chest.':
+        '火嘅暖意傳到佢雙手，但傳唔到胸口嗰種奇怪感覺。',
+      'Jolie closed the book halfway, keeping one finger between the pages.':
+        'Jolie 將本書半合埋，一隻手指仲夾喺書頁之間。',
+      'Jolie gave a small nod.': 'Jolie 輕輕點咗點頭。',
+      'Jolie gave another small nod, but she did not answer right away.':
+        'Jolie 又輕輕點咗點頭，但冇即刻回答。',
+      'Jolie looked toward the path back to town, then toward the darker road beside the forest.':
+        'Jolie 望向返城鎮嘅路，然後又望向森林旁邊更暗嘅路。',
+      'Jolie lowered her gaze to the open book in her lap, but the words blurred into the same question again and again.':
+        'Jolie 垂低眼望住膝上打開嘅書，但啲字一次又一次模糊成同一個問題。',
+      'Jolie made her way back to Eldermere as night settled over the town.':
+        '夜色落喺城鎮上時，Jolie 慢慢行返 Eldermere。',
+      'Jolie stayed behind.': 'Jolie 留咗喺後面。',
+      'Jolie stopped there.': 'Jolie 喺嗰度停低。',
+      'Jolie watched as Fern and the old lady continued down the forest path. Their figures grew smaller between the trees, then disappeared into the dark green shadows leading back toward Eldermere.':
+        'Jolie 睇住 Fern 同老婦人繼續沿住森林小路行。佢哋嘅身影喺樹影之間越嚟越細，最後消失喺通往 Eldermere 嘅深綠陰影入面。',
+      'Just a message sent to make things easier. Maybe to make the first meeting less awkward. Maybe because being playful felt safer than being too formal.':
+        '只係一個為咗令事情容易啲而發出嘅訊息。可能係想令第一次見面冇咁尷尬。可能係因為玩笑比太正式更安全。',
+      'Just a message through Instagram, light and playful. If you could not find her, you should try screaming her name.':
+        '只係一個透過 Instagram 發出、輕鬆又帶啲玩笑嘅訊息。如果你搵唔到佢，就試吓大叫佢個名。',
+      'Just enough to let the others move ahead without her.':
+        '只係啱啱好，可以畀其他人冇佢都繼續行前。',
+      'Just quiet enough for every thought to sound louder.':
+        '靜到每一個念頭都變得更大聲。',
+      'Just something silly to make things less awkward.':
+        '只係一樣傻傻哋、用嚟令事情冇咁尷尬嘅嘢。',
+      keeps: '留住',
+      'Listen carefully. The shrine speaks plainly, but people often answer with what they wish were true.':
+        '聽清楚。神殿講得好直接，但人往往會用自己希望係真嘅嘢去回答。',
+      'Long ago, before Eldermere had walls, people came here to leave names behind. Not because they wanted to forget them, but because they were afraid no one else would remember.':
+        '好耐以前，喺 Eldermere 仲未有城牆之前，人哋會嚟呢度留下名字。唔係因為佢哋想忘記，而係因為佢哋驚冇其他人會記得。',
+      Lunareth: 'Lunareth',
+      'Many stories begin with less. The next memory is not kept here. It is somewhere louder. A memory carried by sound. The first laugh.':
+        '好多故事嘅開始比呢個仲少。下一段記憶唔係收喺呢度。佢喺一個更嘈、更有聲音嘅地方。一段由聲音帶住嘅記憶。第一聲笑。',
+      'Maybe I forgot because I was only living the moment.':
+        '可能我忘記，係因為我當時只係活喺嗰一刻。',
+      'Maybe, when the journey ends, you will find something worth returning to :D':
+        '可能旅程完結嗰陣，你會搵到一樣值得返去嘅嘢 :D',
+      'Maybe. But some people enter a memory exactly like that. They arrive with a sentence you did not expect, and somehow, the day becomes easier to remember.':
+        '可能係。但有啲人就係咁樣走入一段記憶。佢哋帶住一句你冇諗過會聽到嘅說話出現，然後唔知點解，嗰日就變得更容易記住。',
+      'Memories Lane': '記憶之路',
+      message: '訊息',
+      'Mobile train route': '手機版列車路線',
+      'Names of the dead?': '死者嘅名字？',
+      Next: '下一步',
+      'No. It does not ask to be noticed.': '唔係。佢唔要求人注意佢。',
+      'Not empty.': '但唔係空嘅。',
+      'Not exactly. A test decides whether you are worthy. The shrine is kinder than that.':
+        '唔完全係。考驗係決定你值唔值得。神殿比呢個溫柔。',
+      'Not far.': '唔遠。',
+      'Not guilty exactly.': '唔完全係內疚。',
+      'Old Lady': '老婦人',
+      'Only the fire stayed with her, small and warm beneath the old tree, while the question remained open on the page.':
+        '只有火陪住佢，細細哋、暖暖哋，喺老樹下面燃住；而問題仍然攤開喺書頁上。',
+      passing: '路過',
+      'People often think memories must be large to be important. A battle. A farewell. A great promise beneath the stars.':
+        '人哋成日以為記憶一定要好大先重要。一場戰鬥。一場告別。星空下嘅偉大承諾。',
+      'Proof. That someone was here. That something happened. That a small moment once mattered enough to stay.':
+        '證明。證明有人曾經喺度。證明有啲事發生過。證明一個細小瞬間曾經重要到足以留下。',
+      'Ready When You Are': '你準備好就可以開始',
+      scream: '大叫',
+      'She did not know exactly where she was going.':
+        '佢唔太清楚自己究竟要去邊。',
+      'She gathered a few dry branches, made a small fire, and sat close enough to feel its warmth against the cold night air.':
+        '佢執咗幾枝乾樹枝，生咗一個細火，坐近到可以喺寒冷夜風入面感到一點暖意。',
+      'She had returned from the shrine.': '佢已經由神殿返嚟。',
+      'She looked into the forest.': '佢望入森林深處。',
+      'She only knew she was not ready to return yet.':
+        '佢只知道自己仲未準備好返去。',
+      'She stared at the fire.': '佢望住火。',
+      'She turned a page, though she had not finished reading the last one.':
+        '佢翻咗一頁，雖然上一頁其實仲未睇完。',
+      'She turned away from the path back to town and walked deeper beneath the trees. The ground was uneven, covered with roots, fallen leaves, and old stones hidden beneath the grass. Above her, the branches twisted together, blocking most of the moonlight.':
+        '佢轉身離開返城鎮嘅路，行入更深嘅樹影之下。地面凹凸不平，鋪滿樹根、落葉，同埋藏喺草下面嘅舊石。頭頂上，樹枝交纏，擋住咗大部分月光。',
+      shrine: '神殿',
+      'Small things. Careless things. Things I forgot five minutes later.':
+        '細小嘅事。冇留心嘅事。五分鐘之後我就忘記咗嘅事。',
+      'So that was the first clue?': '所以嗰個就係第一條線索？',
+      'So the shrine tests visitors?': '所以神殿會考驗訪客？',
+      'Some hostile creatures do not hunt loudly. They wait for quiet footsteps.':
+        '有啲敵意生物唔會大聲狩獵。佢哋會等安靜嘅腳步聲。',
+      'Some memories are not meant to be rushed.':
+        '有啲記憶唔應該被催促。',
+      'Some. But not only them. Names of people they loved, friends who left, promises they could not keep, even names they never had the courage to speak aloud.':
+        '有啲係。但唔止係佢哋。仲有佢哋愛過嘅人、離開咗嘅朋友、守唔到嘅承諾，甚至係佢哋一直冇勇氣講出口嘅名字。',
+      'Somewhere beyond Eldermere, the next memory was already waiting.':
+        '喺 Eldermere 之外某個地方，下一段記憶已經等緊。',
+      'Somewhere beyond the trees, Eldermere was waiting.':
+        '喺樹林之外，Eldermere 正等住。',
+      'Spoiler: card game :> ': '劇透：卡牌遊戲 :> ',
+      'That is a strange first instruction.': '呢個第一個指示都幾奇怪。',
+      'That is why I brought you here first. Not to show you a great memory, but to ask whether you can recognise a small one.':
+        '所以我先帶你哋嚟呢度。唔係為咗畀你哋睇一段偉大嘅記憶，而係想問你哋，認唔認得出一段細小嘅記憶。',
+      'That sounds painful.': '聽落好痛。',
+      'That thought made her feel quiet.': '嗰個念頭令佢安靜落嚟。',
+      'That was easier than sitting completely still with the thought.':
+        '咁樣總好過同嗰個念頭一齊完全靜止咁坐住。',
+      'The fire cracked softly beside her.': '火喺佢身邊輕輕爆響。',
+      'The fire shifted.': '火光晃動咗一下。',
+      'The First Approach: She first approached through Instagram during a group project. "If you cannot find me, try screaming my name."':
+        '第一次接近：佢喺小組功課期間，第一次透過 Instagram 接近佢。「如果你搵唔到我，就試吓大叫我個名。」',
+      'The forest around her stayed still.': '佢身邊嘅森林仍然靜止。',
+      'The forest became quiet around her.': '佢身邊嘅森林變得安靜。',
+      'The forest is not kind after sunset.': '日落之後，森林唔會仁慈。',
+      'The movement gave her hands something to do.':
+        '呢個動作至少畀佢雙手有啲嘢可以做。',
+      'The next memory is waiting': '下一段記憶正等住',
+      'The night gave no answer.': '夜晚冇畀任何答案。',
+      'The old lady studied her for a moment. Then she looked toward the moonlit trees.':
+        '老婦人望咗佢一陣。然後望向月光下嘅樹。',
+      'The old lady turned around. Her expression was calm, but serious.':
+        '老婦人轉過身。佢神情平靜，但好認真。',
+      'The old lady walked slowly ahead, guiding them back toward Eldermere before the night grew too deep. Fern followed beside her, quiet but watchful, still thinking about the shrine’s question.':
+        '老婦人慢慢行喺前面，趁夜色未太深之前帶佢哋返 Eldermere。Fern 跟喺佢身邊，安靜但警覺，仲諗住神殿嗰個問題。',
+      'The old lady was probably pretending not to worry.':
+        '老婦人大概扮緊唔擔心。',
+      'The path to the shrine was quieter than the town square. Stone slowly disappeared beneath grass and roots.':
+        '通往神殿嘅小路比城鎮廣場安靜。石路慢慢消失喺草同樹根下面。',
+      'The shrine had not shown her a grand confession.':
+        '神殿冇畀佢睇一場宏大嘅告白。',
+      'The statue had not moved. The forest had not changed. But the memory felt clearer now. Not larger. Not more dramatic. Just clearer.':
+        '石像冇郁。森林冇變。但段記憶而家變得更清楚。唔係更大。唔係更戲劇性。只係更清楚。',
+      'The streets had grown still, and the warmth from the windows made the whole place feel like it was keeping secrets.':
+        '街道已經靜落嚟，窗入面透出嘅暖光令成個地方好似收藏住秘密。',
+      'The words from the shrine had followed her all the way through the trees.':
+        '神殿嘅說話一路跟住佢穿過樹林。',
+      'Their pages caught the firelight softly. Notes, old words, and half-finished thoughts rested in front of her, but she was not really reading.':
+        '書頁柔柔咁接住火光。筆記、舊字句，同半完成嘅念頭攤喺佢面前，但佢其實冇真正睇入眼。',
+      'Then do not wander too far.': '咁就唔好行得太遠。',
+      'Then she opened her books.': '然後佢打開啲書。',
+      'Then what did I keep?': '咁我又留住咗啲咩？',
+      'Then what does it do?': '咁佢做咩？',
+      'Then what is it?': '咁記憶係咩？',
+      'This is the Memorial Shrine.': '呢度就係紀念神殿。',
+      'To be continued...': '待續……',
+      'Too simple to matter.': '簡單到好似唔重要。',
+      'Train journey love story': '列車旅程愛情故事',
+      'Trees leaned over the path, their branches crossing above like old hands. Behind them, Eldermere faded into footsteps, leaves, and distant birds.':
+        '樹木向小路傾斜，樹枝喺上方交錯，好似一雙雙古老嘅手。喺佢哋身後，Eldermere 漸漸融入腳步聲、葉聲同遠處鳥聲之中。',
+      wait: '等待',
+      want: '想要',
+      'We should head back now, before the forest grows dark. Eldermere is gentle in the morning, but hostile creatures wander closer after sunset.':
+        '我哋而家應該返去，趁森林仲未完全變暗。Eldermere 朝早係溫柔嘅，但日落之後，有敵意嘅生物會行近。',
+      'What else did he remember?': '佢仲記得啲咩？',
+      'Yes. That was the beginning. Not a grand meeting. Not a dramatic promise.':
+        '係。嗰個就係開始。唔係盛大嘅相遇。唔係戲劇性嘅承諾。',
+      'Yes. The first clue is important because it became the place everything started from.':
+        '係。第一條線索好重要，因為佢變成咗一切開始嘅地方。',
+      'You will play as Frieren, carrying your own name through each town and every memory.':
+        '你會扮演 Frieren，帶住你自己嘅名字，穿過每個城鎮同每一段記憶。',
+      'Your task is to explore, choose, solve, and uncover the missing pieces left behind.':
+        '你要探索、選擇、解開謎題，揭開被留下嘅缺口。',
+      '繁體中文': '繁體中文',
     },
   };
 
