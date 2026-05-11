@@ -746,7 +746,7 @@ export const TRANSLATED_TEXT: Record<LanguageId, Record<string, string>> = {
       'Stop 04': '第四站',
       'Final Stop': '終點站',
       Eldermere: 'Eldermere',
-      'The Almost': '差啲就係',
+      'The Almosts': '差啲就係',
       'The Distance': '距離',
       'Things Left Unsaid': '未講出口嘅說話',
       'Still Here': '仲喺度',
