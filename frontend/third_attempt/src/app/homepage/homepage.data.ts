@@ -1113,7 +1113,7 @@ export const ELDERMERE_PATHS: EldermerePath[] = [
       id: 'shrine',
       option: 'Take us to the Memory Shrine.',
       reply:
-        'Then walk softly. The shrine does not punish loud footsteps, but it remembers them.',
+        'Then walk your path. The shrine does not punish loud footsteps, but it remembers them.',
       narration:
         'Elowen begins walking toward a narrow road lined with white flowers. The air grows colder with each step, and the sound of the fountain fades behind them.',
       scene: 'The Memory Shrine',
